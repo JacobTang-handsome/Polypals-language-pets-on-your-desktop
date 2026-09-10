@@ -22,4 +22,17 @@ struct AmbientBehaviorTests {
         #expect(first == second)
         #expect(first?.action != .tidyItem)
     }
+
+    @Test("Natural behavior cadence is low-distraction")
+    func cadence() {
+        #expect(AmbientBehaviorEngine().minimumIdleTime == 15 * 60)
+        #expect(AmbientBehaviorEngine().minimumActionInterval == 10 * 60)
+        let solActions = (0..<8).map { PetPersonalityBehavior.perchIdle(for: .sol, stableSeed: $0) }
+        let mousseActions = (0..<8).map { PetPersonalityBehavior.perchIdle(for: .mousse, stableSeed: $0) }
+        let ashActions = (0..<8).map { PetPersonalityBehavior.perchIdle(for: .ash, stableSeed: $0) }
+        #expect(solActions.contains(.perchWalkLeft))
+        #expect(solActions.contains(.perchWalkRight))
+        #expect(!mousseActions.contains(.perchWalkLeft) && !mousseActions.contains(.perchWalkRight))
+        #expect(!ashActions.contains(.perchWalkLeft) && !ashActions.contains(.perchWalkRight))
+    }
 }

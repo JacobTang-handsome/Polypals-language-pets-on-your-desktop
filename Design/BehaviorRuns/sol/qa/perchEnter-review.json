@@ -1,0 +1,112 @@
+{
+  "ok": true,
+  "frames_root": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/BehaviorRuns/sol/frames/perchEnter",
+  "states": [
+    "idle"
+  ],
+  "errors": [],
+  "warnings": [],
+  "rows": [
+    {
+      "state": "idle",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/BehaviorRuns/sol/frames/perchEnter/idle/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 17931,
+          "bbox": [
+            5,
+            30,
+            187,
+            177
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 181
+        },
+        {
+          "index": 1,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/BehaviorRuns/sol/frames/perchEnter/idle/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 17430,
+          "bbox": [
+            5,
+            37,
+            187,
+            171
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 121
+        },
+        {
+          "index": 2,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/BehaviorRuns/sol/frames/perchEnter/idle/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20352,
+          "bbox": [
+            5,
+            8,
+            187,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 202
+        },
+        {
+          "index": 3,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/BehaviorRuns/sol/frames/perchEnter/idle/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 17951,
+          "bbox": [
+            5,
+            9,
+            187,
+            198
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 184
+        },
+        {
+          "index": 4,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/BehaviorRuns/sol/frames/perchEnter/idle/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 15713,
+          "bbox": [
+            5,
+            36,
+            187,
+            172
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 133
+        },
+        {
+          "index": 5,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/BehaviorRuns/sol/frames/perchEnter/idle/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 25033,
+          "bbox": [
+            5,
+            5,
+            186,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 266
+        }
+      ]
+    }
+  ]
+}

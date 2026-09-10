@@ -60,3 +60,18 @@ enum PetAssetCatalog {
         return try? JSONDecoder().decode(PetBehaviorAssetManifest.self, from: data)
     }
 }
+
+enum PetBehaviorFallback {
+    static func state(for behavior: PetBehaviorAnimation, manifest: PetBehaviorAssetManifest?) -> AnimationState {
+        if let fallback = manifest?.clip(behavior)?.fallback { return fallback }
+        switch behavior {
+        case .celebrate, .perchEnter, .perchExit, .stretch: return .jumping
+        case .perchWalkLeft: return .runningLeft
+        case .perchWalkRight: return .runningRight
+        case .ashInviteWing: return .waving
+        case .solPouncePrep, .mousseGroom, .ashHeadTilt: return .review
+        case .solEarTwitch, .mousseProud: return .waiting
+        case .nap, .perchSit, .solTailChase, .solPerchTailWag, .mousseElegantSit, .ashSlowSquint: return .idle
+        }
+    }
+}

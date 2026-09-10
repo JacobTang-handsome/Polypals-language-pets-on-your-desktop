@@ -21,7 +21,8 @@ The app does not include a developer API key, a custom endpoint field, analytics
 ## Permissions
 
 - Notifications are requested only when the user first creates a notification plan. A denied request leaves the plan stored for in-app behavior.
-- Screen Recording, Accessibility, and Microphone permissions are not requested by this release.
+- Accessibility is requested only after the user enables window-edge activity and presses the explicit permission button. Denial keeps the screen-edge fallback available.
+- Screen Recording and Microphone permissions are never requested.
 # Window-edge activity
 
 PolyPals can optionally use macOS Accessibility permission to read the position and size of visible application windows so a pet can sit on or follow a window edge. It does not read window text or content. The feature is off by default, can be disabled at any time, and falls back to screen-edge activity when permission is unavailable. PolyPals does not use the microphone for personality or ear-movement reactions.

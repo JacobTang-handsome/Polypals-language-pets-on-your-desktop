@@ -2,15 +2,73 @@ import AppKit
 import ApplicationServices
 import Foundation
 
+struct PointerMotionFilter: Sendable {
+    let deadZone: CGFloat
+    let minimumInterval: TimeInterval
+    private(set) var lastPoint: CGPoint
+    private(set) var lastUpdate: Date
+
+    init(deadZone: CGFloat = 3, minimumInterval: TimeInterval = 0.08, point: CGPoint = .zero, date: Date = .distantPast) {
+        self.deadZone = deadZone
+        self.minimumInterval = minimumInterval
+        lastPoint = point
+        lastUpdate = date
+    }
+
+    mutating func reset(point: CGPoint, at date: Date = .distantPast) {
+        lastPoint = point
+        lastUpdate = date
+    }
+
+    mutating func accepts(point: CGPoint, at date: Date) -> Bool {
+        guard hypot(point.x - lastPoint.x, point.y - lastPoint.y) > deadZone,
+              date.timeIntervalSince(lastUpdate) >= minimumInterval else { return false }
+        lastPoint = point
+        lastUpdate = date
+        return true
+    }
+}
+
+enum SystemActivityGate {
+    static let quietInterval: TimeInterval = 8
+
+    static var hasQuietKeyboardAndPointer: Bool {
+        let source = CGEventSourceStateID.combinedSessionState
+        let keyboard = CGEventSource.secondsSinceLastEventType(source, eventType: .keyDown)
+        let pointer = min(
+            CGEventSource.secondsSinceLastEventType(source, eventType: .mouseMoved),
+            CGEventSource.secondsSinceLastEventType(source, eventType: .leftMouseDragged)
+        )
+        return isQuiet(keyboardIdle: keyboard, pointerIdle: pointer)
+    }
+
+    static func isQuiet(keyboardIdle: TimeInterval, pointerIdle: TimeInterval) -> Bool {
+        keyboardIdle >= quietInterval && pointerIdle >= quietInterval
+    }
+}
+
+enum PetPositionPersistencePolicy {
+    static func shouldPersist(hasTemporaryPerch: Bool) -> Bool { !hasTemporaryPerch }
+}
+
 enum PetBehaviorState: Equatable, Sendable {
     case idle
     case choosingDestination
     case walkingToPerch(PerchTarget)
     case jumpingOntoPerch(PerchTarget)
-    case perched(PerchTarget)
+    case perched(PerchTarget, PerchActivity)
     case jumpingDown
     case returning
     case performing(PetBehaviorAnimation)
+}
+
+enum PerchActivity: Equatable, Sendable {
+    case sitting
+    case edgeWalkingLeft
+    case edgeWalkingRight
+    case napping
+    case lookingAtPointer
+    case personality(PetBehaviorAnimation)
 }
 
 struct PerchWindow: Equatable, Sendable {
@@ -134,6 +192,32 @@ struct PerchTargetSelector {
     }
 }
 
+enum PerchFollowResolver {
+    static func origin(
+        for target: PerchTarget,
+        updatedQuartzFrame: CGRect,
+        desktopTop: CGFloat,
+        screenFrame: CGRect,
+        petSize: CGSize,
+        minimumWindowSize: CGSize = CGSize(width: 360, height: 220),
+        controlButtonReserve: CGFloat = 112,
+        edgePadding: CGFloat = 28
+    ) -> CGPoint? {
+        let frame = PerchCoordinateConverter.appKitFrame(fromQuartz: updatedQuartzFrame, desktopTop: desktopTop)
+        let fullscreen = abs(frame.width - screenFrame.width) < 8 && abs(frame.height - screenFrame.height) < 30
+        guard frame.width >= minimumWindowSize.width, frame.height >= minimumWindowSize.height,
+              frame.intersects(screenFrame), !fullscreen else { return nil }
+        let relativeX = target.anchor.x - target.windowFrame.minX
+        let lower = max(frame.minX + controlButtonReserve, screenFrame.minX + edgePadding)
+        let upper = min(frame.maxX - edgePadding - petSize.width, screenFrame.maxX - edgePadding - petSize.width)
+        guard upper > lower else { return nil }
+        return CGPoint(
+            x: min(upper, max(lower, frame.minX + relativeX)),
+            y: frame.maxY - petSize.height * 0.15
+        )
+    }
+}
+
 struct PetPersonalityBehavior {
     static func actions(for petID: PetID) -> [PetBehaviorAnimation] {
         switch petID {
@@ -144,15 +228,36 @@ struct PetPersonalityBehavior {
     }
 
     static func action(for petID: PetID, stableSeed: Int) -> PetBehaviorAnimation {
-        let values = actions(for: petID)
+        let values: [PetBehaviorAnimation] = switch petID {
+        // Ear twitch is reserved for app-known cues (for example an invitation),
+        // never inferred from microphone input or selected as a random ambient action.
+        case .sol: [.solTailChase, .solPouncePrep]
+        case .mousse: actions(for: petID)
+        case .ash: actions(for: petID)
+        }
         return values[abs(stableSeed) % values.count]
     }
 
     static func perchIdle(for petID: PetID, stableSeed: Int) -> PetBehaviorAnimation {
         switch petID {
-        case .sol: stableSeed.isMultiple(of: 2) ? .solPerchTailWag : .perchWalkRight
-        case .mousse: stableSeed.isMultiple(of: 3) ? .mousseGroom : .mousseElegantSit
-        case .ash: stableSeed.isMultiple(of: 4) ? .ashHeadTilt : .perchSit
+        case .sol:
+            switch abs(stableSeed) % 4 {
+            case 0: .perchWalkLeft
+            case 1: .perchWalkRight
+            default: .solPerchTailWag
+            }
+        case .mousse:
+            switch abs(stableSeed) % 5 {
+            case 0: .nap
+            case 1: .mousseGroom
+            default: .mousseElegantSit
+            }
+        case .ash:
+            switch abs(stableSeed) % 5 {
+            case 0: .nap
+            case 1: .ashHeadTilt
+            default: .ashSlowSquint
+            }
         }
     }
 }
@@ -178,7 +283,12 @@ struct PetBehaviorStateMachine: Sendable {
 
     mutating func landed() {
         guard case let .jumpingOntoPerch(target) = state else { return }
-        state = .perched(target)
+        state = .perched(target, .sitting)
+    }
+
+    mutating func setPerchActivity(_ activity: PerchActivity) {
+        guard case let .perched(target, _) = state else { return }
+        state = .perched(target, activity)
     }
 
     mutating func perform(_ animation: PetBehaviorAnimation) -> Bool {

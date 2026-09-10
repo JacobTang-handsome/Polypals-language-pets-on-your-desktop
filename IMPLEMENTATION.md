@@ -15,18 +15,20 @@
 - Time-aware ambient actions, relationship-aware greetings, inventory context, “today happened” summaries, natural-language plans, execution history, snooze/skip, and menu-bar focus timers
 - Manual, natural-pause, and occasional-invite modes; focus timer; deterministic global suppression/priority/cooldown/decline policy; per-pet quiet hours; daily and weekly plans
 - Separate runtime-action/system-notification delivery with delayed permission request, collision suppression, deep link, snooze, skip, cancel, pause, and denied-permission fallback
-- Manual presentation mode, no screen/code/keyboard/microphone/Accessibility access, local aggregate metrics, and data export/clear controls
+- Manual presentation mode; no screen-content, code, clipboard, or microphone access; optional user-initiated Accessibility window-position access; local aggregate metrics; and data export/clear controls
 - Simplified Chinese String Catalog with automated key synchronization and CI checking
 - Three unified soft-picture-book v2 pet atlases and manifests, plus deterministic, visual, continuity, and three-reviewer blind-direction QA artifacts
 
 ## Verification completed
 
-- `swift test`: 53 tests in 16 suites passed, including V1→V4 store migrations, CEFR/card policy, malicious plugin fixtures, asset checks, and provider contracts
+- `swift test`: 61 tests in 16 suites passed, including V1→V4 store migrations, CEFR/card policy, malicious plugin fixtures, base/behavior asset checks, window selection, state transitions, pointer throttling, and provider contracts
 - Release build: arm64 Mach-O, macOS 14 minimum, ad-hoc signature verified
 - Bundle identifier: `com.polypals.PolyPals`
 - Three packaged atlases: 1536×2288 RGBA WebP, 8×11, `spriteVersionNumber: 2`, zero transparent RGB residue
 - Natural-life behavior uses a cancellable state machine with window/screen-edge perch targets, deterministic candidate selection, Accessibility-gated cross-app window discovery, multi-display coordinate conversion, one-pet perch reservation, and safe screen-edge fallback.
 - Additional personality and perch animations are optional sidecar atlases (`*-behavior-spritesheet.webp` + `*-behavior.json`); the existing v2 8×11 contract remains unchanged and each clip declares timing, looping, anchor, interruptibility, and a safe legacy fallback.
+- The sidecar atlas is deterministically assembled from six-frame extracted rows. `perchExit` reverses `perchEnter`; Mousse and Ash reuse their restrained pride/wing gestures for celebration, and edge walking intentionally falls back to the existing direction-correct v2 running rows.
+- Direct interaction, chat/detail panels, invitations, answer generation, presentation mode, sleep, hiding, and screen changes cancel ambient state and its timers. Keyboard or pointer activity inside eight seconds suppresses a new natural action; overall cadence is capped at once per ten minutes after a fifteen-minute interaction idle period.
 - GUI smoke test: final SpriteKit pet, quick menu, five-section detail panel, finite offline cards, chat focus, plan controls, and explicit bundled portraits render successfully
 - Short idle sample with all three pet windows: 0.0–1.5% CPU and about 108 MB resident memory
 - Local DMG passes `hdiutil verify`

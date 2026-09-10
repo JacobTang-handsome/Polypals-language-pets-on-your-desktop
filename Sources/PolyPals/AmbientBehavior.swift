@@ -6,7 +6,9 @@ protocol AmbientBehaviorDeciding: Sendable {
 
 struct AmbientBehaviorEngine: AmbientBehaviorDeciding {
     let minimumIdleTime: TimeInterval = 15 * 60
-    let minimumActionInterval: TimeInterval = 60
+    // Natural-life activity is deliberately sparse. This also bounds perch attempts
+    // to no more than once per ten minutes without adding a high-frequency scheduler.
+    let minimumActionInterval: TimeInterval = 10 * 60
 
     func decide(context: PetActivityContext) -> AmbientBehaviorDecision? {
         guard context.isVisible, !context.isSleeping, !context.focusActive,

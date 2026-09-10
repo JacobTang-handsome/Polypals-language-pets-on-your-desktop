@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "petID": "ash",
+  "cellWidth": 192,
+  "cellHeight": 208,
+  "columns": 6,
+  "spritesheetPath": "ash-behavior-spritesheet.webp",
+  "clips": [
+    {
+      "id": "nap",
+      "row": 0,
+      "frameCount": 6,
+      "secondsPerFrame": 0.16,
+      "loops": true,
+      "interruptible": true,
+      "fallback": "idle",
+      "anchorX": 0.5,
+      "anchorY": 0.08
+    },
+    {
+      "id": "stretch",
+      "row": 1,
+      "frameCount": 6,
+      "secondsPerFrame": 0.16,
+      "loops": false,
+      "interruptible": true,
+      "fallback": "jumping",
+      "anchorX": 0.5,
+      "anchorY": 0.08
+    },
+    {
+      "id": "perchEnter",
+      "row": 2,
+      "frameCount": 6,
+      "secondsPerFrame": 0.16,
+      "loops": false,
+      "interruptible": true,
+      "fallback": "jumping",
+      "anchorX": 0.5,
+      "anchorY": 0.15
+    },
+    {
+      "id": "perchExit",
+      "row": 3,
+      "frameCount": 6,
+      "secondsPerFrame": 0.16,
+      "loops": false,
+      "interruptible": true,
+      "fallback": "jumping",
+      "anchorX": 0.5,
+      "anchorY": 0.15
+    },
+    {
+      "id": "ashHeadTilt",
+      "row": 4,
+      "frameCount": 6,
+      "secondsPerFrame": 0.16,
+      "loops": false,
+      "interruptible": true,
+      "fallback": "review",
+      "anchorX": 0.5,
+      "anchorY": 0.08
+    },
+    {
+      "id": "ashSlowSquint",
+      "row": 5,
+      "frameCount": 6,
+      "secondsPerFrame": 0.16,
+      "loops": true,
+      "interruptible": true,
+      "fallback": "idle",
+      "anchorX": 0.5,
+      "anchorY": 0.08
+    },
+    {
+      "id": "ashInviteWing",
+      "row": 6,
+      "frameCount": 6,
+      "secondsPerFrame": 0.16,
+      "loops": false,
+      "interruptible": true,
+      "fallback": "waving",
+      "anchorX": 0.5,
+      "anchorY": 0.08
+    },
+    {
+      "id": "perchSit",
+      "row": 5,
+      "frameCount": 6,
+      "secondsPerFrame": 0.16,
+      "loops": true,
+      "interruptible": true,
+      "fallback": "idle",
+      "anchorX": 0.5,
+      "anchorY": 0.15
+    },
+    {
+      "id": "celebrate",
+      "row": 6,
+      "frameCount": 6,
+      "secondsPerFrame": 0.16,
+      "loops": false,
+      "interruptible": true,
+      "fallback": "jumping",
+      "anchorX": 0.5,
+      "anchorY": 0.08
+    }
+  ]
+}

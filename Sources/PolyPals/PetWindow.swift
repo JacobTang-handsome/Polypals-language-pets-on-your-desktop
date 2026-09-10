@@ -73,11 +73,11 @@ final class PetWindowManager {
 
     func wave(_ petID: PetID) {
         controllers[petID]?.show()
-        controllers[petID]?.play(.waving)
+        controllers[petID]?.playBusiness(.waving)
     }
 
     func play(_ state: AnimationState, for petID: PetID) {
-        controllers[petID]?.play(state)
+        controllers[petID]?.playBusiness(state)
     }
 
     func playRelationshipLevelUp(_ petID: PetID) {
@@ -163,8 +163,7 @@ final class PetWindowController: NSObject {
     private var ambientReturnWorkItem: DispatchWorkItem?
     private var perchFollowTimer: Timer?
     private var pointerTimer: Timer?
-    private var lastPointerPoint = NSPoint.zero
-    private var lastPointerUpdate = Date.distantPast
+    private var pointerMotionFilter = PointerMotionFilter()
     private let ambientEngine = AmbientBehaviorEngine()
     private let windowProvider: any WindowEdgeProviding = SystemWindowEdgeProvider()
     private let perchSelector = PerchTargetSelector()
@@ -238,6 +237,11 @@ final class PetWindowController: NSObject {
 
     func play(_ state: AnimationState) {
         spriteView.sceneModel.play(state)
+    }
+
+    func playBusiness(_ state: AnimationState) {
+        cancelAmbientBehavior(restoreHome: true)
+        play(state)
     }
 
     func playBehavior(_ animation: PetBehaviorAnimation, duration: TimeInterval) {
@@ -332,8 +336,13 @@ final class PetWindowController: NSObject {
     }
 
     func showInvitation(_ candidate: InvitationCandidate) {
+        cancelAmbientBehavior(restoreHome: true)
         show()
-        play(.waving)
+        if petID == .sol {
+            playBehavior(.solEarTwitch, duration: 1.2)
+        } else {
+            play(.waving)
+        }
         dismissInvitation()
         let view = InvitationBubbleView(
             candidate: candidate,
@@ -437,6 +446,7 @@ final class PetWindowController: NSObject {
               ProactiveMode(rawValue: profile.proactiveMode) != .manual,
               detailController?.window?.isVisible != true,
               invitationPanel?.isVisible != true,
+              SystemActivityGate.hasQuietKeyboardAndPointer,
               now.timeIntervalSince(lastDirectInteraction) >= 45,
               let screen = panel.screen ?? NSScreen.main else { return }
         let routine = model.routineState(for: petID)
@@ -504,17 +514,13 @@ final class PetWindowController: NSObject {
 
     private func followPointer(duration: TimeInterval) {
         cancelScheduledAmbientReturn()
-        lastPointerPoint = NSEvent.mouseLocation
-        lastPointerUpdate = .distantPast
+        pointerMotionFilter.reset(point: NSEvent.mouseLocation)
         pointerTimer?.invalidate()
         pointerTimer = Timer.scheduledTimer(withTimeInterval: 0.10, repeats: true) { [weak self] _ in
             Task { @MainActor in
                 guard let self else { return }
                 let point = NSEvent.mouseLocation
-                guard hypot(point.x - self.lastPointerPoint.x, point.y - self.lastPointerPoint.y) > 3,
-                      Date().timeIntervalSince(self.lastPointerUpdate) >= 0.08 else { return }
-                self.lastPointerPoint = point
-                self.lastPointerUpdate = Date()
+                guard self.pointerMotionFilter.accepts(point: point, at: Date()) else { return }
                 self.spriteView.sceneModel.look(toward: CGPoint(
                     x: point.x - self.panel.frame.midX,
                     y: point.y - self.panel.frame.midY
@@ -534,8 +540,11 @@ final class PetWindowController: NSObject {
     }
 
     private func beginPerching(duration: TimeInterval, on screen: NSScreen) {
-        guard model.windowManager?.reservePerch(for: petID) == true,
-              behaviorMachine.beginChoosing() else { return }
+        guard behaviorMachine.beginChoosing() else { return }
+        guard model.windowManager?.reservePerch(for: petID) == true else {
+            behaviorMachine.cancel()
+            return
+        }
         let selection = PerchSelectionContext(
             petID: petID,
             petSize: panel.frame.size,
@@ -576,16 +585,55 @@ final class PetWindowController: NSObject {
                 guard let self else { return }
                 self.behaviorMachine.landed()
                 let seed = Calendar.current.component(.minute, from: Date())
-                self.spriteView.sceneModel.playBehavior(
-                    PetPersonalityBehavior.perchIdle(for: self.petID, stableSeed: seed),
-                    returnToIdleAfter: nil
-                )
-                self.startFollowingPerch()
+                self.performPerchActivity(PetPersonalityBehavior.perchIdle(for: self.petID, stableSeed: seed))
                 self.schedulePerchDeparture(after: duration)
             }
         }
         ambientReturnWorkItem = item
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.65, execute: item)
+    }
+
+    private func performPerchActivity(_ animation: PetBehaviorAnimation) {
+        let activity: PerchActivity = switch animation {
+        case .perchWalkLeft: .edgeWalkingLeft
+        case .perchWalkRight: .edgeWalkingRight
+        case .nap: .napping
+        default: .personality(animation)
+        }
+        behaviorMachine.setPerchActivity(activity)
+        spriteView.sceneModel.playBehavior(animation, returnToIdleAfter: nil)
+        guard animation == .perchWalkLeft || animation == .perchWalkRight,
+              let target = activePerchTarget else {
+            startFollowingPerch()
+            return
+        }
+        let delta: CGFloat = animation == .perchWalkLeft ? -52 : 52
+        let nextX = min(target.safeHorizontalRange.upperBound, max(target.safeHorizontalRange.lowerBound, panel.frame.minX + delta))
+        guard abs(nextX - panel.frame.minX) > 4 else {
+            startFollowingPerch()
+            return
+        }
+        NSAnimationContext.runAnimationGroup { context in
+            context.duration = 1.4
+            context.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+            panel.animator().setFrameOrigin(NSPoint(x: nextX, y: panel.frame.minY))
+        } completionHandler: { [weak self] in
+            Task { @MainActor in
+                guard let self, let oldTarget = self.activePerchTarget else { return }
+                self.activePerchTarget = PerchTarget(
+                    kind: oldTarget.kind,
+                    windowNumber: oldTarget.windowNumber,
+                    ownerPID: oldTarget.ownerPID,
+                    screenID: oldTarget.screenID,
+                    windowFrame: oldTarget.windowFrame,
+                    anchor: CGPoint(x: nextX, y: oldTarget.anchor.y),
+                    safeHorizontalRange: oldTarget.safeHorizontalRange
+                )
+                self.spriteView.sceneModel.playBehavior(.perchSit, returnToIdleAfter: nil)
+                self.behaviorMachine.setPerchActivity(.sitting)
+                self.startFollowingPerch()
+            }
+        }
     }
 
     private func startFollowingPerch() {
@@ -605,21 +653,23 @@ final class PetWindowController: NSObject {
             return
         }
         let desktopTop = NSScreen.screens.first?.frame.maxY ?? screen.frame.maxY
-        let frame = PerchCoordinateConverter.appKitFrame(fromQuartz: raw.frame, desktopTop: desktopTop)
-        guard frame.intersects(screen.visibleFrame) else { leavePerch(); return }
-        let relativeX = target.anchor.x - target.windowFrame.minX
-        let lower = max(frame.minX + perchSelector.controlButtonReserve, screen.visibleFrame.minX + perchSelector.edgePadding)
-        let upper = min(
-            frame.maxX - perchSelector.edgePadding - panel.frame.width,
-            screen.visibleFrame.maxX - perchSelector.edgePadding - panel.frame.width
-        )
-        guard upper > lower else { leavePerch(); return }
-        let next = NSPoint(
-            x: min(upper, max(lower, frame.minX + relativeX)),
-            y: frame.maxY - panel.frame.height * 0.15
-        )
+        guard raw.layer == 0, raw.isOnScreen, raw.ownerPID == target.ownerPID,
+              let next = PerchFollowResolver.origin(
+                for: target,
+                updatedQuartzFrame: raw.frame,
+                desktopTop: desktopTop,
+                screenFrame: screen.visibleFrame,
+                petSize: panel.frame.size
+              ) else {
+            leavePerch()
+            return
+        }
         guard hypot(next.x - panel.frame.minX, next.y - panel.frame.minY) > 1.5 else { return }
-        panel.setFrameOrigin(next)
+        NSAnimationContext.runAnimationGroup { context in
+            context.duration = 0.18
+            context.timingFunction = CAMediaTimingFunction(name: .easeOut)
+            panel.animator().setFrameOrigin(next)
+        }
     }
 
     private func schedulePerchDeparture(after duration: TimeInterval) {
@@ -674,7 +724,10 @@ final class PetWindowController: NSObject {
         origin.x = min(visible.maxX - panel.frame.width, max(visible.minX, origin.x))
         origin.y = min(visible.maxY - panel.frame.height, max(visible.minY, origin.y))
         panel.setFrameOrigin(origin)
-        persistPosition()
+        // A perch is temporary. Screen changes must not replace the user's saved home position.
+        if PetPositionPersistencePolicy.shouldPersist(hasTemporaryPerch: activePerchTarget != nil) {
+            persistPosition()
+        }
         if let invitationPanel {
             invitationPanel.setFrameOrigin(NSPoint(
                 x: min(visible.maxX - invitationPanel.frame.width, max(visible.minX, panel.frame.midX - invitationPanel.frame.width / 2)),
@@ -819,6 +872,17 @@ final class PetSpriteView: SKView {
 
     required init?(coder: NSCoder) { nil }
 
+    override func hitTest(_ point: NSPoint) -> NSView? {
+        // Ignore the large transparent corners of the borderless pet window.
+        let center = NSPoint(x: bounds.midX, y: bounds.midY * 0.94)
+        let radiusX = max(1, bounds.width * 0.42)
+        let radiusY = max(1, bounds.height * 0.45)
+        let dx = (point.x - center.x) / radiusX
+        let dy = (point.y - center.y) / radiusY
+        guard dx * dx + dy * dy <= 1 else { return nil }
+        return super.hitTest(point)
+    }
+
     override func mouseDown(with event: NSEvent) {
         owner?.registerDirectInteraction()
         if event.clickCount >= 2 {
@@ -934,7 +998,7 @@ final class PetSpriteScene: SKScene {
             )
             sprite.run(clip.loops ? .repeatForever(animation) : animation, withKey: "frames")
         } else {
-            play(fallbackState(for: behavior), returnToIdleAfter: duration)
+            play(PetBehaviorFallback.state(for: behavior, manifest: behaviorManifest), returnToIdleAfter: duration)
             return
         }
         if let duration {
@@ -956,19 +1020,6 @@ final class PetSpriteScene: SKScene {
                 height: 1 / CGFloat(rows)
             )
             return SKTexture(rect: rect, in: texture)
-        }
-    }
-
-    private func fallbackState(for behavior: PetBehaviorAnimation) -> AnimationState {
-        if let fallback = behaviorManifest?.clip(behavior)?.fallback { return fallback }
-        switch behavior {
-        case .celebrate, .perchEnter, .perchExit, .stretch: return .jumping
-        case .perchWalkLeft: return .runningLeft
-        case .perchWalkRight: return .runningRight
-        case .ashInviteWing: return .waving
-        case .solPouncePrep, .mousseGroom, .ashHeadTilt: return .review
-        case .solEarTwitch, .mousseProud: return .waiting
-        case .nap, .perchSit, .solTailChase, .solPerchTailWag, .mousseElegantSit, .ashSlowSquint: return .idle
         }
     }
 
