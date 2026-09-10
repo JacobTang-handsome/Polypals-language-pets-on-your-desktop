@@ -1,0 +1,88 @@
+{
+  "pairs": [
+    {
+      "A": "ambiguous",
+      "B": "screen-right",
+      "reason": "A is near frontal with no decisive side profile; B's beak and facial turn point right.",
+      "pair": "horizontal-1"
+    },
+    {
+      "A": "screen-right",
+      "B": "screen-right",
+      "reason": "Both owls show beaks and facial profiles oriented to screen-right.",
+      "pair": "horizontal-2"
+    },
+    {
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "A's beak/profile points left while B's points right.",
+      "pair": "horizontal-3"
+    },
+    {
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "A is a clear left-facing profile; B is a clear right-facing profile.",
+      "pair": "horizontal-4"
+    },
+    {
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "The side profiles visibly face opposite directions: A left, B right.",
+      "pair": "horizontal-5"
+    },
+    {
+      "A": "screen-left",
+      "B": "screen-left",
+      "reason": "Both heads and beaks angle toward screen-left.",
+      "pair": "horizontal-6"
+    },
+    {
+      "A": "screen-left",
+      "B": "screen-left",
+      "reason": "Both owls present left-facing, downward-angled side profiles.",
+      "pair": "horizontal-7"
+    },
+    {
+      "A": "up",
+      "B": "down",
+      "reason": "A's eyes/head lift upward; B's eyelids and head angle downward.",
+      "pair": "vertical-1"
+    },
+    {
+      "A": "up",
+      "B": "down",
+      "reason": "A looks raised and open-eyed upward; B is visibly bowed with downward gaze.",
+      "pair": "vertical-2"
+    },
+    {
+      "A": "down",
+      "B": "up",
+      "reason": "A's head and gaze dip down; B's face and eyes lift up.",
+      "pair": "vertical-3"
+    },
+    {
+      "A": "down",
+      "B": "up",
+      "reason": "A has a lowered downward gaze; B has an elevated upward gaze.",
+      "pair": "vertical-4"
+    },
+    {
+      "A": "up",
+      "B": "up",
+      "reason": "Both owls hold raised heads with upward-directed gaze.",
+      "pair": "vertical-5"
+    },
+    {
+      "A": "up",
+      "B": "down",
+      "reason": "A's head/eyes are lifted; B's head is lowered and gaze points down.",
+      "pair": "vertical-6"
+    },
+    {
+      "A": "up",
+      "B": "down",
+      "reason": "A presents a raised frontal head; B is clearly bowed downward.",
+      "pair": "vertical-7"
+    }
+  ]
+}

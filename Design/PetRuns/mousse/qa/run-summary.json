@@ -1,0 +1,15 @@
+{
+  "petId": "mousse",
+  "spriteVersionNumber": 2,
+  "finalAtlas": "final/spritesheet-extended.webp",
+  "packagedAtlas": "Sources/PolyPals/Resources/Pets/mousse/mousse-spritesheet.webp",
+  "sha256": "a222321db2530d2f6c53734a91cc4c2aace7c930ec32f2e75ba59327266425ee",
+  "atlasValidation": "final/validation-extended.json",
+  "visualReview": "qa/review.json",
+  "contactSheet": "qa/contact-sheet-extended.png",
+  "directionSheet": "qa/look-directions.png",
+  "directionSemantics": "qa/direction-semantics.json",
+  "blindValidation": "qa/direction-blind-validation.json",
+  "continuity": "qa/look-continuity.json",
+  "status": "passed-with-minor-intermediate-direction-warnings"
+}

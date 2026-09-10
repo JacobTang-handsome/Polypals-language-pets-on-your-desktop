@@ -1,0 +1,112 @@
+{
+  "ok": true,
+  "frames_root": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/BehaviorRuns/ash/frames/nap",
+  "states": [
+    "idle"
+  ],
+  "errors": [],
+  "warnings": [],
+  "rows": [
+    {
+      "state": "idle",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/BehaviorRuns/ash/frames/nap/idle/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 28201,
+          "bbox": [
+            9,
+            5,
+            183,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 281
+        },
+        {
+          "index": 1,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/BehaviorRuns/ash/frames/nap/idle/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 28504,
+          "bbox": [
+            8,
+            5,
+            183,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 253
+        },
+        {
+          "index": 2,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/BehaviorRuns/ash/frames/nap/idle/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 28723,
+          "bbox": [
+            7,
+            5,
+            185,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 254
+        },
+        {
+          "index": 3,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/BehaviorRuns/ash/frames/nap/idle/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 28853,
+          "bbox": [
+            7,
+            5,
+            185,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 245
+        },
+        {
+          "index": 4,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/BehaviorRuns/ash/frames/nap/idle/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 27572,
+          "bbox": [
+            10,
+            5,
+            181,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 268
+        },
+        {
+          "index": 5,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/BehaviorRuns/ash/frames/nap/idle/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 27971,
+          "bbox": [
+            9,
+            5,
+            182,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 281
+        }
+      ]
+    }
+  ]
+}

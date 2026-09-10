@@ -1,0 +1,107 @@
+{
+  "pet": "ash",
+  "reviewedBy": "parent",
+  "result": "pass",
+  "directions": [
+    {
+      "direction": "000",
+      "status": "pass",
+      "horizontalEvidence": "centered",
+      "verticalEvidence": "up"
+    },
+    {
+      "direction": "022.5",
+      "status": "pass",
+      "horizontalEvidence": "screen-right",
+      "verticalEvidence": "up"
+    },
+    {
+      "direction": "045",
+      "status": "pass",
+      "horizontalEvidence": "screen-right",
+      "verticalEvidence": "up"
+    },
+    {
+      "direction": "067.5",
+      "status": "pass",
+      "horizontalEvidence": "screen-right",
+      "verticalEvidence": "up"
+    },
+    {
+      "direction": "090",
+      "status": "pass",
+      "horizontalEvidence": "screen-right",
+      "verticalEvidence": "axis-level"
+    },
+    {
+      "direction": "112.5",
+      "status": "pass",
+      "horizontalEvidence": "screen-right",
+      "verticalEvidence": "down"
+    },
+    {
+      "direction": "135",
+      "status": "pass",
+      "horizontalEvidence": "screen-right",
+      "verticalEvidence": "down"
+    },
+    {
+      "direction": "157.5",
+      "status": "pass",
+      "horizontalEvidence": "screen-right",
+      "verticalEvidence": "down"
+    },
+    {
+      "direction": "180",
+      "status": "pass",
+      "horizontalEvidence": "centered",
+      "verticalEvidence": "down"
+    },
+    {
+      "direction": "202.5",
+      "status": "pass",
+      "horizontalEvidence": "screen-left",
+      "verticalEvidence": "down"
+    },
+    {
+      "direction": "225",
+      "status": "pass",
+      "horizontalEvidence": "screen-left",
+      "verticalEvidence": "down"
+    },
+    {
+      "direction": "247.5",
+      "status": "warning",
+      "horizontalEvidence": "screen-left",
+      "verticalEvidence": "down"
+    },
+    {
+      "direction": "270",
+      "status": "warning",
+      "horizontalEvidence": "screen-left",
+      "verticalEvidence": "axis-level"
+    },
+    {
+      "direction": "292.5",
+      "status": "warning",
+      "horizontalEvidence": "screen-left",
+      "verticalEvidence": "up"
+    },
+    {
+      "direction": "315",
+      "status": "pass",
+      "horizontalEvidence": "screen-left",
+      "verticalEvidence": "up"
+    },
+    {
+      "direction": "337.5",
+      "status": "pass",
+      "horizontalEvidence": "screen-left",
+      "verticalEvidence": "up"
+    }
+  ],
+  "notes": [
+    "All four cardinals are unmistakable through complete-eye rotation, beak placement, facial disk and head turn.",
+    "Metric warnings near 270 are minor; labeled review confirms continuous viewer-left semantics, stable identity, and no clipping."
+  ]
+}

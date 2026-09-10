@@ -1,0 +1,17 @@
+name: Bug report
+description: Report a reproducible PolyPals problem without private data
+body:
+  - type: textarea
+    attributes: { label: What happened? }
+    validations: { required: true }
+  - type: textarea
+    attributes: { label: Steps to reproduce }
+    validations: { required: true }
+  - type: input
+    attributes: { label: PolyPals and macOS versions }
+  - type: checkboxes
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed API keys, chats, databases, logs, and personal information.
+          required: true

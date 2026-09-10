@@ -1,0 +1,88 @@
+{
+  "pairs": [
+    {
+      "A": "ambiguous",
+      "B": "screen-right",
+      "reason": "A faces mostly forward; B's beak and gaze point right.",
+      "pair": "horizontal-1"
+    },
+    {
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "A's beak points left; B's beak points right.",
+      "pair": "horizontal-2"
+    },
+    {
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "Both are clear side profiles, A left-facing and B right-facing.",
+      "pair": "horizontal-3"
+    },
+    {
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "A looks left in profile; B looks right in profile.",
+      "pair": "horizontal-4"
+    },
+    {
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "A's visible profile points left; B's profile points right.",
+      "pair": "horizontal-5"
+    },
+    {
+      "A": "ambiguous",
+      "B": "ambiguous",
+      "reason": "Both are downward/inward three-quarter poses rather than clear horizontal profiles.",
+      "pair": "horizontal-6"
+    },
+    {
+      "A": "ambiguous",
+      "B": "ambiguous",
+      "reason": "Both heads angle downward with no decisive left/right profile.",
+      "pair": "horizontal-7"
+    },
+    {
+      "A": "ambiguous",
+      "B": "down",
+      "reason": "A is front-facing; B is a clear top-down, eyes-lowered pose.",
+      "pair": "vertical-1"
+    },
+    {
+      "A": "ambiguous",
+      "B": "down",
+      "reason": "A faces forward; B's head and gaze point downward.",
+      "pair": "vertical-2"
+    },
+    {
+      "A": "down",
+      "B": "up",
+      "reason": "A is head-down; B is upright with raised, upward-facing gaze.",
+      "pair": "vertical-3"
+    },
+    {
+      "A": "down",
+      "B": "up",
+      "reason": "A's head and gaze drop; B's face tilts upward.",
+      "pair": "vertical-4"
+    },
+    {
+      "A": "ambiguous",
+      "B": "ambiguous",
+      "reason": "Both are clear right-facing side poses, not decisive vertical directions.",
+      "pair": "vertical-5"
+    },
+    {
+      "A": "ambiguous",
+      "B": "down",
+      "reason": "A is upright/front-facing; B is visibly head-down.",
+      "pair": "vertical-6"
+    },
+    {
+      "A": "ambiguous",
+      "B": "down",
+      "reason": "A is upright/front-facing; B has a pronounced downward head tilt.",
+      "pair": "vertical-7"
+    }
+  ]
+}

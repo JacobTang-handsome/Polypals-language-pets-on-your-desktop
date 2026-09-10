@@ -1,0 +1,15 @@
+name: Content pack submission
+description: Propose a validated declarative content pack
+body:
+  - type: input
+    attributes: { label: Pack ID and version }
+    validations: { required: true }
+  - type: textarea
+    attributes: { label: Languages, CEFR levels, sources, and license }
+    validations: { required: true }
+  - type: checkboxes
+    attributes:
+      label: Validation
+      options:
+        - label: The example validator passes and all dialogue is original or licensed.
+          required: true

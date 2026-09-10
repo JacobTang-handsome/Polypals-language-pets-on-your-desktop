@@ -1,0 +1,8356 @@
+{
+  "sourceLanguage": "zh-Hans",
+  "strings": {
+    "\n不要声称读取了屏幕、代码或外部应用。不要制造打卡、内疚或未完成任务。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\n不要声称读取了屏幕、代码或外部应用。不要制造打卡、内疚或未完成任务。"
+          }
+        }
+      }
+    },
+    "\n权威语言策略（覆盖人格文案里的旧等级）：": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\n权威语言策略（覆盖人格文案里的旧等级）："
+          }
+        }
+      }
+    },
+    "\n生成原创、无版权引用、无文化事实断言的微内容。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\n生成原创、无版权引用、无文化事实断言的微内容。"
+          }
+        }
+      }
+    },
+    "%@ pt": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ pt"
+          }
+        }
+      }
+    },
+    "%@ · %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ · %2$@"
+          }
+        }
+      }
+    },
+    "%@ · %@ · 关系 %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ · %2$@ · 关系 %3$@"
+          }
+        }
+      }
+    },
+    "%@%": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@%2$"
+          }
+        }
+      }
+    },
+    "A1 很实用的求助句。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A1 很实用的求助句。"
+          }
+        }
+      }
+    },
+    "AI 生成": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI 生成"
+          }
+        }
+      }
+    },
+    "API Key 已删除。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "API Key 已删除。"
+          }
+        }
+      }
+    },
+    "API Key 无效或无权限。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "API Key 无效或无权限。"
+          }
+        }
+      }
+    },
+    "Académie française 的词条列出用餐及其食物等意义。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Académie française 的词条列出用餐及其食物等意义。"
+          }
+        }
+      }
+    },
+    "Afternoon tea 的流行历史比一个著名传说更复杂。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afternoon tea 的流行历史比一个著名传说更复杂。"
+          }
+        }
+      }
+    },
+    "Ash 对一个意外成功的程序点了点头。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ash 对一个意外成功的程序点了点头。"
+          }
+        }
+      }
+    },
+    "Ash 的夜间便签": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ash 的夜间便签"
+          }
+        }
+      }
+    },
+    "Aubusson 挂毯技艺被列入非遗名录。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aubusson 挂毯技艺被列入非遗名录。"
+          }
+        }
+      }
+    },
+    "Could we…? 将建议表达得更柔和。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Could we…? 将建议表达得更柔和。"
+          }
+        }
+      }
+    },
+    "C’est…? 是非常常用的简单确认句。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "C’est…? 是非常常用的简单确认句。"
+          }
+        }
+      }
+    },
+    "Historic England 指出，相关日记与讽刺作品显示，闲暇阶层更早已有配点心饮茶的习惯。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Historic England 指出，相关日记与讽刺作品显示，闲暇阶层更早已有配点心饮茶的习惯。"
+          }
+        }
+      }
+    },
+    "Il y a 表示‘有’。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Il y a 表示‘有’。"
+          }
+        }
+      }
+    },
+    "Mousse 在评价什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mousse 在评价什么？"
+          }
+        }
+      }
+    },
+    "Mousse 在问什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mousse 在问什么？"
+          }
+        }
+      }
+    },
+    "Mousse 带来一句可以立即使用的话。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mousse 带来一句可以立即使用的话。"
+          }
+        }
+      }
+    },
+    "Mousse 很认真地指着点心。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mousse 很认真地指着点心。"
+          }
+        }
+      }
+    },
+    "Mousse 想吃水果。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mousse 想吃水果。"
+          }
+        }
+      }
+    },
+    "Mousse 摆好了一幅简单画面。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mousse 摆好了一幅简单画面。"
+          }
+        }
+      }
+    },
+    "Mousse 的咖啡桌": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mousse 的咖啡桌"
+          }
+        }
+      }
+    },
+    "OpenAI API Key（可稍后设置）": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OpenAI API Key（可稍后设置）"
+          }
+        }
+      }
+    },
+    "PolyPals 设置": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PolyPals 设置"
+          }
+        }
+      }
+    },
+    "RAE 将 siesta 解释为午餐后用于睡眠或休息的时间。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RAE 将 siesta 解释为午餐后用于睡眠或休息的时间。"
+          }
+        }
+      }
+    },
+    "RAE 将 ñ 作为独立字母收录。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RAE 将 ñ 作为独立字母收录。"
+          }
+        }
+      }
+    },
+    "RAE 将其解释为吃完后仍留在桌边的时间。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RAE 将其解释为吃完后仍留在桌边的时间。"
+          }
+        }
+      }
+    },
+    "Sol 今天决定诚实描述自己的状态。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sol 今天决定诚实描述自己的状态。"
+          }
+        }
+      }
+    },
+    "Sol 对一个尚未运行的程序很有信心。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sol 对一个尚未运行的程序很有信心。"
+          }
+        }
+      }
+    },
+    "Sol 展开一张很长的地图。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sol 展开一张很长的地图。"
+          }
+        }
+      }
+    },
+    "Sol 带来一个很有辨识度的字母。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sol 带来一个很有辨识度的字母。"
+          }
+        }
+      }
+    },
+    "Sol 抱来一盒并不存在的电池。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sol 抱来一盒并不存在的电池。"
+          }
+        }
+      }
+    },
+    "Sol 的小角落": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sol 的小角落"
+          }
+        }
+      }
+    },
+    "Sol 说它耳朵后面有只苍蝇。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sol 说它耳朵后面有只苍蝇。"
+          }
+        }
+      }
+    },
+    "Sol 需要的手并不是字面意义上的。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sol 需要的手并不是字面意义上的。"
+          }
+        }
+      }
+    },
+    "UNESCO 将 flamenco 列入人类非物质文化遗产代表作名录。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "UNESCO 将 flamenco 列入人类非物质文化遗产代表作名录。"
+          }
+        }
+      }
+    },
+    "UNESCO 描述其为以传统舞蹈为核心的节庆聚会。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "UNESCO 描述其为以传统舞蹈为核心的节庆聚会。"
+          }
+        }
+      }
+    },
+    "UNESCO 收录的是哪方面？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "UNESCO 收录的是哪方面？"
+          }
+        }
+      }
+    },
+    "UNESCO 更强调什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "UNESCO 更强调什么？"
+          }
+        }
+      }
+    },
+    "UNESCO 项目强调了什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "UNESCO 项目强调了什么？"
+          }
+        }
+      }
+    },
+    "\\n不要声称读取了屏幕、代码或外部应用。不要制造打卡、内疚或未完成任务。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\\n不要声称读取了屏幕、代码或外部应用。不要制造打卡、内疚或未完成任务。"
+          }
+        }
+      }
+    },
+    "\\n生成原创、无版权引用、无文化事实断言的微内容。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\\n生成原创、无版权引用、无文化事实断言的微内容。"
+          }
+        }
+      }
+    },
+    "against all odds 强调困难条件下仍然成功。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "against all odds 强调困难条件下仍然成功。"
+          }
+        }
+      }
+    },
+    "alegrarse 表示感到高兴。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "alegrarse 表示感到高兴。"
+          }
+        }
+      }
+    },
+    "avec plaisir 可表示‘乐意之至’。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "avec plaisir 可表示‘乐意之至’。"
+          }
+        }
+      }
+    },
+    "avec 表示‘和、带有’。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "avec 表示‘和、带有’。"
+          }
+        }
+      }
+    },
+    "avoir faim 表示‘饿’，法语里字面是‘有饥饿感’。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "avoir faim 表示‘饿’，法语里字面是‘有饥饿感’。"
+          }
+        }
+      }
+    },
+    "bien 常作副词，bueno 常作形容词。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "bien 常作副词，bueno 常作形容词。"
+          }
+        }
+      }
+    },
+    "bonsoir 用于晚上。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "bonsoir 用于晚上。"
+          }
+        }
+      }
+    },
+    "buscar 表示寻找。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "buscar 表示寻找。"
+          }
+        }
+      }
+    },
+    "ce livre 表示这本书。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ce livre 表示这本书。"
+          }
+        }
+      }
+    },
+    "cette 用于阴性单数。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "cette 用于阴性单数。"
+          }
+        }
+      }
+    },
+    "cómo llego a… 用来询问如何到达。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "cómo llego a… 用来询问如何到达。"
+          }
+        }
+      }
+    },
+    "dans 表示在……里面。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "dans 表示在……里面。"
+          }
+        }
+      }
+    },
+    "demain 表示明天。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "demain 表示明天。"
+          }
+        }
+      }
+    },
+    "dort 表示正在睡。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "dort 表示正在睡。"
+          }
+        }
+      }
+    },
+    "délicieux 表示美味。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "délicieux 表示美味。"
+          }
+        }
+      }
+    },
+    "encontrar 表示找到。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "encontrar 表示找到。"
+          }
+        }
+      }
+    },
+    "estar 常表达状态或位置。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "estar 常表达状态或位置。"
+          }
+        }
+      }
+    },
+    "faire froid 表示天气冷。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "faire froid 表示天气冷。"
+          }
+        }
+      }
+    },
+    "fatigué 表示疲惫。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "fatigué 表示疲惫。"
+          }
+        }
+      }
+    },
+    "hacer viento 表示刮风。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "hacer viento 表示刮风。"
+          }
+        }
+      }
+    },
+    "ici 表示这里，là 常表示那里。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ici 表示这里，là 常表示那里。"
+          }
+        }
+      }
+    },
+    "ma maison。元音开头有特殊情况，稍后再学。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ma maison。元音开头有特殊情况，稍后再学。"
+          }
+        }
+      }
+    },
+    "otra vez 表示再次。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "otra vez 表示再次。"
+          }
+        }
+      }
+    },
+    "où 表示哪里。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "où 表示哪里。"
+          }
+        }
+      }
+    },
+    "para 常用于目的或目标。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "para 常用于目的或目标。"
+          }
+        }
+      }
+    },
+    "pomme 应该搭配哪一个？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "pomme 应该搭配哪一个？"
+          }
+        }
+      }
+    },
+    "pomme 是阴性名词：une pomme。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "pomme 是阴性名词：une pomme。"
+          }
+        }
+      }
+    },
+    "promising 表示前景好；conclusive 表示足以得出最终结论。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "promising 表示前景好；conclusive 表示足以得出最终结论。"
+          }
+        }
+      }
+    },
+    "saber 常用于知道事实或会做某事；conocer 常用于认识人或熟悉地方。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "saber 常用于知道事实或会做某事；conocer 常用于认识人或熟悉地方。"
+          }
+        }
+      }
+    },
+    "sous 表示在……下面。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "sous 表示在……下面。"
+          }
+        }
+      }
+    },
+    "traer una excusa 表示带着一个借口来。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "traer una excusa 表示带着一个借口来。"
+          }
+        }
+      }
+    },
+    "traer 常表示带来；llevar 常表示带走或携带去别处。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "traer 常表示带来；llevar 常表示带走或携带去别处。"
+          }
+        }
+      }
+    },
+    "très 是很，trop 常是太、过度。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "très 是很，trop 常是太、过度。"
+          }
+        }
+      }
+    },
+    "un peu 表示一点。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "un peu 表示一点。"
+          }
+        }
+      }
+    },
+    "voilà 可以表示‘给你、这就是’。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "voilà 可以表示‘给你、这就是’。"
+          }
+        }
+      }
+    },
+    "voudrais 是礼貌表达需求。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "voudrais 是礼貌表达需求。"
+          }
+        }
+      }
+    },
+    "【可选纠错】": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "【可选纠错】"
+          }
+        }
+      }
+    },
+    "一": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一"
+          }
+        }
+      }
+    },
+    "一个小调整": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一个小调整"
+          }
+        }
+      }
+    },
+    "一个意外结局让 Sol 停了两秒。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一个意外结局让 Sol 停了两秒。"
+          }
+        }
+      }
+    },
+    "一个数字": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一个数字"
+          }
+        }
+      }
+    },
+    "一个被许多人认识、也常被简化的词。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一个被许多人认识、也常被简化的词。"
+          }
+        }
+      }
+    },
+    "一件乐器": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一件乐器"
+          }
+        }
+      }
+    },
+    "一只橙红色小狐狸正望向旁边。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一只橙红色小狐狸正望向旁边。"
+          }
+        }
+      }
+    },
+    "一只狐狸和一只过大的杯子。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一只狐狸和一只过大的杯子。"
+          }
+        }
+      }
+    },
+    "一只猫头鹰安静地看着你，似乎已经有了评价。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一只猫头鹰安静地看着你，似乎已经有了评价。"
+          }
+        }
+      }
+    },
+    "一块小饼干": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一块小饼干"
+          }
+        }
+      }
+    },
+    "一张菜单": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一张菜单"
+          }
+        }
+      }
+    },
+    "一段原创咖啡馆对白。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一段原创咖啡馆对白。"
+          }
+        }
+      }
+    },
+    "一段原创的代码对白。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一段原创的代码对白。"
+          }
+        }
+      }
+    },
+    "一段原创的明日计划。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一段原创的明日计划。"
+          }
+        }
+      }
+    },
+    "一段原创的雨天对白。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一段原创的雨天对白。"
+          }
+        }
+      }
+    },
+    "一段只有两句的原创场景。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一段只有两句的原创场景。"
+          }
+        }
+      }
+    },
+    "一段新的小发现。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一段新的小发现。"
+          }
+        }
+      }
+    },
+    "一段旅行": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一段旅行"
+          }
+        }
+      }
+    },
+    "一种夸张的幽默回应。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一种夸张的幽默回应。"
+          }
+        }
+      }
+    },
+    "一种建筑": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一种建筑"
+          }
+        }
+      }
+    },
+    "一种甜点": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一种甜点"
+          }
+        }
+      }
+    },
+    "一种舞步": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一种舞步"
+          }
+        }
+      }
+    },
+    "一种菜谱": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一种菜谱"
+          }
+        }
+      }
+    },
+    "一种衣服": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一种衣服"
+          }
+        }
+      }
+    },
+    "一首歌曲": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一首歌曲"
+          }
+        }
+      }
+    },
+    "七": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "七"
+          }
+        }
+      }
+    },
+    "三": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "三"
+          }
+        }
+      }
+    },
+    "三个住在 Mac 桌面上的双语朋友": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "三个住在 Mac 桌面上的双语朋友"
+          }
+        }
+      }
+    },
+    "上下文预览": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上下文预览"
+          }
+        }
+      }
+    },
+    "上午": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上午"
+          }
+        }
+      }
+    },
+    "下午": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下午"
+          }
+        }
+      }
+    },
+    "下周": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下周"
+          }
+        }
+      }
+    },
+    "不可能": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不可能"
+          }
+        }
+      }
+    },
+    "不想再看这类": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不想再看这类"
+          }
+        }
+      }
+    },
+    "不知道": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不知道"
+          }
+        }
+      }
+    },
+    "不读取屏幕、代码或按键；聊天只发送当前消息、最近会话和你已确认的记忆。模型请求固定使用 store: false。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不读取屏幕、代码或按键；聊天只发送当前消息、最近会话和你已确认的记忆。模型请求固定使用 store: false。"
+          }
+        }
+      }
+    },
+    "专业或隐含语境；不故作复杂": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "专业或隐含语境；不故作复杂"
+          }
+        }
+      }
+    },
+    "专业语境和风格敏感词汇": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "专业语境和风格敏感词汇"
+          }
+        }
+      }
+    },
+    "专注": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "专注"
+          }
+        }
+      }
+    },
+    "专注 25 分钟": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "专注 25 分钟"
+          }
+        }
+      }
+    },
+    "专注 50 分钟": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "专注 50 分钟"
+          }
+        }
+      }
+    },
+    "专注中": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "专注中"
+          }
+        }
+      }
+    },
+    "两个‘知道’并不完全一样。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "两个‘知道’并不完全一样。"
+          }
+        }
+      }
+    },
+    "两个冠词只差一个字母。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "两个冠词只差一个字母。"
+          }
+        }
+      }
+    },
+    "两个词都像‘暗示’，责任却不同。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "两个词都像‘暗示’，责任却不同。"
+          }
+        }
+      }
+    },
+    "中文帮助": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "中文帮助"
+          }
+        }
+      }
+    },
+    "中文提示": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "中文提示"
+          }
+        }
+      }
+    },
+    "中文翻译（可选）": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "中文翻译（可选）"
+          }
+        }
+      }
+    },
+    "为其中一人配一句话。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "为其中一人配一句话。"
+          }
+        }
+      }
+    },
+    "主动程度": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "主动程度"
+          }
+        }
+      }
+    },
+    "九": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "九"
+          }
+        }
+      }
+    },
+    "书店": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "书店"
+          }
+        }
+      }
+    },
+    "二": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "二"
+          }
+        }
+      }
+    },
+    "五": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "五"
+          }
+        }
+      }
+    },
+    "什么时候使用？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "什么时候使用？"
+          }
+        }
+      }
+    },
+    "什么时候再见？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "什么时候再见？"
+          }
+        }
+      }
+    },
+    "什么时候最有用？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "什么时候最有用？"
+          }
+        }
+      }
+    },
+    "什么时候说？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "什么时候说？"
+          }
+        }
+      }
+    },
+    "仅手动": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "仅手动"
+          }
+        }
+      }
+    },
+    "仅用高频日常词": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "仅用高频日常词"
+          }
+        }
+      }
+    },
+    "今天不要": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "今天不要"
+          }
+        }
+      }
+    },
+    "今天只见": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "今天只见"
+          }
+        }
+      }
+    },
+    "今天安静": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "今天安静"
+          }
+        }
+      }
+    },
+    "今天我不想工作": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "今天我不想工作"
+          }
+        }
+      }
+    },
+    "今天我需要短暂休息": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "今天我需要短暂休息"
+          }
+        }
+      }
+    },
+    "今天我需要长途旅行": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "今天我需要长途旅行"
+          }
+        }
+      }
+    },
+    "今天的节奏来自一个有来源的小知识。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "今天的节奏来自一个有来源的小知识。"
+          }
+        }
+      }
+    },
+    "今天跳过": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "今天跳过"
+          }
+        }
+      }
+    },
+    "今晚": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "今晚"
+          }
+        }
+      }
+    },
+    "从“C’est…”开始说一句。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从“C’est…”开始说一句。"
+          }
+        }
+      }
+    },
+    "代码": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "代码"
+          }
+        }
+      }
+    },
+    "价格": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "价格"
+          }
+        }
+      }
+    },
+    "任何合理或荒诞的解释都可以。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "任何合理或荒诞的解释都可以。"
+          }
+        }
+      }
+    },
+    "任选一个细节说一句。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "任选一个细节说一句。"
+          }
+        }
+      }
+    },
+    "休眠": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "休眠"
+          }
+        }
+      }
+    },
+    "会议": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会议"
+          }
+        }
+      }
+    },
+    "传统上它指什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "传统上它指什么？"
+          }
+        }
+      }
+    },
+    "传统法棍面包的手工知识与文化被列入非遗名录。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "传统法棍面包的手工知识与文化被列入非遗名录。"
+          }
+        }
+      }
+    },
+    "低": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "低"
+          }
+        }
+      }
+    },
+    "低等级卡片句子明显过长": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "低等级卡片句子明显过长"
+          }
+        }
+      }
+    },
+    "你是 Ash，一只冷静聪明、略带干幽默的深蓝色小猫头鹰。使用自然高级英语，约 90% 英语和 10% 中文。区分闲聊、写作和研究语境；除非用户要求，否则不要把休息变成学术训练。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你是 Ash，一只冷静聪明、略带干幽默的深蓝色小猫头鹰。使用自然高级英语，约 90% 英语和 10% 中文。区分闲聊、写作和研究语境；除非用户要求，否则不要把休息变成学术训练。"
+          }
+        }
+      }
+    },
+    "你是 Mousse，一只高傲但很有耐心、重视仪式感的小猎豹。使用 A1 法语短句，约 55% 法语和 45% 中文或视觉提示。每轮最多引入一个新结构，并认真庆祝很小的进步。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你是 Mousse，一只高傲但很有耐心、重视仪式感的小猎豹。使用 A1 法语短句，约 55% 法语和 45% 中文或视觉提示。每轮最多引入一个新结构，并认真庆祝很小的进步。"
+          }
+        }
+      }
+    },
+    "你是 Sol，一只活泼、好奇、略夸张的橙红色小狐狸。你优先理解用户想表达什么，不因错误制造压力。使用 B1 西班牙语，约 85% 西语和 15% 简短中文提示。闲聊时不主动教学。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你是 Sol，一只活泼、好奇、略夸张的橙红色小狐狸。你优先理解用户想表达什么，不因错误制造压力。使用 B1 西班牙语，约 85% 西语和 15% 简短中文提示。闲聊时不主动教学。"
+          }
+        }
+      }
+    },
+    "你有一分钟吗": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你有一分钟吗"
+          }
+        }
+      }
+    },
+    "你有硬币吗": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你有硬币吗"
+          }
+        }
+      }
+    },
+    "你觉得这表示什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你觉得这表示什么？"
+          }
+        }
+      }
+    },
+    "你需要礼貌地打断一个过长的会议。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你需要礼貌地打断一个过长的会议。"
+          }
+        }
+      }
+    },
+    "使用系统通知": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用系统通知"
+          }
+        }
+      }
+    },
+    "例如：每周三下午六点让 Mousse 带来复习": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "例如：每周三下午六点让 Mousse 带来复习"
+          }
+        }
+      }
+    },
+    "保存": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存"
+          }
+        }
+      }
+    },
+    "保存为共同记忆": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存为共同记忆"
+          }
+        }
+      }
+    },
+    "保存聊天历史": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存聊天历史"
+          }
+        }
+      }
+    },
+    "保持当前等级": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保持当前等级"
+          }
+        }
+      }
+    },
+    "修辞、语用细微差异和灵活句法": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "修辞、语用细微差异和灵活句法"
+          }
+        }
+      }
+    },
+    "修饰动作‘做得好’常用哪个？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "修饰动作‘做得好’常用哪个？"
+          }
+        }
+      }
+    },
+    "停止": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "停止"
+          }
+        }
+      }
+    },
+    "停止当前专注": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "停止当前专注"
+          }
+        }
+      }
+    },
+    "停止生成": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "停止生成"
+          }
+        }
+      }
+    },
+    "偶尔邀请": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "偶尔邀请"
+          }
+        }
+      }
+    },
+    "允许宠物在窗口边缘活动": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "允许宠物在窗口边缘活动"
+          }
+        }
+      }
+    },
+    "先回应意思，不主动纠错。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "先回应意思，不主动纠错。"
+          }
+        }
+      }
+    },
+    "先回应意思；每轮最多纠正一个最重要的问题，用【可选纠错】折叠段落表示。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "先回应意思；每轮最多纠正一个最重要的问题，用【可选纠错】折叠段落表示。"
+          }
+        }
+      }
+    },
+    "先把这个小词摆好。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "先把这个小词摆好。"
+          }
+        }
+      }
+    },
+    "先表达意思，纠错默认折叠。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "先表达意思，纠错默认折叠。"
+          }
+        }
+      }
+    },
+    "全局冷却中": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全局冷却中"
+          }
+        }
+      }
+    },
+    "全屏空间": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全屏空间"
+          }
+        }
+      }
+    },
+    "全部": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全部"
+          }
+        }
+      }
+    },
+    "全部安静一小时": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全部安静一小时"
+          }
+        }
+      }
+    },
+    "全部宠物": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全部宠物"
+          }
+        }
+      }
+    },
+    "八": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "八"
+          }
+        }
+      }
+    },
+    "公园": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "公园"
+          }
+        }
+      }
+    },
+    "六": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "六"
+          }
+        }
+      }
+    },
+    "共享饮用的草本饮品": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "共享饮用的草本饮品"
+          }
+        }
+      }
+    },
+    "共同庆祝与餐桌仪式": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "共同庆祝与餐桌仪式"
+          }
+        }
+      }
+    },
+    "共同收藏": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "共同收藏"
+          }
+        }
+      }
+    },
+    "共同记忆": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "共同记忆"
+          }
+        }
+      }
+    },
+    "关于": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "关于"
+          }
+        }
+      }
+    },
+    "关闭": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "关闭"
+          }
+        }
+      }
+    },
+    "关闭聊天": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "关闭聊天"
+          }
+        }
+      }
+    },
+    "内容": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "内容"
+          }
+        }
+      }
+    },
+    "内容偏好": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "内容偏好"
+          }
+        }
+      }
+    },
+    "内容包": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "内容包"
+          }
+        }
+      }
+    },
+    "内容包升级预览": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "内容包升级预览"
+          }
+        }
+      }
+    },
+    "内容包导入预览": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "内容包导入预览"
+          }
+        }
+      }
+    },
+    "内容包没有卡片。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "内容包没有卡片。"
+          }
+        }
+      }
+    },
+    "内容包清单不完整。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "内容包清单不完整。"
+          }
+        }
+      }
+    },
+    "内容包版本不受支持。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "内容包版本不受支持。"
+          }
+        }
+      }
+    },
+    "内容包超过2MB。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "内容包超过2MB。"
+          }
+        }
+      }
+    },
+    "内容已重复": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "内容已重复"
+          }
+        }
+      }
+    },
+    "再来一个": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "再来一个"
+          }
+        }
+      }
+    },
+    "再试一次": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "再试一次"
+          }
+        }
+      }
+    },
+    "冷": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "冷"
+          }
+        }
+      }
+    },
+    "准备付款时": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "准备付款时"
+          }
+        }
+      }
+    },
+    "准备睡觉": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "准备睡觉"
+          }
+        }
+      }
+    },
+    "准备离开": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "准备离开"
+          }
+        }
+      }
+    },
+    "几点了": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "几点了"
+          }
+        }
+      }
+    },
+    "出口": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "出口"
+          }
+        }
+      }
+    },
+    "划走": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "划走"
+          }
+        }
+      }
+    },
+    "列车暂时保持神秘。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "列车暂时保持神秘。"
+          }
+        }
+      }
+    },
+    "刚好该伸个懒腰": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "刚好该伸个懒腰"
+          }
+        }
+      }
+    },
+    "初见": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "初见"
+          }
+        }
+      }
+    },
+    "初见阶段：礼貌、简短，不主动引用共同记忆。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "初见阶段：礼貌、简短，不主动引用共同记忆。"
+          }
+        }
+      }
+    },
+    "删除 API Key": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除 API Key"
+          }
+        }
+      }
+    },
+    "刮风": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "刮风"
+          }
+        }
+      }
+    },
+    "制成复习卡": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "制成复习卡"
+          }
+        }
+      }
+    },
+    "包含语气或搭配判断": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "包含语气或搭配判断"
+          }
+        }
+      }
+    },
+    "包括香料植物种植、原料处理和调香。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "包括香料植物种植、原料处理和调香。"
+          }
+        }
+      }
+    },
+    "医生": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "医生"
+          }
+        }
+      }
+    },
+    "十": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "十"
+          }
+        }
+      }
+    },
+    "午后短暂休息": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "午后短暂休息"
+          }
+        }
+      }
+    },
+    "单一城市公园": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "单一城市公园"
+          }
+        }
+      }
+    },
+    "单个 r 的 pero 是‘但是’，双 r 的 perro 是‘狗’。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "单个 r 的 pero 是‘但是’，双 r 的 perro 是‘狗’。"
+          }
+        }
+      }
+    },
+    "单次": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "单次"
+          }
+        }
+      }
+    },
+    "单次消息最多 8,000 个字符，请缩短后再发送。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "单次消息最多 8,000 个字符，请缩短后再发送。"
+          }
+        }
+      }
+    },
+    "卡片": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "卡片"
+          }
+        }
+      }
+    },
+    "卡片时长或正文无效": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "卡片时长或正文无效"
+          }
+        }
+      }
+    },
+    "历史朝圣路线网络": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "历史朝圣路线网络"
+          }
+        }
+      }
+    },
+    "原创的简单咖啡馆对白。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "原创的简单咖啡馆对白。"
+          }
+        }
+      }
+    },
+    "原创的迟到现场。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "原创的迟到现场。"
+          }
+        }
+      }
+    },
+    "原创雨天对白。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "原创雨天对白。"
+          }
+        }
+      }
+    },
+    "原生 macOS 14+ · Apple Silicon · 直接分发测试版": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "原生 macOS 14+ · Apple Silicon · 直接分发测试版"
+          }
+        }
+      }
+    },
+    "去买电池": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "去买电池"
+          }
+        }
+      }
+    },
+    "去车站的路线": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "去车站的路线"
+          }
+        }
+      }
+    },
+    "发生了什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "发生了什么？"
+          }
+        }
+      }
+    },
+    "发送": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "发送"
+          }
+        }
+      }
+    },
+    "取消": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消"
+          }
+        }
+      }
+    },
+    "取消计划": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消计划"
+          }
+        }
+      }
+    },
+    "口语中表示累坏了。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "口语中表示累坏了。"
+          }
+        }
+      }
+    },
+    "只吃昂贵食物": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "只吃昂贵食物"
+          }
+        }
+      }
+    },
+    "只是一种重音符号": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "只是一种重音符号"
+          }
+        }
+      }
+    },
+    "只给一个可立即使用的修正": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "只给一个可立即使用的修正"
+          }
+        }
+      }
+    },
+    "只要表达清楚即可；一次最多提示一个结构。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "只要表达清楚即可；一次最多提示一个结构。"
+          }
+        }
+      }
+    },
+    "只需要一个短句。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "只需要一个短句。"
+          }
+        }
+      }
+    },
+    "可以从 El zorro lleva… 开始。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可以从 El zorro lleva… 开始。"
+          }
+        }
+      }
+    },
+    "可以从 Está lloviendo… 开始。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可以从 Está lloviendo… 开始。"
+          }
+        }
+      }
+    },
+    "可以从 Le guépard… 开始。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可以从 Le guépard… 开始。"
+          }
+        }
+      }
+    },
+    "可以使用 Hay… 表示‘有’。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可以使用 Hay… 表示‘有’。"
+          }
+        }
+      }
+    },
+    "可以使用 ¿Cuándo llega…?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可以使用 ¿Cuándo llega…?"
+          }
+        }
+      }
+    },
+    "可以再看看提示": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可以再看看提示"
+          }
+        }
+      }
+    },
+    "可以慢速重听，不需要拼写。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可以慢速重听，不需要拼写。"
+          }
+        }
+      }
+    },
+    "可以追求自然语气，不必写成学术句子。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可以追求自然语气，不必写成学术句子。"
+          }
+        }
+      }
+    },
+    "可在保存前编辑": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可在保存前编辑"
+          }
+        }
+      }
+    },
+    "可迁移到日常生活的单一任务": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可迁移到日常生活的单一任务"
+          }
+        }
+      }
+    },
+    "可选纠错": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可选纠错"
+          }
+        }
+      }
+    },
+    "可靠历史研究提醒我们什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可靠历史研究提醒我们什么？"
+          }
+        }
+      }
+    },
+    "吃完饭不一定马上离桌。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "吃完饭不一定马上离桌。"
+          }
+        }
+      }
+    },
+    "同一时间已有更高优先级事件": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "同一时间已有更高优先级事件"
+          }
+        }
+      }
+    },
+    "同一种语言连接着很多地方。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "同一种语言连接着很多地方。"
+          }
+        }
+      }
+    },
+    "名字": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "名字"
+          }
+        }
+      }
+    },
+    "否认钥匙存在": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "否认钥匙存在"
+          }
+        }
+      }
+    },
+    "听 Ash 的一句冷静判断。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "听 Ash 的一句冷静判断。"
+          }
+        }
+      }
+    },
+    "听 Sol 说一句。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "听 Sol 说一句。"
+          }
+        }
+      }
+    },
+    "听一个很短的问题。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "听一个很短的问题。"
+          }
+        }
+      }
+    },
+    "听音辨义": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "听音辨义"
+          }
+        }
+      }
+    },
+    "周": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "周"
+          }
+        }
+      }
+    },
+    "周末早餐": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "周末早餐"
+          }
+        }
+      }
+    },
+    "咖啡": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "咖啡"
+          }
+        }
+      }
+    },
+    "咖啡与代码展开了谈判。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "咖啡与代码展开了谈判。"
+          }
+        }
+      }
+    },
+    "咖啡馆点单": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "咖啡馆点单"
+          }
+        }
+      }
+    },
+    "哪一个常用于临时状态？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "哪一个常用于临时状态？"
+          }
+        }
+      }
+    },
+    "哪一个更适合表示认识一个人？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "哪一个更适合表示认识一个人？"
+          }
+        }
+      }
+    },
+    "哪一句最自然且不显攻击性？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "哪一句最自然且不显攻击性？"
+          }
+        }
+      }
+    },
+    "哪个词表示‘但是’？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "哪个词表示‘但是’？"
+          }
+        }
+      }
+    },
+    "唤醒全部宠物": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "唤醒全部宠物"
+          }
+        }
+      }
+    },
+    "喜欢": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "喜欢"
+          }
+        }
+      }
+    },
+    "喜欢什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "喜欢什么？"
+          }
+        }
+      }
+    },
+    "四": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "四"
+          }
+        }
+      }
+    },
+    "回去工作": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "回去工作"
+          }
+        }
+      }
+    },
+    "回应者在做什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "回应者在做什么？"
+          }
+        }
+      }
+    },
+    "回答把决定归给了什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "回答把决定归给了什么？"
+          }
+        }
+      }
+    },
+    "回答者有多饿？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "回答者有多饿？"
+          }
+        }
+      }
+    },
+    "固定难度": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "固定难度"
+          }
+        }
+      }
+    },
+    "图书馆": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "图书馆"
+          }
+        }
+      }
+    },
+    "在所有桌面空间显示": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在所有桌面空间显示"
+          }
+        }
+      }
+    },
+    "在问什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在问什么？"
+          }
+        }
+      }
+    },
+    "在餐厅请求账单。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在餐厅请求账单。"
+          }
+        }
+      }
+    },
+    "地图": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "地图"
+          }
+        }
+      }
+    },
+    "声音很小": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "声音很小"
+          }
+        }
+      }
+    },
+    "复习卡": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "复习卡"
+          }
+        }
+      }
+    },
+    "复制本地统计 CSV": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "复制本地统计 CSV"
+          }
+        }
+      }
+    },
+    "复杂语法、隐含意义和风格差异": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "复杂语法、隐含意义和风格差异"
+          }
+        }
+      }
+    },
+    "外套": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "外套"
+          }
+        }
+      }
+    },
+    "多少钱": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "多少钱"
+          }
+        }
+      }
+    },
+    "夜里": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "夜里"
+          }
+        }
+      }
+    },
+    "天": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "天"
+          }
+        }
+      }
+    },
+    "天气": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "天气"
+          }
+        }
+      }
+    },
+    "天气如何？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "天气如何？"
+          }
+        }
+      }
+    },
+    "天气很冷": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "天气很冷"
+          }
+        }
+      }
+    },
+    "天气怎样？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "天气怎样？"
+          }
+        }
+      }
+    },
+    "太简单": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "太简单"
+          }
+        }
+      }
+    },
+    "太难": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "太难"
+          }
+        }
+      }
+    },
+    "失踪的钥匙被发现了。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "失踪的钥匙被发现了。"
+          }
+        }
+      }
+    },
+    "夸张": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "夸张"
+          }
+        }
+      }
+    },
+    "奶酪制作": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "奶酪制作"
+          }
+        }
+      }
+    },
+    "好朋友": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "好朋友"
+          }
+        }
+      }
+    },
+    "好朋友：可以自然延续过去的故事，仍不得制造依赖或亏欠。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "好朋友：可以自然延续过去的故事，仍不得制造依赖或亏欠。"
+          }
+        }
+      }
+    },
+    "好的、同意": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "好的、同意"
+          }
+        }
+      }
+    },
+    "如果闹钟配合的话，暗示不完全确定。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "如果闹钟配合的话，暗示不完全确定。"
+          }
+        }
+      }
+    },
+    "字段或时长不符合卡片协议": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "字段或时长不符合卡片协议"
+          }
+        }
+      }
+    },
+    "字面上说‘我把伞留在家里，免得它淋湿’。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "字面上说‘我把伞留在家里，免得它淋湿’。"
+          }
+        }
+      }
+    },
+    "字面是‘准备好优雅地失败’。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "字面是‘准备好优雅地失败’。"
+          }
+        }
+      }
+    },
+    "学习模式": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "学习模式"
+          }
+        }
+      }
+    },
+    "它与什么相关？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "它与什么相关？"
+          }
+        }
+      }
+    },
+    "它们各自拥有性格、记忆和生活。你可以随时离开，也不会留下未完成任务。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "它们各自拥有性格、记忆和生活。你可以随时离开，也不会留下未完成任务。"
+          }
+        }
+      }
+    },
+    "它先承认成功，再暗示成功原因仍不可靠。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "它先承认成功，再暗示成功原因仍不可靠。"
+          }
+        }
+      }
+    },
+    "它只属于王室": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "它只属于王室"
+          }
+        }
+      }
+    },
+    "它在 UNESCO 名录中属于什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "它在 UNESCO 名录中属于什么？"
+          }
+        }
+      }
+    },
+    "它在区分什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "它在区分什么？"
+          }
+        }
+      }
+    },
+    "它形容怎样的人？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "它形容怎样的人？"
+          }
+        }
+      }
+    },
+    "它是什么传统？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "它是什么传统？"
+          }
+        }
+      }
+    },
+    "它是什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "它是什么？"
+          }
+        }
+      }
+    },
+    "它由通往圣地亚哥的历史路线构成。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "它由通往圣地亚哥的历史路线构成。"
+          }
+        }
+      }
+    },
+    "它表示什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "它表示什么？"
+          }
+        }
+      }
+    },
+    "它通常发生在什么时候？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "它通常发生在什么时候？"
+          }
+        }
+      }
+    },
+    "安装 .polypals-pack": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安装 .polypals-pack"
+          }
+        }
+      }
+    },
+    "安静一小时": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安静一小时"
+          }
+        }
+      }
+    },
+    "安静地坐下": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安静地坐下"
+          }
+        }
+      }
+    },
+    "安静时间": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安静时间"
+          }
+        }
+      }
+    },
+    "安静模式": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安静模式"
+          }
+        }
+      }
+    },
+    "完全不饿": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "完全不饿"
+          }
+        }
+      }
+    },
+    "完全同意": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "完全同意"
+          }
+        }
+      }
+    },
+    "完成这一张": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "完成这一张"
+          }
+        }
+      }
+    },
+    "定时提醒": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "定时提醒"
+          }
+        }
+      }
+    },
+    "宠物安静时间": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "宠物安静时间"
+          }
+        }
+      }
+    },
+    "宣布成功": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "宣布成功"
+          }
+        }
+      }
+    },
+    "密钥只保存在本机 Keychain。没有密钥时，126 张审核卡片仍可使用。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "密钥只保存在本机 Keychain。没有密钥时，126 张审核卡片仍可使用。"
+          }
+        }
+      }
+    },
+    "密钥只保存在本机 Keychain。没有密钥时，21 张审核卡片仍可使用。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "密钥只保存在本机 Keychain。没有密钥时，21 张审核卡片仍可使用。"
+          }
+        }
+      }
+    },
+    "密钥或权限错误": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "密钥或权限错误"
+          }
+        }
+      }
+    },
+    "对方在问什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "对方在问什么？"
+          }
+        }
+      }
+    },
+    "导入内容包": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "导入内容包"
+          }
+        }
+      }
+    },
+    "导入旧版内容 JSON": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "导入旧版内容 JSON"
+          }
+        }
+      }
+    },
+    "小猎豹安静地坐着。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "小猎豹安静地坐着。"
+          }
+        }
+      }
+    },
+    "少看相似": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "少看相似"
+          }
+        }
+      }
+    },
+    "就是这个": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "就是这个"
+          }
+        }
+      }
+    },
+    "工作": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "工作"
+          }
+        }
+      }
+    },
+    "已保存 API Key；输入新值以替换": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已保存 API Key；输入新值以替换"
+          }
+        }
+      }
+    },
+    "已保存在本机。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已保存在本机。"
+          }
+        }
+      }
+    },
+    "已停止生成；已有内容已保留。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已停止生成；已有内容已保留。"
+          }
+        }
+      }
+    },
+    "已删除插件；收藏内容已保留快照。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已删除插件；收藏内容已保留快照。"
+          }
+        }
+      }
+    },
+    "已可识别并跟随其他应用窗口": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已可识别并跟随其他应用窗口"
+          }
+        }
+      }
+    },
+    "已按上午9:00安排课前提醒；如果课程时间不同，请在下方调整。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已按上午9:00安排课前提醒；如果课程时间不同，请在下方调整。"
+          }
+        }
+      }
+    },
+    "已收藏": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已收藏"
+          }
+        }
+      }
+    },
+    "已确认记忆": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已确认记忆"
+          }
+        }
+      }
+    },
+    "已确认记忆：\n": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已确认记忆：\n"
+          }
+        }
+      }
+    },
+    "已确认记忆：\\n": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已确认记忆：\\n"
+          }
+        }
+      }
+    },
+    "已确认记忆：无": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已确认记忆：无"
+          }
+        }
+      }
+    },
+    "已经完全明白时": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已经完全明白时"
+          }
+        }
+      }
+    },
+    "巴黎地铁": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "巴黎地铁"
+          }
+        }
+      }
+    },
+    "布列塔尼的节庆舞会": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "布列塔尼的节庆舞会"
+          }
+        }
+      }
+    },
+    "希望很快再见": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "希望很快再见"
+          }
+        }
+      }
+    },
+    "带幽默的保留": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "带幽默的保留"
+          }
+        }
+      }
+    },
+    "带来一个一分钟的故事": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "带来一个一分钟的故事"
+          }
+        }
+      }
+    },
+    "帮个忙": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "帮个忙"
+          }
+        }
+      }
+    },
+    "常用于轻松回应。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "常用于轻松回应。"
+          }
+        }
+      }
+    },
+    "常用来表示帮助某人。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "常用来表示帮助某人。"
+          }
+        }
+      }
+    },
+    "常用生活词汇": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "常用生活词汇"
+          }
+        }
+      }
+    },
+    "常用词汇与少量常见习语": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "常用词汇与少量常见习语"
+          }
+        }
+      }
+    },
+    "常见的轻量开场。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "常见的轻量开场。"
+          }
+        }
+      }
+    },
+    "干幽默": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "干幽默"
+          }
+        }
+      }
+    },
+    "幽默": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "幽默"
+          }
+        }
+      }
+    },
+    "应用内专注计时器": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "应用内专注计时器"
+          }
+        }
+      }
+    },
+    "店员在问什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "店员在问什么？"
+          }
+        }
+      }
+    },
+    "开始怀疑": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开始怀疑"
+          }
+        }
+      }
+    },
+    "开始认真行动": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开始认真行动"
+          }
+        }
+      }
+    },
+    "开始认识它们": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开始认识它们"
+          }
+        }
+      }
+    },
+    "开放回答": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开放回答"
+          }
+        }
+      }
+    },
+    "开玩笑降低预期": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开玩笑降低预期"
+          }
+        }
+      }
+    },
+    "当前等级": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当前等级"
+          }
+        }
+      }
+    },
+    "形容察觉到事情可能不对。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "形容察觉到事情可能不对。"
+          }
+        }
+      }
+    },
+    "形容直言不讳。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "形容直言不讳。"
+          }
+        }
+      }
+    },
+    "影视式对白": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "影视式对白"
+          }
+        }
+      }
+    },
+    "很好奇": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "很好奇"
+          }
+        }
+      }
+    },
+    "很饿": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "很饿"
+          }
+        }
+      }
+    },
+    "很高兴": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "很高兴"
+          }
+        }
+      }
+    },
+    "忘记了名字": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "忘记了名字"
+          }
+        }
+      }
+    },
+    "快速吃完": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "快速吃完"
+          }
+        }
+      }
+    },
+    "总是忘词": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "总是忘词"
+          }
+        }
+      }
+    },
+    "恢复默认位置": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "恢复默认位置"
+          }
+        }
+      }
+    },
+    "想到屏幕边缘走走": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "想到屏幕边缘走走"
+          }
+        }
+      }
+    },
+    "想找个窗口边缘坐一会儿": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "想找个窗口边缘坐一会儿"
+          }
+        }
+      }
+    },
+    "想活动一下": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "想活动一下"
+          }
+        }
+      }
+    },
+    "想象一只狐狸戴着太大的帽子。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "想象一只狐狸戴着太大的帽子。"
+          }
+        }
+      }
+    },
+    "想象一只猫头鹰盯着已经通过的测试。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "想象一只猫头鹰盯着已经通过的测试。"
+          }
+        }
+      }
+    },
+    "想象桌上有苹果和橙子。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "想象桌上有苹果和橙子。"
+          }
+        }
+      }
+    },
+    "意外": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "意外"
+          }
+        }
+      }
+    },
+    "感谢": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "感谢"
+          }
+        }
+      }
+    },
+    "愤怒": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "愤怒"
+          }
+        }
+      }
+    },
+    "慢速": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "慢速"
+          }
+        }
+      }
+    },
+    "成功得出乎意料": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "成功得出乎意料"
+          }
+        }
+      }
+    },
+    "我不知道": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "我不知道"
+          }
+        }
+      }
+    },
+    "我们的关系": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "我们的关系"
+          }
+        }
+      }
+    },
+    "我累了": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "我累了"
+          }
+        }
+      }
+    },
+    "我要苹果": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "我要苹果"
+          }
+        }
+      }
+    },
+    "我路上捡到一个故事。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "我路上捡到一个故事。"
+          }
+        }
+      }
+    },
+    "我迷路了": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "我迷路了"
+          }
+        }
+      }
+    },
+    "我饿了": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "我饿了"
+          }
+        }
+      }
+    },
+    "截止": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "截止"
+          }
+        }
+      }
+    },
+    "房间": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "房间"
+          }
+        }
+      }
+    },
+    "房间很大": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "房间很大"
+          }
+        }
+      }
+    },
+    "手动重试": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手动重试"
+          }
+        }
+      }
+    },
+    "手工技艺和文化": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手工技艺和文化"
+          }
+        }
+      }
+    },
+    "打开角色设置": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开角色设置"
+          }
+        }
+      }
+    },
+    "执行历史": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "执行历史"
+          }
+        }
+      }
+    },
+    "找不到钥匙": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "找不到钥匙"
+          }
+        }
+      }
+    },
+    "把丢失说成探险": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "把丢失说成探险"
+          }
+        }
+      }
+    },
+    "抽象话题、语气差异和自然改写": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "抽象话题、语气差异和自然改写"
+          }
+        }
+      }
+    },
+    "指出语气与更自然的备选": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "指出语气与更自然的备选"
+          }
+        }
+      }
+    },
+    "挥挥手": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "挥挥手"
+          }
+        }
+      }
+    },
+    "换一个变化": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "换一个变化"
+          }
+        }
+      }
+    },
+    "换个房间": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "换个房间"
+          }
+        }
+      }
+    },
+    "授予辅助功能权限": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "授予辅助功能权限"
+          }
+        }
+      }
+    },
+    "推理强度": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "推理强度"
+          }
+        }
+      }
+    },
+    "推荐模型": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "推荐模型"
+          }
+        }
+      }
+    },
+    "描述天气或房间。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "描述天气或房间。"
+          }
+        }
+      }
+    },
+    "描述窗户。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "描述窗户。"
+          }
+        }
+      }
+    },
+    "提供商": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "提供商"
+          }
+        }
+      }
+    },
+    "提供自然改写、必要语法解释和最多三个生词，但保持简洁。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "提供自然改写、必要语法解释和最多三个生词，但保持简洁。"
+          }
+        }
+      }
+    },
+    "插件安装预览": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "插件安装预览"
+          }
+        }
+      }
+    },
+    "撤销": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "撤销"
+          }
+        }
+      }
+    },
+    "播放": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "播放"
+          }
+        }
+      }
+    },
+    "收藏": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "收藏"
+          }
+        }
+      }
+    },
+    "收藏与礼物": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "收藏与礼物"
+          }
+        }
+      }
+    },
+    "收藏这句": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "收藏这句"
+          }
+        }
+      }
+    },
+    "收藏这句话": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "收藏这句话"
+          }
+        }
+      }
+    },
+    "放大": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "放大"
+          }
+        }
+      }
+    },
+    "文化冷知识": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "文化冷知识"
+          }
+        }
+      }
+    },
+    "文化卡必须包含可核验来源。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "文化卡必须包含可核验来源。"
+          }
+        }
+      }
+    },
+    "文化卡缺少来源": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "文化卡缺少来源"
+          }
+        }
+      }
+    },
+    "新的聊天": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新的聊天"
+          }
+        }
+      }
+    },
+    "方式": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "方式"
+          }
+        }
+      }
+    },
+    "无": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无"
+          }
+        }
+      }
+    },
+    "无奈的幽默": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无奈的幽默"
+          }
+        }
+      }
+    },
+    "无法读取内容包。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法读取内容包。"
+          }
+        }
+      }
+    },
+    "日": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "日"
+          }
+        }
+      }
+    },
+    "早上": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "早上"
+          }
+        }
+      }
+    },
+    "早餐前": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "早餐前"
+          }
+        }
+      }
+    },
+    "时": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "时"
+          }
+        }
+      }
+    },
+    "时间": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "时间"
+          }
+        }
+      }
+    },
+    "明天": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "明天"
+          }
+        }
+      }
+    },
+    "明显提示；单一核心点": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "明显提示；单一核心点"
+          }
+        }
+      }
+    },
+    "明确拒绝": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "明确拒绝"
+          }
+        }
+      }
+    },
+    "易混淆词": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "易混淆词"
+          }
+        }
+      }
+    },
+    "星期": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "星期"
+          }
+        }
+      }
+    },
+    "星期与时间": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "星期与时间"
+          }
+        }
+      }
+    },
+    "显示大小": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "显示大小"
+          }
+        }
+      }
+    },
+    "显示这只宠物": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "显示这只宠物"
+          }
+        }
+      }
+    },
+    "晚上": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "晚上"
+          }
+        }
+      }
+    },
+    "晚上问候用哪个？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "晚上问候用哪个？"
+          }
+        }
+      }
+    },
+    "晚餐后的散步": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "晚餐后的散步"
+          }
+        }
+      }
+    },
+    "智能补充卡片": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "智能补充卡片"
+          }
+        }
+      }
+    },
+    "暂时隐藏": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "暂时隐藏"
+          }
+        }
+      }
+    },
+    "暂缓一小时": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "暂缓一小时"
+          }
+        }
+      }
+    },
+    "更接近哪个意思？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更接近哪个意思？"
+          }
+        }
+      }
+    },
+    "更接近哪种反应？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更接近哪种反应？"
+          }
+        }
+      }
+    },
+    "更接近哪种意思？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更接近哪种意思？"
+          }
+        }
+      }
+    },
+    "最基础的问候之一。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "最基础的问候之一。"
+          }
+        }
+      }
+    },
+    "最大": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "最大"
+          }
+        }
+      }
+    },
+    "有一个一分钟的小世界。点开才会展开内容。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "有一个一分钟的小世界。点开才会展开内容。"
+          }
+        }
+      }
+    },
+    "有一会儿没人打扰了": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "有一会儿没人打扰了"
+          }
+        }
+      }
+    },
+    "有一点": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "有一点"
+          }
+        }
+      }
+    },
+    "有希望与已有定论": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "有希望与已有定论"
+          }
+        }
+      }
+    },
+    "有点担心": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "有点担心"
+          }
+        }
+      }
+    },
+    "有点无聊": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "有点无聊"
+          }
+        }
+      }
+    },
+    "有点累": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "有点累"
+          }
+        }
+      }
+    },
+    "有趣表达": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "有趣表达"
+          }
+        }
+      }
+    },
+    "朋友": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "朋友"
+          }
+        }
+      }
+    },
+    "朋友在请求什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "朋友在请求什么？"
+          }
+        }
+      }
+    },
+    "朋友迟到了十分钟。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "朋友迟到了十分钟。"
+          }
+        }
+      }
+    },
+    "朋友阶段：可以更熟悉，但不得擅自发明昵称。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "朋友阶段：可以更熟悉，但不得擅自发明昵称。"
+          }
+        }
+      }
+    },
+    "朋友，今天想从哪件小事开始？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "朋友，今天想从哪件小事开始？"
+          }
+        }
+      }
+    },
+    "朝说话者方向带来常用哪个？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "朝说话者方向带来常用哪个？"
+          }
+        }
+      }
+    },
+    "未授权时会自动降级为在屏幕边缘活动，不会影响其他功能。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未授权时会自动降级为在屏幕边缘活动，不会影响其他功能。"
+          }
+        }
+      }
+    },
+    "本周遇见过": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "本周遇见过"
+          }
+        }
+      }
+    },
+    "本次不保存": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "本次不保存"
+          }
+        }
+      }
+    },
+    "本次聊天不保存": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "本次聊天不保存"
+          }
+        }
+      }
+    },
+    "本次请求会带什么": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "本次请求会带什么"
+          }
+        }
+      }
+    },
+    "来一分钟": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "来一分钟"
+          }
+        }
+      }
+    },
+    "查看来源": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "查看来源"
+          }
+        }
+      }
+    },
+    "标签": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标签"
+          }
+        }
+      }
+    },
+    "标题": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标题"
+          }
+        }
+      }
+    },
+    "桌子下面": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "桌子下面"
+          }
+        }
+      }
+    },
+    "桌面上出现了奇怪的组合。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "桌面上出现了奇怪的组合。"
+          }
+        }
+      }
+    },
+    "模型": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "模型"
+          }
+        }
+      }
+    },
+    "模型 ID": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "模型 ID"
+          }
+        }
+      }
+    },
+    "模型提供商": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "模型提供商"
+          }
+        }
+      }
+    },
+    "模型暂时不可用": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "模型暂时不可用"
+          }
+        }
+      }
+    },
+    "模型服务暂时不可用。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "模型服务暂时不可用。"
+          }
+        }
+      }
+    },
+    "模型请求失败": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "模型请求失败"
+          }
+        }
+      }
+    },
+    "模型请求失败。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "模型请求失败。"
+          }
+        }
+      }
+    },
+    "模型返回了无法识别的响应。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "模型返回了无法识别的响应。"
+          }
+        }
+      }
+    },
+    "橙": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "橙"
+          }
+        }
+      }
+    },
+    "欢迎来到 PolyPals": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "欢迎来到 PolyPals"
+          }
+        }
+      }
+    },
+    "正在下雪": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在下雪"
+          }
+        }
+      }
+    },
+    "正在测试连接…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在测试连接…"
+          }
+        }
+      }
+    },
+    "正式承诺": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正式承诺"
+          }
+        }
+      }
+    },
+    "正式祝贺": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正式祝贺"
+          }
+        }
+      }
+    },
+    "每只宠物的安静时间和通知开关位于对应的‘角色’页；全局冷却、每日上限和执行原因在这里统一管理。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "每只宠物的安静时间和通知开关位于对应的‘角色’页；全局冷却、每日上限和执行原因在这里统一管理。"
+          }
+        }
+      }
+    },
+    "每周": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "每周"
+          }
+        }
+      }
+    },
+    "每天": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "每天"
+          }
+        }
+      }
+    },
+    "每日": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "每日"
+          }
+        }
+      }
+    },
+    "每星期": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "每星期"
+          }
+        }
+      }
+    },
+    "水": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "水"
+          }
+        }
+      }
+    },
+    "水果在哪里？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "水果在哪里？"
+          }
+        }
+      }
+    },
+    "没听清时": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没听清时"
+          }
+        }
+      }
+    },
+    "没有听懂": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没有听懂"
+          }
+        }
+      }
+    },
+    "没有未完成任务。你可以轻松回去，也可以主动再来一个。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没有未完成任务。你可以轻松回去，也可以主动再来一个。"
+          }
+        }
+      }
+    },
+    "没有符合条件的邀请": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没有符合条件的邀请"
+          }
+        }
+      }
+    },
+    "没问题": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没问题"
+          }
+        }
+      }
+    },
+    "法国人的节庆餐桌不仅关乎菜品。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "法国人的节庆餐桌不仅关乎菜品。"
+          }
+        }
+      }
+    },
+    "法文": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "法文"
+          }
+        }
+      }
+    },
+    "法语": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "法语"
+          }
+        }
+      }
+    },
+    "法语词典中它首先指什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "法语词典中它首先指什么？"
+          }
+        }
+      }
+    },
+    "洗手间": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "洗手间"
+          }
+        }
+      }
+    },
+    "测试连接": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "测试连接"
+          }
+        }
+      }
+    },
+    "添加": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加"
+          }
+        }
+      }
+    },
+    "清空本地统计": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清空本地统计"
+          }
+        }
+      }
+    },
+    "清空记忆": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清空记忆"
+          }
+        }
+      }
+    },
+    "清空这只宠物的所有已确认记忆？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清空这只宠物的所有已确认记忆？"
+          }
+        }
+      }
+    },
+    "清空这只宠物的记忆": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清空这只宠物的记忆"
+          }
+        }
+      }
+    },
+    "清除这只宠物的聊天、记忆、收藏、计划和设置？角色本身会保留。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清除这只宠物的聊天、记忆、收藏、计划和设置？角色本身会保留。"
+          }
+        }
+      }
+    },
+    "渐渐熟悉": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "渐渐熟悉"
+          }
+        }
+      }
+    },
+    "渐渐熟悉：每次最多自然引用一条已确认记忆。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "渐渐熟悉：每次最多自然引用一条已确认记忆。"
+          }
+        }
+      }
+    },
+    "演示模式": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "演示模式"
+          }
+        }
+      }
+    },
+    "火车": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "火车"
+          }
+        }
+      }
+    },
+    "点": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点"
+          }
+        }
+      }
+    },
+    "点头之交": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点头之交"
+          }
+        }
+      }
+    },
+    "点头之交：问候可以更自然，最多轻微提及一个用户确认的偏好。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点头之交：问候可以更自然，最多轻微提及一个用户确认的偏好。"
+          }
+        }
+      }
+    },
+    "点餐": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点餐"
+          }
+        }
+      }
+    },
+    "热": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "热"
+          }
+        }
+      }
+    },
+    "熟悉": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "熟悉"
+          }
+        }
+      }
+    },
+    "熟悉场景；允许句型开头": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "熟悉场景；允许句型开头"
+          }
+        }
+      }
+    },
+    "熟悉度": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "熟悉度"
+          }
+        }
+      }
+    },
+    "熟悉度不会下降；跳过、拒绝或休眠都不会扣分。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "熟悉度不会下降；跳过、拒绝或休眠都不会扣分。"
+          }
+        }
+      }
+    },
+    "熟悉等级": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "熟悉等级"
+          }
+        }
+      }
+    },
+    "版本": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "版本"
+          }
+        }
+      }
+    },
+    "特别幸运": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "特别幸运"
+          }
+        }
+      }
+    },
+    "狐狸": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "狐狸"
+          }
+        }
+      }
+    },
+    "猎豹": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "猎豹"
+          }
+        }
+      }
+    },
+    "猫在哪里？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "猫在哪里？"
+          }
+        }
+      }
+    },
+    "猫头鹰": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "猫头鹰"
+          }
+        }
+      }
+    },
+    "玩笑": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "玩笑"
+          }
+        }
+      }
+    },
+    "现代建筑": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "现代建筑"
+          }
+        }
+      }
+    },
+    "现在": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "现在"
+          }
+        }
+      }
+    },
+    "现在几点": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "现在几点"
+          }
+        }
+      }
+    },
+    "现在的精力": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "现在的精力"
+          }
+        }
+      }
+    },
+    "玻璃吹制": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "玻璃吹制"
+          }
+        }
+      }
+    },
+    "理解等级": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "理解等级"
+          }
+        }
+      }
+    },
+    "生成被中断": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "生成被中断"
+          }
+        }
+      }
+    },
+    "生气": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "生气"
+          }
+        }
+      }
+    },
+    "用一句法语描述。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用一句法语描述。"
+          }
+        }
+      }
+    },
+    "用一句西语描述或续写。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用一句西语描述或续写。"
+          }
+        }
+      }
+    },
+    "用户在找什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用户在找什么？"
+          }
+        }
+      }
+    },
+    "用户在问什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用户在问什么？"
+          }
+        }
+      }
+    },
+    "用户想要什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用户想要什么？"
+          }
+        }
+      }
+    },
+    "用户需要什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用户需要什么？"
+          }
+        }
+      }
+    },
+    "用拟人化缓和小麻烦。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用拟人化缓和小麻烦。"
+          }
+        }
+      }
+    },
+    "用英语给画面配一句字幕。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用英语给画面配一句字幕。"
+          }
+        }
+      }
+    },
+    "用西语解释它为什么在那里。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用西语解释它为什么在那里。"
+          }
+        }
+      }
+    },
+    "用西语说任何一句；也可以从“El zorro…”开始。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用西语说任何一句；也可以从“El zorro…”开始。"
+          }
+        }
+      }
+    },
+    "电话告别": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "电话告别"
+          }
+        }
+      }
+    },
+    "番茄": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "番茄"
+          }
+        }
+      }
+    },
+    "目标语言比例": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "目标语言比例"
+          }
+        }
+      }
+    },
+    "相关传统涉及种植、制备和分享马黛茶。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "相关传统涉及种植、制备和分享马黛茶。"
+          }
+        }
+      }
+    },
+    "看图用英语配一句字幕。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "看图用英语配一句字幕。"
+          }
+        }
+      }
+    },
+    "看图用西语说任何一句；也可以从“El zorro…”开始。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "看图用西语说任何一句；也可以从“El zorro…”开始。"
+          }
+        }
+      }
+    },
+    "看图说一句话": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "看图说一句话"
+          }
+        }
+      }
+    },
+    "看图说一句；可以从“Le guépard…”开始。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "看图说一句；可以从“Le guépard…”开始。"
+          }
+        }
+      }
+    },
+    "看看它带回了什么": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "看看它带回了什么"
+          }
+        }
+      }
+    },
+    "看看指针在哪里": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "看看指针在哪里"
+          }
+        }
+      }
+    },
+    "真实高阶语用；避免生僻词堆砌": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "真实高阶语用；避免生僻词堆砌"
+          }
+        }
+      }
+    },
+    "短句；每次仅一个结构": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "短句；每次仅一个结构"
+          }
+        }
+      }
+    },
+    "确认升级": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确认升级"
+          }
+        }
+      }
+    },
+    "确认后才会成为长期记忆": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确认后才会成为长期记忆"
+          }
+        }
+      }
+    },
+    "确认安装": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确认安装"
+          }
+        }
+      }
+    },
+    "确认导入": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确认导入"
+          }
+        }
+      }
+    },
+    "确认并添加这条计划": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确认并添加这条计划"
+          }
+        }
+      }
+    },
+    "礼物": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "礼物"
+          }
+        }
+      }
+    },
+    "礼貌回应感谢": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "礼貌回应感谢"
+          }
+        }
+      }
+    },
+    "礼貌问路。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "礼貌问路。"
+          }
+        }
+      }
+    },
+    "离开这里": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "离开这里"
+          }
+        }
+      }
+    },
+    "离线包含126张审核卡片；开启后每个套餐最多联网生成一张非文化卡片，并缓存到本机。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "离线包含126张审核卡片；开启后每个套餐最多联网生成一张非文化卡片，并缓存到本机。"
+          }
+        }
+      }
+    },
+    "程序": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "程序"
+          }
+        }
+      }
+    },
+    "稍后": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "稍后"
+          }
+        }
+      }
+    },
+    "稍后一小时": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "稍后一小时"
+          }
+        }
+      }
+    },
+    "窗边": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "窗边"
+          }
+        }
+      }
+    },
+    "窗边的短场景。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "窗边的短场景。"
+          }
+        }
+      }
+    },
+    "立刻放弃": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "立刻放弃"
+          }
+        }
+      }
+    },
+    "第一次见面": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第一次见面"
+          }
+        }
+      }
+    },
+    "第二个人想先做什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第二个人想先做什么？"
+          }
+        }
+      }
+    },
+    "第二个人提供什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第二个人提供什么？"
+          }
+        }
+      }
+    },
+    "第二个人有什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第二个人有什么？"
+          }
+        }
+      }
+    },
+    "第二个人的语气更接近哪一种？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第二个人的语气更接近哪一种？"
+          }
+        }
+      }
+    },
+    "第二句主要是什么语气？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第二句主要是什么语气？"
+          }
+        }
+      }
+    },
+    "第二句如何重述问题？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第二句如何重述问题？"
+          }
+        }
+      }
+    },
+    "第二句是什么作用？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第二句是什么作用？"
+          }
+        }
+      }
+    },
+    "第二句是什么语气？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第二句是什么语气？"
+          }
+        }
+      }
+    },
+    "筋疲力尽": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "筋疲力尽"
+          }
+        }
+      }
+    },
+    "筛选": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "筛选"
+          }
+        }
+      }
+    },
+    "简单询价。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "简单询价。"
+          }
+        }
+      }
+    },
+    "简单连接词与基础过去/将来表达": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "简单连接词与基础过去/将来表达"
+          }
+        }
+      }
+    },
+    "简短改写和一句原因": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "简短改写和一句原因"
+          }
+        }
+      }
+    },
+    "简短表示同意或理解。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "简短表示同意或理解。"
+          }
+        }
+      }
+    },
+    "精准解释语法、语域和风格": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "精准解释语法、语域和风格"
+          }
+        }
+      }
+    },
+    "精力": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "精力"
+          }
+        }
+      }
+    },
+    "系统通知不可用，已降级为桌宠动作": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "系统通知不可用，已降级为桌宠动作"
+          }
+        }
+      }
+    },
+    "系统通知只在你第一次确认‘使用系统通知’的计划时申请。拒绝权限不会删除计划，应用仍可在运行时让宠物出现。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "系统通知只在你第一次确认‘使用系统通知’的计划时申请。拒绝权限不会删除计划，应用仍可在运行时让宠物出现。"
+          }
+        }
+      }
+    },
+    "累了": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "累了"
+          }
+        }
+      }
+    },
+    "纠错方式": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "纠错方式"
+          }
+        }
+      }
+    },
+    "织毯技艺": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "织毯技艺"
+          }
+        }
+      }
+    },
+    "结束谈话": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "结束谈话"
+          }
+        }
+      }
+    },
+    "结果仍未发生": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "结果仍未发生"
+          }
+        }
+      }
+    },
+    "结果本来很稳": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "结果本来很稳"
+          }
+        }
+      }
+    },
+    "结账": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "结账"
+          }
+        }
+      }
+    },
+    "给 Mousse 一句话……": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "给 Mousse 一句话……"
+          }
+        }
+      }
+    },
+    "给我一个小套餐": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "给我一个小套餐"
+          }
+        }
+      }
+    },
+    "给我一个有限套餐": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "给我一个有限套餐"
+          }
+        }
+      }
+    },
+    "给我两张卡片": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "给我两张卡片"
+          }
+        }
+      }
+    },
+    "给画面配一句话。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "给画面配一句话。"
+          }
+        }
+      }
+    },
+    "编辑共同记忆": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "编辑共同记忆"
+          }
+        }
+      }
+    },
+    "编辑并重发": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "编辑并重发"
+          }
+        }
+      }
+    },
+    "缩小": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "缩小"
+          }
+        }
+      }
+    },
+    "缺少密钥": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "缺少密钥"
+          }
+        }
+      }
+    },
+    "网络不可用": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "网络不可用"
+          }
+        }
+      }
+    },
+    "老朋友": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "老朋友"
+          }
+        }
+      }
+    },
+    "老朋友：语气可以熟悉，但不得制造依赖、亏欠、打卡压力或情绪惩罚。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "老朋友：语气可以熟悉，但不得制造依赖、亏欠、打卡压力或情绪惩罚。"
+          }
+        }
+      }
+    },
+    "聊一下": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "聊一下"
+          }
+        }
+      }
+    },
+    "聊天": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "聊天"
+          }
+        }
+      }
+    },
+    "背包": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "背包"
+          }
+        }
+      }
+    },
+    "背包物品": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "背包物品"
+          }
+        }
+      }
+    },
+    "背包物品：\n": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "背包物品：\n"
+          }
+        }
+      }
+    },
+    "背包物品：无": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "背包物品：无"
+          }
+        }
+      }
+    },
+    "背包里有件东西想整理": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "背包里有件东西想整理"
+          }
+        }
+      }
+    },
+    "能在专业语境中自然表达并理解隐含意义": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "能在专业语境中自然表达并理解隐含意义"
+          }
+        }
+      }
+    },
+    "能处理旅行和日常工作的连贯对话": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "能处理旅行和日常工作的连贯对话"
+          }
+        }
+      }
+    },
+    "能处理熟悉场景中的简单对话": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "能处理熟悉场景中的简单对话"
+          }
+        }
+      }
+    },
+    "能用最常见的词和短句完成基本交流": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "能用最常见的词和短句完成基本交流"
+          }
+        }
+      }
+    },
+    "能精准处理修辞、风格和细微语用差异": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "能精准处理修辞、风格和细微语用差异"
+          }
+        }
+      }
+    },
+    "能讨论抽象话题并辨别语气差异": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "能讨论抽象话题并辨别语气差异"
+          }
+        }
+      }
+    },
+    "自然保护区": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自然保护区"
+          }
+        }
+      }
+    },
+    "自然停顿": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自然停顿"
+          }
+        }
+      }
+    },
+    "自然常用词与准确搭配": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自然常用词与准确搭配"
+          }
+        }
+      }
+    },
+    "自然改写和关键语法": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自然改写和关键语法"
+          }
+        }
+      }
+    },
+    "自然表达": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自然表达"
+          }
+        }
+      }
+    },
+    "自适应难度": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自适应难度"
+          }
+        }
+      }
+    },
+    "航海比赛": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "航海比赛"
+          }
+        }
+      }
+    },
+    "英国直到二十世纪才喝茶": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "英国直到二十世纪才喝茶"
+          }
+        }
+      }
+    },
+    "英文": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "英文"
+          }
+        }
+      }
+    },
+    "英语": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "英语"
+          }
+        }
+      }
+    },
+    "苹果": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "苹果"
+          }
+        }
+      }
+    },
+    "苹果在哪里": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "苹果在哪里"
+          }
+        }
+      }
+    },
+    "茶": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "茶"
+          }
+        }
+      }
+    },
+    "药店": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "药店"
+          }
+        }
+      }
+    },
+    "表示‘回头见’。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "表示‘回头见’。"
+          }
+        }
+      }
+    },
+    "表示‘太、过度’用哪个？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "表示‘太、过度’用哪个？"
+          }
+        }
+      }
+    },
+    "表示‘没关系’。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "表示‘没关系’。"
+          }
+        }
+      }
+    },
+    "表示‘这里’用哪个？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "表示‘这里’用哪个？"
+          }
+        }
+      }
+    },
+    "表示再见": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "表示再见"
+          }
+        }
+      }
+    },
+    "表示因为惊讶而呆住。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "表示因为惊讶而呆住。"
+          }
+        }
+      }
+    },
+    "表示振作起来、加把劲。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "表示振作起来、加把劲。"
+          }
+        }
+      }
+    },
+    "表示目的时通常用哪个？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "表示目的时通常用哪个？"
+          }
+        }
+      }
+    },
+    "表达生气": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "表达生气"
+          }
+        }
+      }
+    },
+    "表达等级": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "表达等级"
+          }
+        }
+      }
+    },
+    "西班牙": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "西班牙"
+          }
+        }
+      }
+    },
+    "西班牙常见的自然点单方式。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "西班牙常见的自然点单方式。"
+          }
+        }
+      }
+    },
+    "西班牙语": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "西班牙语"
+          }
+        }
+      }
+    },
+    "西班牙语字母表中的字母": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "西班牙语字母表中的字母"
+          }
+        }
+      }
+    },
+    "西语": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "西语"
+          }
+        }
+      }
+    },
+    "要带走吗": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要带走吗"
+          }
+        }
+      }
+    },
+    "要牛奶吗": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要牛奶吗"
+          }
+        }
+      }
+    },
+    "要糖吗": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要糖吗"
+          }
+        }
+      }
+    },
+    "见到你很高兴": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "见到你很高兴"
+          }
+        }
+      }
+    },
+    "觉得很冷": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "觉得很冷"
+          }
+        }
+      }
+    },
+    "角色": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "角色"
+          }
+        }
+      }
+    },
+    "解析": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解析"
+          }
+        }
+      }
+    },
+    "解释迟到": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解释迟到"
+          }
+        }
+      }
+    },
+    "计划": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "计划"
+          }
+        }
+      }
+    },
+    "认真": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "认真"
+          }
+        }
+      }
+    },
+    "认识天数": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "认识天数"
+          }
+        }
+      }
+    },
+    "设置…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置…"
+          }
+        }
+      }
+    },
+    "设置提醒": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置提醒"
+          }
+        }
+      }
+    },
+    "询问价格": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "询问价格"
+          }
+        }
+      }
+    },
+    "询问近况": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "询问近况"
+          }
+        }
+      }
+    },
+    "该项目描述的是庆祝重要时刻的社会习俗，包括选菜、摆桌和品尝。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "该项目描述的是庆祝重要时刻的社会习俗，包括选菜、摆桌和品尝。"
+          }
+        }
+      }
+    },
+    "语言": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "语言"
+          }
+        }
+      }
+    },
+    "语言与宠物不匹配": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "语言与宠物不匹配"
+          }
+        }
+      }
+    },
+    "语言等级": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "语言等级"
+          }
+        }
+      }
+    },
+    "语言能力": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "语言能力"
+          }
+        }
+      }
+    },
+    "说出你看到的一件东西。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "说出你看到的一件东西。"
+          }
+        }
+      }
+    },
+    "说明极细的语用与风格取舍": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "说明极细的语用与风格取舍"
+          }
+        }
+      }
+    },
+    "说话直率": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "说话直率"
+          }
+        }
+      }
+    },
+    "说话者 imply；听者根据线索 infer。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "说话者 imply；听者根据线索 infer。"
+          }
+        }
+      }
+    },
+    "说话者在找什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "说话者在找什么？"
+          }
+        }
+      }
+    },
+    "说话者大概感觉如何？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "说话者大概感觉如何？"
+          }
+        }
+      }
+    },
+    "说话者怎样？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "说话者怎样？"
+          }
+        }
+      }
+    },
+    "说话者给出暗示时用哪个？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "说话者给出暗示时用哪个？"
+          }
+        }
+      }
+    },
+    "说话者表达什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "说话者表达什么？"
+          }
+        }
+      }
+    },
+    "请先在设置中保存 OpenAI API Key。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请先在设置中保存 OpenAI API Key。"
+          }
+        }
+      }
+    },
+    "请先在设置中保存当前模型提供商的 API Key。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请先在设置中保存当前模型提供商的 API Key。"
+          }
+        }
+      }
+    },
+    "请对方更慢地重复。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请对方更慢地重复。"
+          }
+        }
+      }
+    },
+    "请指定宠物，或确认使用最近互动的宠物。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请指定宠物，或确认使用最近互动的宠物。"
+          }
+        }
+      }
+    },
+    "请指定由哪只宠物出现。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请指定由哪只宠物出现。"
+          }
+        }
+      }
+    },
+    "请求付款": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请求付款"
+          }
+        }
+      }
+    },
+    "请求固定使用 store: false，不会读取屏幕、代码或其他宠物数据。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请求固定使用 store: false，不会读取屏幕、代码或其他宠物数据。"
+          }
+        }
+      }
+    },
+    "请求帮助": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请求帮助"
+          }
+        }
+      }
+    },
+    "请求购买一张票。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请求购买一张票。"
+          }
+        }
+      }
+    },
+    "请求超时": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请求超时"
+          }
+        }
+      }
+    },
+    "请求过于频繁": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请求过于频繁"
+          }
+        }
+      }
+    },
+    "请求过于频繁，请稍后手动重试。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请求过于频繁，请稍后手动重试。"
+          }
+        }
+      }
+    },
+    "请补充具体时间，例如下午三点。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请补充具体时间，例如下午三点。"
+          }
+        }
+      }
+    },
+    "课前": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "课前"
+          }
+        }
+      }
+    },
+    "课程前复习（高优先级）": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "课程前复习（高优先级）"
+          }
+        }
+      }
+    },
+    "责怪对方": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "责怪对方"
+          }
+        }
+      }
+    },
+    "责怪朋友": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "责怪朋友"
+          }
+        }
+      }
+    },
+    "赞美食物": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "赞美食物"
+          }
+        }
+      }
+    },
+    "赶火车时": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "赶火车时"
+          }
+        }
+      }
+    },
+    "跟 Sol 说点什么……": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "跟 Sol 说点什么……"
+          }
+        }
+      }
+    },
+    "路线": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "路线"
+          }
+        }
+      }
+    },
+    "车票": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "车票"
+          }
+        }
+      }
+    },
+    "车站": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "车站"
+          }
+        }
+      }
+    },
+    "车站在哪里": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "车站在哪里"
+          }
+        }
+      }
+    },
+    "车站问路": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "车站问路"
+          }
+        }
+      }
+    },
+    "轻微纠错": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "轻微纠错"
+          }
+        }
+      }
+    },
+    "过去与未来": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "过去与未来"
+          }
+        }
+      }
+    },
+    "返回格式异常": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "返回格式异常"
+          }
+        }
+      }
+    },
+    "这一传统与什么有关？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这一传统与什么有关？"
+          }
+        }
+      }
+    },
+    "这一遗产与什么有关？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这一遗产与什么有关？"
+          }
+        }
+      }
+    },
+    "这句话常用来做什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这句话常用来做什么？"
+          }
+        }
+      }
+    },
+    "这句话是什么意思？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这句话是什么意思？"
+          }
+        }
+      }
+    },
+    "这句话最接近哪个意思？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这句话最接近哪个意思？"
+          }
+        }
+      }
+    },
+    "这句话的语气是什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这句话的语气是什么？"
+          }
+        }
+      }
+    },
+    "这句话通常用来做什么？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这句话通常用来做什么？"
+          }
+        }
+      }
+    },
+    "这座城市": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这座城市"
+          }
+        }
+      }
+    },
+    "这张卡片": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这张卡片"
+          }
+        }
+      }
+    },
+    "这当然不是一堂生物课。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这当然不是一堂生物课。"
+          }
+        }
+      }
+    },
+    "这是一个靠近桌宠的小聊天框。它不会把你带进另一套复杂界面。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这是一个靠近桌宠的小聊天框。它不会把你带进另一套复杂界面。"
+          }
+        }
+      }
+    },
+    "这是一种什么提议？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这是一种什么提议？"
+          }
+        }
+      }
+    },
+    "这是苹果吗": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这是苹果吗"
+          }
+        }
+      }
+    },
+    "这本书": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这本书"
+          }
+        }
+      }
+    },
+    "这杯咖啡": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这杯咖啡"
+          }
+        }
+      }
+    },
+    "这次会带什么": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这次会带什么"
+          }
+        }
+      }
+    },
+    "这次就到这里": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这次就到这里"
+          }
+        }
+      }
+    },
+    "这次更困难": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这次更困难"
+          }
+        }
+      }
+    },
+    "这次更简单": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这次更简单"
+          }
+        }
+      }
+    },
+    "这次邀请已暂缓三次，今天不再重复。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这次邀请已暂缓三次，今天不再重复。"
+          }
+        }
+      }
+    },
+    "进入演示模式": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "进入演示模式"
+          }
+        }
+      }
+    },
+    "进食的时刻或食物": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "进食的时刻或食物"
+          }
+        }
+      }
+    },
+    "连贯生活叙述和观点表达": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "连贯生活叙述和观点表达"
+          }
+        }
+      }
+    },
+    "迷你场景": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "迷你场景"
+          }
+        }
+      }
+    },
+    "迷路了": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "迷路了"
+          }
+        }
+      }
+    },
+    "退出 PolyPals": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "退出 PolyPals"
+          }
+        }
+      }
+    },
+    "退出演示模式": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "退出演示模式"
+          }
+        }
+      }
+    },
+    "送它一个东西": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "送它一个东西"
+          }
+        }
+      }
+    },
+    "适合在哪个场景说？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "适合在哪个场景说？"
+          }
+        }
+      }
+    },
+    "适合在哪里说？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "适合在哪里说？"
+          }
+        }
+      }
+    },
+    "选一句可以递给它的话。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选一句可以递给它的话。"
+          }
+        }
+      }
+    },
+    "选一句自然回应。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选一句自然回应。"
+          }
+        }
+      }
+    },
+    "通知": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "通知"
+          }
+        }
+      }
+    },
+    "通知时间冲突，已降级为桌宠动作": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "通知时间冲突，已降级为桌宠动作"
+          }
+        }
+      }
+    },
+    "速度与价格": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "速度与价格"
+          }
+        }
+      }
+    },
+    "造船": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "造船"
+          }
+        }
+      }
+    },
+    "部署": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "部署"
+          }
+        }
+      }
+    },
+    "酒店房间": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "酒店房间"
+          }
+        }
+      }
+    },
+    "采用建议": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "采用建议"
+          }
+        }
+      }
+    },
+    "重发": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重发"
+          }
+        }
+      }
+    },
+    "重复": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重复"
+          }
+        }
+      }
+    },
+    "重置": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重置"
+          }
+        }
+      }
+    },
+    "重置这只宠物的数据": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重置这只宠物的数据"
+          }
+        }
+      }
+    },
+    "重试": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重试"
+          }
+        }
+      }
+    },
+    "钥匙开始了未经批准的旅行。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "钥匙开始了未经批准的旅行。"
+          }
+        }
+      }
+    },
+    "错过了火车": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "错过了火车"
+          }
+        }
+      }
+    },
+    "门后": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "门后"
+          }
+        }
+      }
+    },
+    "问候": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "问候"
+          }
+        }
+      }
+    },
+    "防打扰": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "防打扰"
+          }
+        }
+      }
+    },
+    "阴性单数名词前用哪个？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "阴性单数名词前用哪个？"
+          }
+        }
+      }
+    },
+    "阴性名词 maison 前通常用哪个？": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "阴性名词 maison 前通常用哪个？"
+          }
+        }
+      }
+    },
+    "随便聊": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "随便聊"
+          }
+        }
+      }
+    },
+    "随时说一句……": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "随时说一句……"
+          }
+        }
+      }
+    },
+    "隐私": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "隐私"
+          }
+        }
+      }
+    },
+    "难度": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "难度"
+          }
+        }
+      }
+    },
+    "难度不在用户允许范围": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "难度不在用户允许范围"
+          }
+        }
+      }
+    },
+    "难度与宠物不匹配": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "难度与宠物不匹配"
+          }
+        }
+      }
+    },
+    "难度模式": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "难度模式"
+          }
+        }
+      }
+    },
+    "雨": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "雨"
+          }
+        }
+      }
+    },
+    "雨伞": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "雨伞"
+          }
+        }
+      }
+    },
+    "零": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "零"
+          }
+        }
+      }
+    },
+    "零一二三四五六七八九十": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "零一二三四五六七八九十"
+          }
+        }
+      }
+    },
+    "需要离开": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "需要离开"
+          }
+        }
+      }
+    },
+    "震惊得愣住": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "震惊得愣住"
+          }
+        }
+      }
+    },
+    "非常整洁": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "非常整洁"
+          }
+        }
+      }
+    },
+    "非常热": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "非常热"
+          }
+        }
+      }
+    },
+    "非常疲惫": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "非常疲惫"
+          }
+        }
+      }
+    },
+    "非常饿": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "非常饿"
+          }
+        }
+      }
+    },
+    "非物质文化遗产": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "非物质文化遗产"
+          }
+        }
+      }
+    },
+    "面包店": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "面包店"
+          }
+        }
+      }
+    },
+    "预订座位": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "预订座位"
+          }
+        }
+      }
+    },
+    "额度不足": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "额度不足"
+          }
+        }
+      }
+    },
+    "风": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "风"
+          }
+        }
+      }
+    },
+    "风很大": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "风很大"
+          }
+        }
+      }
+    },
+    "食物很好吃": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "食物很好吃"
+          }
+        }
+      }
+    },
+    "餐": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "餐"
+          }
+        }
+      }
+    },
+    "餐厅": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "餐厅"
+          }
+        }
+      }
+    },
+    "饭后聊天时": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "饭后聊天时"
+          }
+        }
+      }
+    },
+    "饮茶和点心习惯早于单一发明故事": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "饮茶和点心习惯早于单一发明故事"
+          }
+        }
+      }
+    },
+    "饿了": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "饿了"
+          }
+        }
+      }
+    },
+    "香水相关技艺": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "香水相关技艺"
+          }
+        }
+      }
+    },
+    "高": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "高"
+          }
+        }
+      }
+    },
+    "高度自然、语境精准的词汇": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "高度自然、语境精准的词汇"
+          }
+        }
+      }
+    },
+    "高级": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "高级"
+          }
+        }
+      }
+    },
+    "默契伙伴": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "默契伙伴"
+          }
+        }
+      }
+    },
+    "默契伙伴上线。我们继续刚才那点想法。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "默契伙伴上线。我们继续刚才那点想法。"
+          }
+        }
+      }
+    },
+    "默契伙伴：每次最多引用两条相关记忆。": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "默契伙伴：每次最多引用两条相关记忆。"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

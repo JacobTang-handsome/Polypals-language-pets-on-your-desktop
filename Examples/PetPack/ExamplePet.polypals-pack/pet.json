@@ -1,0 +1,19 @@
+{
+  "petId": "org.polypals.example.lumi",
+  "name": "Lumi",
+  "targetLanguage": "de",
+  "defaultLevel": "A2",
+  "personality": "A calm, encouraging firefly who keeps replies concise.",
+  "chineseHelpRatio": 0.35,
+  "correctionMode": "light",
+  "themeColor": "#6F8F72",
+  "bubbleStyle": { "cornerRadius": 14, "maximumWidth": 320 },
+  "spriteVersionNumber": 2,
+  "spritesheet": "assets/spritesheet.png",
+  "frameWidth": 192,
+  "frameHeight": 208,
+  "columns": 8,
+  "rows": 11,
+  "lookDirections": 16,
+  "animationRows": ["idle", "runningRight", "runningLeft", "waving", "jumping", "failed", "waiting", "processing", "review", "lookA", "lookB"]
+}

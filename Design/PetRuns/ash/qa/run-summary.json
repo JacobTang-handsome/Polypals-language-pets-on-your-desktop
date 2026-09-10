@@ -1,0 +1,15 @@
+{
+  "petId": "ash",
+  "spriteVersionNumber": 2,
+  "finalAtlas": "final/spritesheet-extended.webp",
+  "packagedAtlas": "Sources/PolyPals/Resources/Pets/ash/ash-spritesheet.webp",
+  "sha256": "0b9dd5e510b386a56942d81a1d7b95809a18f660ff83c878af182bbda21c0520",
+  "atlasValidation": "final/validation-extended.json",
+  "visualReview": "qa/review.json",
+  "contactSheet": "qa/contact-sheet-extended.png",
+  "directionSheet": "qa/look-directions.png",
+  "directionSemantics": "qa/direction-semantics.json",
+  "blindValidation": "qa/direction-blind-validation.json",
+  "continuity": "qa/look-continuity.json",
+  "status": "passed-after-row-10-repair-with-minor-intermediate-direction-warnings"
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://polypals.app/schemas/pet-pack.schema.json",
+  "title": "PolyPals Pet Pack v1",
+  "type": "object",
+  "required": ["petId", "name", "targetLanguage", "defaultLevel", "personality", "chineseHelpRatio", "correctionMode", "themeColor", "spriteVersionNumber", "spritesheet", "frameWidth", "frameHeight", "columns", "rows", "lookDirections", "animationRows"],
+  "properties": {
+    "petId": { "type": "string", "not": { "enum": ["sol", "mousse", "ash"] } },
+    "name": { "type": "string", "minLength": 1 }, "targetLanguage": { "type": "string", "minLength": 2 },
+    "defaultLevel": { "enum": ["A1", "A2", "B1", "B2", "C1", "C2"] }, "personality": { "type": "string", "minLength": 1 },
+    "chineseHelpRatio": { "type": "number", "minimum": 0, "maximum": 1 }, "correctionMode": { "enum": ["casual", "light", "study"] },
+    "themeColor": { "type": "string", "pattern": "^#[A-Fa-f0-9]{6}$" }, "spriteVersionNumber": { "const": 2 },
+    "spritesheet": { "type": "string", "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+$" },
+    "frameWidth": { "const": 192 }, "frameHeight": { "const": 208 }, "columns": { "const": 8 }, "rows": { "const": 11 }, "lookDirections": { "const": 16 },
+    "animationRows": { "type": "array", "minItems": 11, "maxItems": 11, "uniqueItems": true, "items": { "type": "string" } }
+  },
+  "additionalProperties": true
+}

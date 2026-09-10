@@ -1,0 +1,973 @@
+{
+  "ok": true,
+  "frames_root": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames",
+  "states": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review"
+  ],
+  "errors": [],
+  "warnings": [],
+  "rows": [
+    {
+      "state": "idle",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/idle/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22955,
+          "bbox": [
+            15,
+            5,
+            176,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 136
+        },
+        {
+          "index": 1,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/idle/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23233,
+          "bbox": [
+            14,
+            5,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 193
+        },
+        {
+          "index": 2,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/idle/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22117,
+          "bbox": [
+            20,
+            5,
+            171,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 186
+        },
+        {
+          "index": 3,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/idle/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23211,
+          "bbox": [
+            13,
+            5,
+            178,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 146
+        },
+        {
+          "index": 4,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/idle/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22493,
+          "bbox": [
+            16,
+            5,
+            175,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 156
+        },
+        {
+          "index": 5,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/idle/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23198,
+          "bbox": [
+            14,
+            5,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 174
+        }
+      ]
+    },
+    {
+      "state": "running-right",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/running-right/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18922,
+          "bbox": [
+            5,
+            20,
+            187,
+            187
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 350
+        },
+        {
+          "index": 1,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/running-right/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19067,
+          "bbox": [
+            5,
+            23,
+            187,
+            184
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 334
+        },
+        {
+          "index": 2,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/running-right/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19108,
+          "bbox": [
+            5,
+            27,
+            187,
+            181
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 350
+        },
+        {
+          "index": 3,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/running-right/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19565,
+          "bbox": [
+            5,
+            19,
+            187,
+            188
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 349
+        },
+        {
+          "index": 4,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/running-right/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18597,
+          "bbox": [
+            5,
+            16,
+            187,
+            191
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 307
+        },
+        {
+          "index": 5,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/running-right/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18468,
+          "bbox": [
+            5,
+            24,
+            187,
+            184
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 345
+        },
+        {
+          "index": 6,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/running-right/06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18779,
+          "bbox": [
+            5,
+            29,
+            187,
+            179
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 310
+        },
+        {
+          "index": 7,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/running-right/07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20244,
+          "bbox": [
+            5,
+            19,
+            187,
+            188
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 380
+        }
+      ]
+    },
+    {
+      "state": "running-left",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/running-left/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18922,
+          "bbox": [
+            5,
+            20,
+            187,
+            187
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 350
+        },
+        {
+          "index": 1,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/running-left/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19067,
+          "bbox": [
+            5,
+            23,
+            187,
+            184
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 334
+        },
+        {
+          "index": 2,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/running-left/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19108,
+          "bbox": [
+            5,
+            27,
+            187,
+            181
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 350
+        },
+        {
+          "index": 3,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/running-left/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19565,
+          "bbox": [
+            5,
+            19,
+            187,
+            188
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 349
+        },
+        {
+          "index": 4,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/running-left/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18597,
+          "bbox": [
+            5,
+            16,
+            187,
+            191
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 307
+        },
+        {
+          "index": 5,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/running-left/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18468,
+          "bbox": [
+            5,
+            24,
+            187,
+            184
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 345
+        },
+        {
+          "index": 6,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/running-left/06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18779,
+          "bbox": [
+            5,
+            29,
+            187,
+            179
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 310
+        },
+        {
+          "index": 7,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/running-left/07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20244,
+          "bbox": [
+            5,
+            19,
+            187,
+            188
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 380
+        }
+      ]
+    },
+    {
+      "state": "waving",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/waving/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23400,
+          "bbox": [
+            14,
+            5,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 109
+        },
+        {
+          "index": 1,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/waving/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23565,
+          "bbox": [
+            15,
+            5,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 108
+        },
+        {
+          "index": 2,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/waving/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23178,
+          "bbox": [
+            12,
+            5,
+            179,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 113
+        },
+        {
+          "index": 3,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/waving/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22905,
+          "bbox": [
+            16,
+            5,
+            176,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 100
+        }
+      ]
+    },
+    {
+      "state": "jumping",
+      "expected_frames": 5,
+      "actual_frames": 5,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/jumping/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19855,
+          "bbox": [
+            5,
+            24,
+            187,
+            184
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 135
+        },
+        {
+          "index": 1,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/jumping/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20575,
+          "bbox": [
+            14,
+            5,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 167
+        },
+        {
+          "index": 2,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/jumping/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20005,
+          "bbox": [
+            21,
+            5,
+            170,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 127
+        },
+        {
+          "index": 3,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/jumping/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19486,
+          "bbox": [
+            17,
+            5,
+            174,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 161
+        },
+        {
+          "index": 4,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/jumping/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23134,
+          "bbox": [
+            5,
+            10,
+            187,
+            198
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 177
+        }
+      ]
+    },
+    {
+      "state": "failed",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/failed/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22398,
+          "bbox": [
+            15,
+            5,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 251
+        },
+        {
+          "index": 1,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/failed/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 24834,
+          "bbox": [
+            5,
+            6,
+            187,
+            202
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 207
+        },
+        {
+          "index": 2,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/failed/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 24298,
+          "bbox": [
+            5,
+            8,
+            187,
+            199
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 245
+        },
+        {
+          "index": 3,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/failed/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22740,
+          "bbox": [
+            5,
+            14,
+            187,
+            193
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 244
+        },
+        {
+          "index": 4,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/failed/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22014,
+          "bbox": [
+            5,
+            18,
+            187,
+            189
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 204
+        },
+        {
+          "index": 5,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/failed/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18245,
+          "bbox": [
+            5,
+            32,
+            187,
+            175
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 188
+        },
+        {
+          "index": 6,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/failed/06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 14572,
+          "bbox": [
+            5,
+            48,
+            187,
+            159
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 130
+        },
+        {
+          "index": 7,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/failed/07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 12900,
+          "bbox": [
+            5,
+            55,
+            187,
+            152
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 133
+        }
+      ]
+    },
+    {
+      "state": "waiting",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/waiting/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23492,
+          "bbox": [
+            16,
+            5,
+            176,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 134
+        },
+        {
+          "index": 1,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/waiting/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20494,
+          "bbox": [
+            17,
+            5,
+            175,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 139
+        },
+        {
+          "index": 2,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/waiting/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23441,
+          "bbox": [
+            17,
+            5,
+            175,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 149
+        },
+        {
+          "index": 3,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/waiting/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20979,
+          "bbox": [
+            27,
+            5,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 173
+        },
+        {
+          "index": 4,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/waiting/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22675,
+          "bbox": [
+            19,
+            5,
+            172,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 176
+        },
+        {
+          "index": 5,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/waiting/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23397,
+          "bbox": [
+            17,
+            5,
+            174,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 156
+        }
+      ]
+    },
+    {
+      "state": "running",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/running/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21898,
+          "bbox": [
+            21,
+            5,
+            171,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 170
+        },
+        {
+          "index": 1,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/running/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22344,
+          "bbox": [
+            18,
+            5,
+            173,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 161
+        },
+        {
+          "index": 2,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/running/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22056,
+          "bbox": [
+            19,
+            5,
+            173,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 150
+        },
+        {
+          "index": 3,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/running/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21686,
+          "bbox": [
+            21,
+            5,
+            171,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 167
+        },
+        {
+          "index": 4,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/running/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22355,
+          "bbox": [
+            19,
+            5,
+            173,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 161
+        },
+        {
+          "index": 5,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/running/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21104,
+          "bbox": [
+            25,
+            5,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 164
+        }
+      ]
+    },
+    {
+      "state": "review",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/review/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22502,
+          "bbox": [
+            16,
+            5,
+            176,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 178
+        },
+        {
+          "index": 1,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/review/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22436,
+          "bbox": [
+            17,
+            5,
+            175,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 168
+        },
+        {
+          "index": 2,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/review/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 21090,
+          "bbox": [
+            21,
+            5,
+            170,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 156
+        },
+        {
+          "index": 3,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/review/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22612,
+          "bbox": [
+            16,
+            5,
+            175,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 160
+        },
+        {
+          "index": 4,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/review/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22329,
+          "bbox": [
+            17,
+            5,
+            175,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 178
+        },
+        {
+          "index": 5,
+          "file": "/Users/kai/codex\u7684\u9879\u76ee/Polypals/Design/PetRuns/sol/frames/review/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 20099,
+          "bbox": [
+            23,
+            5,
+            169,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 116
+        }
+      ]
+    }
+  ]
+}

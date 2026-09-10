@@ -1,0 +1,26 @@
+name: CI
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Swift tests
+        run: swift test
+      - name: Release build
+        run: swift build -c release
+      - name: JSON schema syntax
+        run: for f in Schemas/*.json; do python3 -m json.tool "$f" >/dev/null || exit 1; done
+      - name: Validate example content pack
+        run: Tools/validate-pack Examples/ContentPack/ExampleContent.polypals-pack
+      - name: Validate example pet pack
+        run: Tools/validate-pack Examples/PetPack/ExamplePet.polypals-pack
+      - name: String Catalog keys
+        run: Scripts/check-string-catalog.sh
+      - name: Repository safety
+        run: Scripts/check-repository-safety.sh

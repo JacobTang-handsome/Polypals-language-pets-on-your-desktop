@@ -1,0 +1,26 @@
+[
+  {
+    "petId": "sol",
+    "type": "expression",
+    "language": "es",
+    "level": "A2",
+    "minimumLevel": "a1",
+    "recommendedLevel": "a2",
+    "maximumLevel": "b1",
+    "estimatedSeconds": 45,
+    "hook": "Sol ofrece una frase cotidiana.",
+    "targetText": "¿Me echas una mano?",
+    "prompt": "Elige el significado más natural.",
+    "choices": ["Ayudar", "Salir", "Dormir"],
+    "answer": "Ayudar",
+    "chineseHelp": "echar una mano 表示‘帮个忙’。",
+    "sourceTitle": null,
+    "sourceURL": null,
+    "memoryKey": "example:es:echar-una-mano",
+    "tags": ["dailyLife"],
+    "conceptKey": "example:helping",
+    "originMemoryKey": null,
+    "modality": "expression",
+    "challenge": 0
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "formatVersion": 1,
+  "id": "org.polypals.example.spanish-travel",
+  "kind": "content",
+  "name": "Spanish Travel Example",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.4.0",
+  "author": "PolyPals Contributors",
+  "license": "CC-BY-4.0",
+  "languages": ["es"],
+  "levels": ["A1", "A2", "B1"],
+  "capabilities": ["cards"],
+  "assetDigests": {
+    "content/cards.json": "454b2d82a7dc8e595fbae4621ca4b274e7bf56347972091947067ad8239b75f0",
+    "README.md": "b223a88110eff23b9f2ceb134cba440b0b9ea7a259443b97de8aa50253e4c17f",
+    "LICENSE": "ac42efa90620cd97c6d8e0d0410ed34ec66a2860129dff2779a09ca70da1dacf"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "pairs": [
+    {
+      "A": "ambiguous",
+      "B": "screen-right",
+      "reason": "A is nearly frontal with no decisive side orientation; B's beak and body turn right.",
+      "pair": "horizontal-1"
+    },
+    {
+      "A": "screen-right",
+      "B": "screen-right",
+      "reason": "Both owls show the beak and body pointing toward screen-right.",
+      "pair": "horizontal-2"
+    },
+    {
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "A's beak points left while B's beak and body point right.",
+      "pair": "horizontal-3"
+    },
+    {
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "A is a left-facing profile; B is a right-facing profile.",
+      "pair": "horizontal-4"
+    },
+    {
+      "A": "screen-left",
+      "B": "screen-right",
+      "reason": "A's visible beak is on the left; B's visible beak is on the right.",
+      "pair": "horizontal-5"
+    },
+    {
+      "A": "down",
+      "B": "down",
+      "reason": "Both heads are lowered with eyes directed downward.",
+      "pair": "horizontal-6"
+    },
+    {
+      "A": "down",
+      "B": "down",
+      "reason": "Both owls have lowered heads and downward-directed eyes.",
+      "pair": "horizontal-7"
+    },
+    {
+      "A": "up",
+      "B": "down",
+      "reason": "A is upright with gaze raised; B has a lowered head and downward gaze.",
+      "pair": "vertical-1"
+    },
+    {
+      "A": "up",
+      "B": "down",
+      "reason": "A is upright/front-facing; B is visibly bowed with eyes down.",
+      "pair": "vertical-2"
+    },
+    {
+      "A": "down",
+      "B": "up",
+      "reason": "A is bowed and looking down; B is upright with raised gaze.",
+      "pair": "vertical-3"
+    },
+    {
+      "A": "up",
+      "B": "up",
+      "reason": "Both are upright, with eyes and head oriented upward.",
+      "pair": "vertical-4"
+    },
+    {
+      "A": "up",
+      "B": "up",
+      "reason": "Both are upright side views with raised/level upward gaze.",
+      "pair": "vertical-5"
+    },
+    {
+      "A": "up",
+      "B": "down",
+      "reason": "A is upright and looking up; B's head and eye angle downward.",
+      "pair": "vertical-6"
+    },
+    {
+      "A": "up",
+      "B": "down",
+      "reason": "A is upright/front-facing; B is bowed with downward gaze.",
+      "pair": "vertical-7"
+    }
+  ]
+}

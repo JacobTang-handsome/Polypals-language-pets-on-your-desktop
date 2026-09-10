@@ -1,0 +1,10 @@
+name: Feature request
+description: Suggest a scoped product improvement
+body:
+  - type: textarea
+    attributes: { label: User problem }
+    validations: { required: true }
+  - type: textarea
+    attributes: { label: Proposed experience }
+  - type: textarea
+    attributes: { label: Privacy and compatibility considerations }

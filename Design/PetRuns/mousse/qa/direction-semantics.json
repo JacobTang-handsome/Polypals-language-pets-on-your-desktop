@@ -1,0 +1,107 @@
+{
+  "pet": "mousse",
+  "reviewedBy": "parent",
+  "result": "pass",
+  "directions": [
+    {
+      "direction": "000",
+      "status": "warning",
+      "horizontalEvidence": "centered",
+      "verticalEvidence": "up"
+    },
+    {
+      "direction": "022.5",
+      "status": "pass",
+      "horizontalEvidence": "screen-right",
+      "verticalEvidence": "up"
+    },
+    {
+      "direction": "045",
+      "status": "pass",
+      "horizontalEvidence": "screen-right",
+      "verticalEvidence": "up"
+    },
+    {
+      "direction": "067.5",
+      "status": "pass",
+      "horizontalEvidence": "screen-right",
+      "verticalEvidence": "up"
+    },
+    {
+      "direction": "090",
+      "status": "pass",
+      "horizontalEvidence": "screen-right",
+      "verticalEvidence": "axis-level"
+    },
+    {
+      "direction": "112.5",
+      "status": "pass",
+      "horizontalEvidence": "screen-right",
+      "verticalEvidence": "down"
+    },
+    {
+      "direction": "135",
+      "status": "pass",
+      "horizontalEvidence": "screen-right",
+      "verticalEvidence": "down"
+    },
+    {
+      "direction": "157.5",
+      "status": "pass",
+      "horizontalEvidence": "screen-right",
+      "verticalEvidence": "down"
+    },
+    {
+      "direction": "180",
+      "status": "pass",
+      "horizontalEvidence": "centered",
+      "verticalEvidence": "down"
+    },
+    {
+      "direction": "202.5",
+      "status": "pass",
+      "horizontalEvidence": "screen-left",
+      "verticalEvidence": "down"
+    },
+    {
+      "direction": "225",
+      "status": "pass",
+      "horizontalEvidence": "screen-left",
+      "verticalEvidence": "down"
+    },
+    {
+      "direction": "247.5",
+      "status": "pass",
+      "horizontalEvidence": "screen-left",
+      "verticalEvidence": "down"
+    },
+    {
+      "direction": "270",
+      "status": "pass",
+      "horizontalEvidence": "screen-left",
+      "verticalEvidence": "axis-level"
+    },
+    {
+      "direction": "292.5",
+      "status": "pass",
+      "horizontalEvidence": "screen-left",
+      "verticalEvidence": "up"
+    },
+    {
+      "direction": "315",
+      "status": "pass",
+      "horizontalEvidence": "screen-left",
+      "verticalEvidence": "up"
+    },
+    {
+      "direction": "337.5",
+      "status": "warning",
+      "horizontalEvidence": "screen-left",
+      "verticalEvidence": "up"
+    }
+  ],
+  "notes": [
+    "All four cardinals are unmistakable and the spot pattern, tail attachment, paws and baseline remain coherent.",
+    "337.5→000 size/center metrics are warnings; visual review at normal size confirms a readable one-step return to up with no wrong quadrant."
+  ]
+}

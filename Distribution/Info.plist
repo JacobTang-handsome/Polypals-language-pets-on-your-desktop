@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>zh-Hans</string>
+    <key>CFBundleDisplayName</key>
+    <string>PolyPals</string>
+    <key>CFBundleExecutable</key>
+    <string>PolyPals</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.polypals.PolyPals</string>
+    <key>CFBundleIconFile</key>
+    <string>AppIcon</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>PolyPals</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+	<string>0.4.0</string>
+    <key>CFBundleVersion</key>
+	<string>4</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>14.0</string>
+    <key>LSUIElement</key>
+    <true/>
+    <key>NSHighResolutionCapable</key>
+    <true/>
+    <key>NSUserNotificationUsageDescription</key>
+    <string>仅在你创建计划后，用对应宠物提醒你查看一段微型语言内容。</string>
+</dict>
+</plist>

@@ -1,0 +1,19 @@
+{
+  "formatVersion": 1,
+  "id": "org.polypals.example.lumi",
+  "kind": "pet",
+  "name": "Lumi Example Pet",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.4.0",
+  "author": "PolyPals Contributors",
+  "license": "CC0-1.0",
+  "languages": ["de"],
+  "levels": ["A2"],
+  "capabilities": ["pet", "sprite-v2", "chat"],
+  "assetDigests": {
+    "pet.json": "2e8bc345aea8ef7aac468b85b297cf8bee69bc37f4ee370ecfc2f88de4129323",
+    "README.md": "88b69827a12bfe3d6bf0741b341b5fcc474bc14946d457780925a92053bc6083",
+    "LICENSE": "b0f3bbdc784f6805773ffe8626aa4ea166ed482cf5bf34033e5d3696838310a8",
+    "assets/spritesheet.png": "5f06cb5d4676013b1a99012709d4b8c5e8b4f8afd5125d965183a232d85c9e03"
+  }
+}
