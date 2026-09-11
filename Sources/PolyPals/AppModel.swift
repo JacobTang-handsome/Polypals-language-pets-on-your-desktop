@@ -1489,9 +1489,10 @@ final class AppModel: ObservableObject {
         let snapshot = makeChatContextSnapshot(for: petID)
         let confirmed = snapshot.confirmedMemories.map { "• \($0)" }
         let items = snapshot.inventoryItems.map { "• \($0)" }
-        return "当前消息 · 最近聊天 \(snapshot.recentMessages.count) 条 · 已确认记忆 \(confirmed.count) 条 · 背包物品 \(items.count) 件\n" +
-            (confirmed.isEmpty ? "已确认记忆：无" : "已确认记忆：\n" + confirmed.joined(separator: "\n")) + "\n" +
-            (items.isEmpty ? "背包物品：无" : "背包物品：\n" + items.joined(separator: "\n"))
+        let summary = "当前消息 · 最近聊天 \(snapshot.recentMessages.count) 条 · 已确认记忆 \(confirmed.count) 条 · 背包物品 \(items.count) 件"
+        let confirmedSection = confirmed.isEmpty ? "已确认记忆：无" : "已确认记忆：\n" + confirmed.joined(separator: "\n")
+        let itemsSection = items.isEmpty ? "背包物品：无" : "背包物品：\n" + items.joined(separator: "\n")
+        return [summary, confirmedSection, itemsSection].joined(separator: "\n")
     }
 
     func makeChatContextSnapshot(for petID: PetID, excludingLastLine: Bool = false) -> ChatContextSnapshot {
