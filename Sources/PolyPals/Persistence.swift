@@ -632,9 +632,10 @@ final class ScheduleExecutionEntity {
 
 // Keep the exact 0.1 model graph so SwiftData can identify and migrate an
 // installed user's store. These types are migration-only; runtime code uses
-// the top-level v2 model types above.
+// the top-level v2 model types above. Version identifiers remain computed so
+// Xcode 16.4 does not treat a non-Sendable Schema.Version as shared state.
 enum PolyPalsSchemaV1: VersionedSchema {
-    static let versionIdentifier = Schema.Version(1, 0, 0)
+    static var versionIdentifier: Schema.Version { Schema.Version(1, 0, 0) }
 
     @Model final class PetProfileEntity {
         @Attribute(.unique) var petID: String
@@ -738,7 +739,7 @@ enum PolyPalsSchemaV1: VersionedSchema {
 }
 
 enum PolyPalsSchemaV2: VersionedSchema {
-    static let versionIdentifier = Schema.Version(2, 0, 0)
+    static var versionIdentifier: Schema.Version { Schema.Version(2, 0, 0) }
     static var models: [any PersistentModel.Type] {
         [
             PetProfileEntity.self, PetMemoryEntity.self, ChatThreadEntity.self,
@@ -750,7 +751,7 @@ enum PolyPalsSchemaV2: VersionedSchema {
 }
 
 enum PolyPalsSchemaV3: VersionedSchema {
-    static let versionIdentifier = Schema.Version(3, 0, 0)
+    static var versionIdentifier: Schema.Version { Schema.Version(3, 0, 0) }
     static var models: [any PersistentModel.Type] {
         PolyPalsSchemaV2.models + [
             PetProfileMetadataEntity.self,
@@ -763,14 +764,14 @@ enum PolyPalsSchemaV3: VersionedSchema {
 }
 
 enum PolyPalsSchemaV4: VersionedSchema {
-    static let versionIdentifier = Schema.Version(4, 0, 0)
+    static var versionIdentifier: Schema.Version { Schema.Version(4, 0, 0) }
     static var models: [any PersistentModel.Type] {
         PolyPalsSchemaV3.models + [LanguageProfileEntity.self]
     }
 }
 
 enum PolyPalsSchemaV5: VersionedSchema {
-    static let versionIdentifier = Schema.Version(5, 0, 0)
+    static var versionIdentifier: Schema.Version { Schema.Version(5, 0, 0) }
     static var models: [any PersistentModel.Type] {
         PolyPalsSchemaV4.models + [InventoryStoryEntity.self, PetQuietStateEntity.self]
     }

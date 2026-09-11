@@ -1,6 +1,7 @@
 import AppKit
 import Foundation
-import UserNotifications
+// Xcode 16.4's SDK does not yet expose the Sendable annotations present in newer SDKs.
+@preconcurrency import UserNotifications
 
 enum NotificationScheduleResult: Sendable, Equatable {
     case scheduled
