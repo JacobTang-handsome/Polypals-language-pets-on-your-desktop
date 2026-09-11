@@ -169,14 +169,23 @@ struct NaturalLifeBehaviorTests {
 
     @Test("Recent typing or dragging suppresses natural behavior")
     func userActivityGate() {
-        #expect(!SystemActivityGate.isQuiet(keyboardIdle: 2, pointerIdle: 20))
-        #expect(!SystemActivityGate.isQuiet(keyboardIdle: 20, pointerIdle: 2))
-        #expect(SystemActivityGate.isQuiet(keyboardIdle: 20, pointerIdle: 20))
+        #expect(!SystemActivityGate.isQuiet(keyboardIdle: 2, draggingIdle: 20))
+        #expect(!SystemActivityGate.isQuiet(keyboardIdle: 20, draggingIdle: 2))
+        #expect(SystemActivityGate.isQuiet(keyboardIdle: 20, draggingIdle: 20))
     }
 
     @Test("Temporary perch positions never replace the saved home")
     func temporaryPositionPersistence() {
         #expect(PetPositionPersistencePolicy.shouldPersist(hasTemporaryPerch: false))
         #expect(!PetPositionPersistencePolicy.shouldPersist(hasTemporaryPerch: true))
+    }
+
+    @Test("Window movement interpolation reaches both endpoints")
+    func movementInterpolation() {
+        let start = CGPoint(x: 100, y: 200)
+        let end = CGPoint(x: 500, y: 600)
+        #expect(PetWindowMotion.origin(from: start, to: end, progress: 0) == start)
+        #expect(PetWindowMotion.origin(from: start, to: end, progress: 1) == end)
+        #expect(PetWindowMotion.origin(from: start, to: end, progress: 0.5) == CGPoint(x: 300, y: 400))
     }
 }

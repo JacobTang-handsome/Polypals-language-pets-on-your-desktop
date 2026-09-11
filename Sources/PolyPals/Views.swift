@@ -111,6 +111,85 @@ struct InvitationBubbleView: View {
     }
 }
 
+struct GiftChoiceBubbleView: View {
+    let petName: String
+    let choose: (GiftOption) -> Void
+    let cancel: () -> Void
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            HStack {
+                Text("送给 \(petName) 一个小东西").font(.headline)
+                Spacer()
+                Button(action: cancel) { Image(systemName: "xmark.circle.fill") }.buttonStyle(.plain)
+            }
+            VStack(spacing: 8) {
+                ForEach(0..<2, id: \.self) { row in
+                    HStack(spacing: 8) {
+                        ForEach(Array(GiftOption.all[(row * 2)..<(row * 2 + 2)])) { option in
+                            Button { choose(option) } label: {
+                                Label(option.title, systemImage: option.symbol)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                            }
+                            .buttonStyle(.bordered)
+                            .frame(maxWidth: .infinity)
+                        }
+                    }
+                }
+            }
+            Text("每天一份，它以后还会在生活里想起来。")
+                .font(.caption2).foregroundStyle(.secondary)
+        }
+        .padding(14)
+        .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 16))
+    }
+}
+
+struct QuietChoiceBubbleView: View {
+    let status: String?
+    let oneHour: () -> Void
+    let today: () -> Void
+    let resume: () -> Void
+    let cancel: () -> Void
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 9) {
+            HStack {
+                Text(status ?? "安静一下").font(.headline)
+                Spacer()
+                Button(action: cancel) { Image(systemName: "xmark.circle.fill") }.buttonStyle(.plain)
+            }
+            Text("暂停散步、栖息和主动邀请；你仍可随时点它。已设定的计划提醒会保留。")
+                .font(.caption).foregroundStyle(.secondary)
+            HStack {
+                Button("安静 1 小时", action: oneHour)
+                Button("今天不打扰", action: today)
+            }
+            .buttonStyle(.bordered)
+            if status != nil {
+                Button("恢复活动", action: resume).buttonStyle(.borderedProminent)
+            }
+        }
+        .padding(14)
+        .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 16))
+    }
+}
+
+struct PetReactionBubbleView: View {
+    let text: String
+    let dismiss: () -> Void
+
+    var body: some View {
+        HStack(spacing: 10) {
+            Text(text).font(.callout).fixedSize(horizontal: false, vertical: true)
+            Spacer(minLength: 4)
+            Button(action: dismiss) { Image(systemName: "xmark.circle.fill") }.buttonStyle(.plain)
+        }
+        .padding(14)
+        .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 16))
+    }
+}
+
 struct PetDetailView: View {
     @EnvironmentObject private var model: AppModel
     let petID: PetID
@@ -173,7 +252,7 @@ struct ChatLauncherView: View {
             Text("这是一个靠近桌宠的小聊天框。它不会把你带进另一套复杂界面。")
                 .multilineTextAlignment(.center).foregroundStyle(.secondary)
             if let last = model.chatLines[petID]?.last(where: { !$0.text.isEmpty }) {
-                Text(last.text).font(.callout).lineLimit(3)
+                Text(ChatMarkdownRenderer.attributed(last.text)).font(.callout).lineLimit(3)
                     .padding(14).frame(maxWidth: 420)
                     .background(theme.petBubble, in: RoundedRectangle(cornerRadius: 18))
             }
@@ -504,41 +583,47 @@ struct BackpackView: View {
     @State private var inventoryFilter = "all"
 
     var body: some View {
-        HStack(spacing: 18) {
-            GroupBox("共同收藏") {
-                VStack {
-                    Picker("筛选", selection: $inventoryFilter) {
-                        Text("全部").tag("all")
-                        Text("卡片").tag("card")
-                        Text("聊天").tag("chat")
-                        Text("复习卡").tag("review-card")
-                        Text("礼物").tag("gift")
-                    }.pickerStyle(.menu)
-                    List(filteredInventory) { item in
-                        HStack {
-                            VStack(alignment: .leading) {
-                                Text(item.title).font(.headline)
-                                Text(item.detail).font(.caption).foregroundStyle(.secondary)
+        VStack(spacing: 14) {
+            if let found = model.unreadFoundItems(for: petID).first {
+                foundReveal(found)
+            }
+            HStack(spacing: 18) {
+                GroupBox("共同背包") {
+                    VStack {
+                        Picker("筛选", selection: $inventoryFilter) {
+                            Text("全部").tag("all")
+                            Text("它带回的").tag("found")
+                            Text("你送的").tag("gift")
+                            Text("共同收藏").tag("collection")
+                        }.pickerStyle(.menu)
+                        List(filteredInventory) { item in
+                            HStack {
+                                Image(systemName: model.inventoryStory(for: item)?.symbol ?? fallbackSymbol(for: item.kind))
+                                    .frame(width: 24).foregroundStyle(.secondary)
+                                VStack(alignment: .leading) {
+                                    Text(item.title).font(.headline)
+                                    Text(item.detail).font(.caption).foregroundStyle(.secondary).lineLimit(2)
+                                }
+                                Spacer()
+                                Button(role: .destructive) { model.deleteInventoryItem(item) } label: { Image(systemName: "trash") }
                             }
-                            Spacer()
-                            Button(role: .destructive) { model.deleteInventoryItem(item) } label: { Image(systemName: "trash") }
                         }
                     }
                 }
-            }
-            GroupBox("已确认记忆") {
-                List(model.memories(for: petID)) { memory in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(memory.content)
-                            Text(memory.type).font(.caption).foregroundStyle(.secondary)
+                GroupBox("已确认记忆") {
+                    List(model.memories(for: petID)) { memory in
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text(memory.content)
+                                Text(memory.type).font(.caption).foregroundStyle(.secondary)
+                            }
+                            Spacer()
+                            Button {
+                                editingMemory = memory
+                                editedMemoryText = memory.content
+                            } label: { Image(systemName: "pencil") }
+                            Button(role: .destructive) { model.deleteMemory(memory) } label: { Image(systemName: "trash") }
                         }
-                        Spacer()
-                        Button {
-                            editingMemory = memory
-                            editedMemoryText = memory.content
-                        } label: { Image(systemName: "pencil") }
-                        Button(role: .destructive) { model.deleteMemory(memory) } label: { Image(systemName: "trash") }
                     }
                 }
             }
@@ -568,7 +653,42 @@ struct BackpackView: View {
 
     private var filteredInventory: [InventoryItemEntity] {
         let items = model.inventory(for: petID)
-        return inventoryFilter == "all" ? items : items.filter { $0.kind == inventoryFilter }
+        switch inventoryFilter {
+        case "found": return model.foundItems(for: petID)
+        case "gift": return items.filter { $0.kind == "gift" }
+        case "collection": return items.filter { $0.kind != "gift" && $0.kind != "found" }
+        default: return items
+        }
+    }
+
+    @ViewBuilder
+    private func foundReveal(_ item: InventoryItemEntity) -> some View {
+        HStack(alignment: .top, spacing: 14) {
+            Image(systemName: model.inventoryStory(for: item)?.symbol ?? "shippingbox.fill")
+                .font(.system(size: 34)).foregroundStyle(.orange)
+                .frame(width: 48, height: 48)
+                .background(.orange.opacity(0.12), in: RoundedRectangle(cornerRadius: 12))
+            VStack(alignment: .leading, spacing: 6) {
+                Text("\(PetDefinition.definition(for: petID).name) 带回了一件东西").font(.caption.weight(.semibold)).foregroundStyle(.secondary)
+                Text(item.title).font(.title3.bold())
+                Text(item.detail).font(.callout).fixedSize(horizontal: false, vertical: true)
+            }
+            Spacer()
+            Button("收进共同背包") { model.revealFoundItem(item) }
+                .buttonStyle(.borderedProminent)
+        }
+        .padding(14)
+        .background(.orange.opacity(0.08), in: RoundedRectangle(cornerRadius: 16))
+    }
+
+    private func fallbackSymbol(for kind: String) -> String {
+        switch kind {
+        case "gift": "gift"
+        case "card", "review-card": "rectangle.stack"
+        case "chat": "quote.bubble"
+        case "found": "shippingbox"
+        default: "archivebox"
+        }
     }
 }
 
@@ -703,6 +823,9 @@ struct CharacterView: View {
             Picker("主动程度", selection: binding(\.proactiveMode, transform: { ProactiveMode(rawValue: $0) ?? .manual }, reverse: \.rawValue)) {
                 ForEach(ProactiveMode.allCases) { mode in Text(mode.title).tag(mode) }
             }
+            Text((ProactiveMode(rawValue: profile.proactiveMode) ?? .manual).behaviorDescription)
+                .font(.caption).foregroundStyle(.secondary)
+            Button("预览性格动作") { model.previewPersonalityAction(for: petID) }
             Toggle("允许宠物在窗口边缘活动", isOn: Binding(
                 get: { model.windowPerchingEnabled },
                 set: { model.setWindowPerchingEnabled($0) }
@@ -713,11 +836,12 @@ struct CharacterView: View {
                         .font(.caption).foregroundStyle(.secondary)
                 } else {
                     VStack(alignment: .leading, spacing: 6) {
-                        Text("未授权时会自动降级为在屏幕边缘活动，不会影响其他功能。")
+                        Text("未授权时仍会尝试读取公开窗口边界；系统不提供时才会退回屏幕边缘。")
                             .font(.caption).foregroundStyle(.secondary)
                         Button("授予辅助功能权限") { model.requestWindowPerchingPermission() }
                     }
                 }
+                Button("立即尝试栖息") { model.previewPerch(for: petID) }
             }
             Section("语言能力") {
                 Picker("当前等级", selection: languageBinding(\.currentLevel)) {

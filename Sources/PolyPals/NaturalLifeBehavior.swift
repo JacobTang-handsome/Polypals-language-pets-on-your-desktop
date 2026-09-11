@@ -30,20 +30,41 @@ struct PointerMotionFilter: Sendable {
 }
 
 enum SystemActivityGate {
-    static let quietInterval: TimeInterval = 8
+    static let quietInterval: TimeInterval = 2.5
 
     static var hasQuietKeyboardAndPointer: Bool {
         let source = CGEventSourceStateID.combinedSessionState
         let keyboard = CGEventSource.secondsSinceLastEventType(source, eventType: .keyDown)
-        let pointer = min(
-            CGEventSource.secondsSinceLastEventType(source, eventType: .mouseMoved),
-            CGEventSource.secondsSinceLastEventType(source, eventType: .leftMouseDragged)
+        let dragging = min(
+            CGEventSource.secondsSinceLastEventType(source, eventType: .leftMouseDragged),
+            CGEventSource.secondsSinceLastEventType(source, eventType: .rightMouseDragged)
         )
-        return isQuiet(keyboardIdle: keyboard, pointerIdle: pointer)
+        return isQuiet(keyboardIdle: keyboard, draggingIdle: dragging)
     }
 
-    static func isQuiet(keyboardIdle: TimeInterval, pointerIdle: TimeInterval) -> Bool {
-        keyboardIdle >= quietInterval && pointerIdle >= quietInterval
+    static func isQuiet(keyboardIdle: TimeInterval, draggingIdle: TimeInterval) -> Bool {
+        keyboardIdle >= quietInterval && draggingIdle >= quietInterval
+    }
+}
+
+enum IdleAnimationCadence {
+    static func waits(for petID: PetID) -> [TimeInterval] {
+        switch petID {
+        case .sol: [6.5, 10.5, 8]
+        case .mousse: [10, 15, 12]
+        case .ash: [13, 19, 16]
+        }
+    }
+}
+
+enum PetWindowMotion {
+    static func origin(from start: CGPoint, to end: CGPoint, progress: Double) -> CGPoint {
+        let clamped = min(1, max(0, progress))
+        let eased = clamped * clamped * (3 - 2 * clamped)
+        return CGPoint(
+            x: start.x + (end.x - start.x) * eased,
+            y: start.y + (end.y - start.y) * eased
+        )
     }
 }
 
@@ -111,8 +132,10 @@ struct SystemWindowEdgeProvider: WindowEdgeProviding {
     var hasAccessibilityPermission: Bool { AXIsProcessTrusted() }
 
     func visibleWindows() -> [PerchWindow] {
-        guard hasAccessibilityPermission,
-              let raw = CGWindowListCopyWindowInfo([.optionOnScreenOnly, .excludeDesktopElements], kCGNullWindowID)
+        // CGWindowList exposes public on-screen window geometry without AX trust.
+        // Requiring AX here made every ad-hoc rebuild silently fall back to the
+        // desktop edge even though usable window bounds were available.
+        guard let raw = CGWindowListCopyWindowInfo([.optionOnScreenOnly, .excludeDesktopElements], kCGNullWindowID)
                 as? [[CFString: Any]] else { return [] }
         return raw.compactMap { item in
             guard let number = item[kCGWindowNumber] as? Int,
@@ -236,6 +259,14 @@ struct PetPersonalityBehavior {
         case .ash: actions(for: petID)
         }
         return values[abs(stableSeed) % values.count]
+    }
+
+    static func focusAction(for petID: PetID, stableSeed: Int) -> PetBehaviorAnimation {
+        switch petID {
+        case .sol: .solPouncePrep
+        case .mousse: stableSeed.isMultiple(of: 2) ? .mousseGroom : .mousseElegantSit
+        case .ash: stableSeed.isMultiple(of: 2) ? .ashSlowSquint : .ashHeadTilt
+        }
     }
 
     static func perchIdle(for petID: PetID, stableSeed: Int) -> PetBehaviorAnimation {

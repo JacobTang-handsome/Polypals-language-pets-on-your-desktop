@@ -5,13 +5,11 @@ protocol AmbientBehaviorDeciding: Sendable {
 }
 
 struct AmbientBehaviorEngine: AmbientBehaviorDeciding {
-    let minimumIdleTime: TimeInterval = 15 * 60
-    // Natural-life activity is deliberately sparse. This also bounds perch attempts
-    // to no more than once per ten minutes without adding a high-frequency scheduler.
-    let minimumActionInterval: TimeInterval = 10 * 60
+    let minimumIdleTime: TimeInterval = 75
+    let minimumActionInterval: TimeInterval = 60
 
     func decide(context: PetActivityContext) -> AmbientBehaviorDecision? {
-        guard context.isVisible, !context.isSleeping, !context.focusActive,
+        guard context.isVisible, !context.isSleeping,
               !context.presentationMode, !context.detailPanelOpen,
               !context.chatPanelOpen, !context.isDragging else { return nil }
         if let last = context.lastInteractionAt,
@@ -35,14 +33,25 @@ struct AmbientBehaviorEngine: AmbientBehaviorDeciding {
             (.tidyItem, context.hasInventoryItem ? (context.petID == .mousse ? 56 : 28) : -100, 6, "背包里有件东西想整理"),
             (.walkToEdge, restPeriod ? -20 : (inActiveHours || period == .evening ? 52 : 32), 3, "想到屏幕边缘走走"),
             (.lookAtPointer, 18, 2, "看看指针在哪里"),
-            (.perch, restPeriod ? 8 : perchWeight(for: context.petID), 30, "想找个窗口边缘坐一会儿"),
+            (.perch, context.perchAllowed ? (restPeriod ? 8 : perchWeight(for: context.petID)) : -100, 30, "想找个窗口边缘坐一会儿"),
             (.personality, restPeriod ? 10 : personalityWeight(for: context.petID), 4, "想活动一下")
         ]
         let recent = Set(context.recentActions.prefix(2))
-        let eligible = candidates.filter { !recent.contains($0.0) && $0.1 > 0 }
-        guard let best = eligible.max(by: { lhs, rhs in
-            if lhs.1 == rhs.1 { return stableValue(for: lhs.0, context: context) < stableValue(for: rhs.0, context: context) }
-            return lhs.1 < rhs.1
+        if context.perchAllowed, !context.focusActive,
+           context.recentActions.count >= 2, !recent.contains(.perch) {
+            let duration = 30 + Double(stableValue(for: .perch, context: context) % 4)
+            return AmbientBehaviorDecision(action: .perch, duration: duration, reason: "该去窗口边缘坐一会儿了")
+        }
+        let eligible = candidates.filter {
+            !recent.contains($0.0) && $0.1 > 0 && (!context.focusActive || $0.0 == .personality)
+        }
+        let totalWeight = eligible.reduce(0) { $0 + $1.1 }
+        guard totalWeight > 0 else { return nil }
+        var roll = stableRoll(context: context) % totalWeight
+        guard let best = eligible.first(where: { candidate in
+            if roll < candidate.1 { return true }
+            roll -= candidate.1
+            return false
         }) else { return nil }
         let duration = best.2 + Double(stableValue(for: best.0, context: context) % 4)
         return AmbientBehaviorDecision(action: best.0, duration: duration, reason: best.3)
@@ -57,7 +66,17 @@ struct AmbientBehaviorEngine: AmbientBehaviorDeciding {
     }
 
     private func stableValue(for action: AmbientAction, context: PetActivityContext) -> Int {
-        let seed = "\(context.petID.rawValue)|\(Calendar.current.component(.day, from: context.now))|\(Calendar.current.component(.hour, from: context.now))|\(action.rawValue)"
+        let minute = Int(context.now.timeIntervalSince1970 / 60)
+        let seed = "\(context.petID.rawValue)|\(minute)|\(action.rawValue)"
+        let value = seed.utf8.reduce(UInt64(1469598103934665603)) { value, byte in
+            (value ^ UInt64(byte)) &* 1099511628211
+        }
+        return Int(value % UInt64(Int.max))
+    }
+
+    private func stableRoll(context: PetActivityContext) -> Int {
+        let minute = Int(context.now.timeIntervalSince1970 / 60)
+        let seed = "natural-life|\(context.petID.rawValue)|\(minute)"
         let value = seed.utf8.reduce(UInt64(1469598103934665603)) { value, byte in
             (value ^ UInt64(byte)) &* 1099511628211
         }

@@ -5,6 +5,12 @@ import Testing
 
 @Suite("Persistence")
 struct PersistenceTests {
+    @Test("New pets use natural-pause behavior by default")
+    func naturalPauseDefault() {
+        let profile = PetProfileEntity(definition: .definition(for: .sol))
+        #expect(profile.proactiveMode == ProactiveMode.naturalPause.rawValue)
+    }
+
     @Test("Version 1 store migrates without losing pet data")
     @MainActor
     func v1Migration() throws {

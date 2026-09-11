@@ -246,6 +246,14 @@ enum ProactiveMode: String, Codable, CaseIterable, Identifiable, Sendable {
         case .occasionalInvite: "偶尔邀请"
         }
     }
+
+    var behaviorDescription: String {
+        switch self {
+        case .manual: "不会自动散步、栖息或执行性格动作。"
+        case .naturalPause: "停顿约 1–2 分钟后自然活动；专注时只做安静动作。"
+        case .occasionalInvite: "包含自然活动，并会在合适时机偶尔邀请你互动。"
+        }
+    }
 }
 
 public enum CorrectionMode: String, Codable, CaseIterable, Identifiable, Sendable {
@@ -439,6 +447,7 @@ struct PetActivityContext: Sendable {
     let isSleeping: Bool
     let hasInventoryItem: Bool
     let recentActions: [AmbientAction]
+    let perchAllowed: Bool
 }
 
 struct AmbientBehaviorDecision: Sendable, Equatable {

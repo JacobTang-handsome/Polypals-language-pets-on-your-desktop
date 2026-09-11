@@ -37,7 +37,7 @@ final class ProactiveCoordinator {
         let eligible = PetID.allCases.filter { petID in
             let profile = model.profile(for: petID)
             return ProactiveMode(rawValue: profile.proactiveMode) == .occasionalInvite
-                && profile.isVisible && !profile.isSleeping && !model.isPetQuiet(petID, at: now)
+                && profile.isVisible && !profile.isSleeping && !model.isPetAutonomouslyQuiet(petID, at: now)
         }
         if let petID = eligible.max(by: {
             (model.profile(for: $0).lastInteractionAt ?? .distantPast)

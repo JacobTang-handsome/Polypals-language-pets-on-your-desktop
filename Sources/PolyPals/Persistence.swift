@@ -31,7 +31,7 @@ final class PetProfileEntity {
         difficulty = definition.level
         languageRatio = definition.languageRatio
         correctionMode = CorrectionMode.casual.rawValue
-        proactiveMode = ProactiveMode.manual.rawValue
+        proactiveMode = ProactiveMode.naturalPause.rawValue
         quietStartHour = 22
         quietEndHour = 9
         isVisible = true
@@ -440,6 +440,41 @@ final class InventoryEffectEntity {
 }
 
 @Model
+final class InventoryStoryEntity {
+    @Attribute(.unique) var inventoryItemID: UUID
+    var petID: String
+    var origin: String
+    var contentKey: String?
+    var symbol: String
+    var isUnread: Bool
+    var revealedAt: Date?
+
+    init(itemID: UUID, petID: PetID, origin: InventoryOrigin, contentKey: String? = nil, symbol: String = "shippingbox", isUnread: Bool = false) {
+        inventoryItemID = itemID
+        self.petID = petID.rawValue
+        self.origin = origin.rawValue
+        self.contentKey = contentKey
+        self.symbol = symbol
+        self.isUnread = isUnread
+    }
+}
+
+@Model
+final class PetQuietStateEntity {
+    @Attribute(.unique) var petID: String
+    var quietUntil: Date?
+    var includesSchedules: Bool
+    var updatedAt: Date
+
+    init(petID: PetID, quietUntil: Date? = nil, includesSchedules: Bool = false) {
+        self.petID = petID.rawValue
+        self.quietUntil = quietUntil
+        self.includesSchedules = includesSchedules
+        updatedAt = Date()
+    }
+}
+
+@Model
 final class CardMetadataEntity {
     @Attribute(.unique) var metadataKey: String
     var petID: String
@@ -734,13 +769,21 @@ enum PolyPalsSchemaV4: VersionedSchema {
     }
 }
 
+enum PolyPalsSchemaV5: VersionedSchema {
+    static let versionIdentifier = Schema.Version(5, 0, 0)
+    static var models: [any PersistentModel.Type] {
+        PolyPalsSchemaV4.models + [InventoryStoryEntity.self, PetQuietStateEntity.self]
+    }
+}
+
 enum PolyPalsMigrationPlan: SchemaMigrationPlan {
-    static var schemas: [any VersionedSchema.Type] { [PolyPalsSchemaV1.self, PolyPalsSchemaV2.self, PolyPalsSchemaV3.self, PolyPalsSchemaV4.self] }
+    static var schemas: [any VersionedSchema.Type] { [PolyPalsSchemaV1.self, PolyPalsSchemaV2.self, PolyPalsSchemaV3.self, PolyPalsSchemaV4.self, PolyPalsSchemaV5.self] }
     static var stages: [MigrationStage] {
         [
             .lightweight(fromVersion: PolyPalsSchemaV1.self, toVersion: PolyPalsSchemaV2.self),
             .lightweight(fromVersion: PolyPalsSchemaV2.self, toVersion: PolyPalsSchemaV3.self),
-            .lightweight(fromVersion: PolyPalsSchemaV3.self, toVersion: PolyPalsSchemaV4.self)
+            .lightweight(fromVersion: PolyPalsSchemaV3.self, toVersion: PolyPalsSchemaV4.self),
+            .lightweight(fromVersion: PolyPalsSchemaV4.self, toVersion: PolyPalsSchemaV5.self)
         ]
     }
 }
@@ -827,8 +870,8 @@ enum PersistenceFactory {
         try context.save()
     }
 
-    static func backupStoreBeforeV4Migration(fileManager: FileManager = .default) throws {
-        guard UserDefaults.standard.integer(forKey: "dataSchemaVersion") < 4,
+    static func backupStoreBeforeMigration(fileManager: FileManager = .default) throws {
+        guard UserDefaults.standard.integer(forKey: "dataSchemaVersion") < 5,
               let applicationSupport = fileManager.urls(for: .applicationSupportDirectory, in: .userDomainMask).first else { return }
         let store = applicationSupport.appendingPathComponent("default.store")
         guard fileManager.fileExists(atPath: store.path) else { return }
@@ -836,7 +879,7 @@ enum PersistenceFactory {
         formatter.dateFormat = "yyyyMMdd-HHmmss"
         let backupDirectory = applicationSupport
             .appendingPathComponent("PolyPals Backups", isDirectory: true)
-            .appendingPathComponent("pre-v0.4-\(formatter.string(from: Date()))", isDirectory: true)
+            .appendingPathComponent("pre-v0.5-\(formatter.string(from: Date()))", isDirectory: true)
         try fileManager.createDirectory(at: backupDirectory, withIntermediateDirectories: true)
         for suffix in ["", "-wal", "-shm"] {
             let source = URL(fileURLWithPath: store.path + suffix)
@@ -847,8 +890,8 @@ enum PersistenceFactory {
 
     @MainActor
     static func makeContainer(inMemory: Bool = false) throws -> ModelContainer {
-        if !inMemory { try backupStoreBeforeV4Migration() }
-        let schema = Schema(versionedSchema: PolyPalsSchemaV4.self)
+        if !inMemory { try backupStoreBeforeMigration() }
+        let schema = Schema(versionedSchema: PolyPalsSchemaV5.self)
         let configuration = SwiftData.ModelConfiguration(schema: schema, isStoredInMemoryOnly: inMemory)
         let container = try ModelContainer(
             for: schema,
@@ -856,13 +899,13 @@ enum PersistenceFactory {
             configurations: configuration
         )
         if !inMemory { try backfillV2Fields(in: container) }
-        if !inMemory { UserDefaults.standard.set(4, forKey: "dataSchemaVersion") }
+        if !inMemory { UserDefaults.standard.set(5, forKey: "dataSchemaVersion") }
         return container
     }
 
     @MainActor
     static func makeContainer(at storeURL: URL) throws -> ModelContainer {
-        let schema = Schema(versionedSchema: PolyPalsSchemaV4.self)
+        let schema = Schema(versionedSchema: PolyPalsSchemaV5.self)
         let configuration = SwiftData.ModelConfiguration(schema: schema, url: storeURL)
         let container = try ModelContainer(
             for: schema,

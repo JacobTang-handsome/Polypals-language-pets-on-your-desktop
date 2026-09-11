@@ -102,6 +102,7 @@ final class AppModel: ObservableObject {
             configuration: .init(provider: provider, modelID: configuredModel, reasoningEffort: effort)
         )
         bootstrap()
+        if windowPerchingEnabled { enableNaturalLifeForManualProfiles() }
         hasAPIKey = (try? keyStore.loadAPIKey(for: provider))?.isEmpty == false
         restoreSchedulerState()
         schedulerSnapshot.focusSessionActive = focusTimer.isRunning
@@ -333,6 +334,7 @@ final class AppModel: ObservableObject {
         let effects = (try? context.fetch(FetchDescriptor<InventoryEffectEntity>())) ?? []
         return inventory(for: petID)
             .filter { item in
+                if inventoryStory(for: item)?.isUnread == true { return false }
                 guard let last = effects.first(where: { $0.inventoryItemID == item.id })?.lastReferencedAt else { return true }
                 return date.timeIntervalSince(last) >= 24 * 60 * 60
             }
@@ -364,8 +366,14 @@ final class AppModel: ObservableObject {
         var parts: [String] = []
         if state.walkCount > 0 { parts.append("在屏幕边缘散步了\(state.walkCount)次") }
         if state.napCount > 0 { parts.append("打盹了\(state.napCount)次") }
+        if state.stretchCount > 0 { parts.append("伸了\(state.stretchCount)次懒腰") }
         if state.tidyCount > 0 { parts.append("整理了\(state.tidyCount)件小物品") }
+        if state.chatCount > 0 { parts.append("和你聊了\(state.chatCount)次") }
         if state.completedCardCount > 0 { parts.append("和你看过\(state.completedCardCount)张卡片") }
+        if state.giftCount > 0 { parts.append("收到了你的小礼物") }
+        let start = Calendar.current.startOfDay(for: now)
+        let foundToday = foundItems(for: petID).filter { $0.createdAt >= start }.count
+        if foundToday > 0 { parts.append("带回了\(foundToday)件小东西") }
         if parts.isEmpty { return "今天，\(name)还在安静地陪着你。" }
         return "今天，\(name)\(parts.joined(separator: "，"))."
     }
@@ -890,10 +898,16 @@ final class AppModel: ObservableObject {
         reloadProfiles()
     }
 
-    func giveGift(to petID: PetID, title: String = "一块小饼干") {
+    @discardableResult
+    func giveGift(to petID: PetID, title: String = "一块小饼干", symbol: String = "birthday.cake") -> InventoryItemEntity? {
+        let today = Calendar.current.startOfDay(for: Date())
+        if let existing = inventory(for: petID).first(where: { $0.kind == "gift" && $0.createdAt >= today }) {
+            return existing
+        }
         let item = InventoryItemEntity(petID: petID, kind: "gift", title: title, detail: "你送给 \(PetDefinition.definition(for: petID).name) 的小礼物。")
         context.insert(item)
         context.insert(InventoryEffectEntity(itemID: item.id, petID: petID, tags: ["gift", "dailyLife"]))
+        context.insert(InventoryStoryEntity(itemID: item.id, petID: petID, origin: .userGift, symbol: symbol))
         awardRelationship(.gift, to: petID)
         let daily = dailyState(for: petID)
         daily.giftCount += 1
@@ -902,12 +916,84 @@ final class AppModel: ObservableObject {
         recordMetric("gift", petID: petID)
         try? context.save()
         reloadProfiles()
+        objectWillChange.send()
+        return item
+    }
+
+    func giftGivenToday(to petID: PetID, now: Date = Date()) -> InventoryItemEntity? {
+        let today = Calendar.current.startOfDay(for: now)
+        return inventory(for: petID).first { $0.kind == "gift" && $0.createdAt >= today }
+    }
+
+    func giftReaction(for petID: PetID, title: String) -> String {
+        switch petID {
+        case .sol: "¡Gracias! \(title)我决定先留一半给明天。"
+        case .mousse: "Très bien. \(title)我会认真收好。"
+        case .ash: "A thoughtful offering. \(title)的时机不错。"
+        }
     }
 
     func inventory(for petID: PetID) -> [InventoryItemEntity] {
         ((try? context.fetch(FetchDescriptor<InventoryItemEntity>())) ?? [])
             .filter { $0.petID == petID.rawValue }
             .sorted { $0.createdAt > $1.createdAt }
+    }
+
+    func inventoryStory(for item: InventoryItemEntity) -> InventoryStoryEntity? {
+        ((try? context.fetch(FetchDescriptor<InventoryStoryEntity>())) ?? [])
+            .first { $0.inventoryItemID == item.id }
+    }
+
+    func foundItems(for petID: PetID) -> [InventoryItemEntity] {
+        let storyIDs = Set(((try? context.fetch(FetchDescriptor<InventoryStoryEntity>())) ?? [])
+            .filter { $0.petID == petID.rawValue && $0.origin == InventoryOrigin.petFound.rawValue }
+            .map(\.inventoryItemID))
+        return inventory(for: petID).filter { storyIDs.contains($0.id) || $0.kind == "found" }
+    }
+
+    func unreadFoundItems(for petID: PetID) -> [InventoryItemEntity] {
+        let unreadIDs = Set(((try? context.fetch(FetchDescriptor<InventoryStoryEntity>())) ?? [])
+            .filter { $0.petID == petID.rawValue && $0.origin == InventoryOrigin.petFound.rawValue && $0.isUnread }
+            .map(\.inventoryItemID))
+        return inventory(for: petID).filter { unreadIDs.contains($0.id) }
+    }
+
+    @discardableResult
+    func ensureFoundItemAvailable(for petID: PetID, at now: Date = Date()) -> InventoryItemEntity? {
+        let stories = ((try? context.fetch(FetchDescriptor<InventoryStoryEntity>())) ?? [])
+            .filter { $0.petID == petID.rawValue && $0.origin == InventoryOrigin.petFound.rawValue }
+        let itemByID = Dictionary(uniqueKeysWithValues: inventory(for: petID).map { ($0.id, $0) })
+        let lastFoundAt = stories.compactMap { itemByID[$0.inventoryItemID]?.createdAt }.max()
+        guard PetFoundItemPolicy.shouldCreate(
+            petID: petID,
+            now: now,
+            lastFoundAt: lastFoundAt,
+            hasInteracted: profile(for: petID).lastInteractionAt != nil,
+            unreadCount: stories.filter(\.isUnread).count
+        ) else { return nil }
+        let usedKeys = Set(stories.compactMap(\.contentKey))
+        let available = PetKeepsakeCatalog.items(for: petID).filter { !usedKeys.contains($0.key) }
+        guard !available.isEmpty else { return nil }
+        let day = Calendar.current.ordinality(of: .day, in: .year, for: now) ?? 0
+        let definition = available[(day + (PetID.allCases.firstIndex(of: petID) ?? 0)) % available.count]
+        let item = InventoryItemEntity(petID: petID, kind: "found", title: definition.title, detail: definition.detail)
+        context.insert(item)
+        context.insert(InventoryEffectEntity(itemID: item.id, petID: petID, tags: ["found", "dailyLife"]))
+        context.insert(InventoryStoryEntity(itemID: item.id, petID: petID, origin: .petFound, contentKey: definition.key, symbol: definition.symbol, isUnread: true))
+        try? context.save()
+        dailyStateRevision = UUID()
+        objectWillChange.send()
+        windowManager?.refreshStatus(for: petID)
+        return item
+    }
+
+    func revealFoundItem(_ item: InventoryItemEntity) {
+        guard let story = inventoryStory(for: item) else { return }
+        story.isUnread = false
+        story.revealedAt = Date()
+        try? context.save()
+        objectWillChange.send()
+        if let petID = PetID(rawValue: item.petID) { windowManager?.refreshStatus(for: petID) }
     }
 
     func weeklyEncounteredWords(for petID: PetID, now: Date = Date()) -> [String] {
@@ -924,8 +1010,13 @@ final class AppModel: ObservableObject {
     }
 
     func deleteInventoryItem(_ item: InventoryItemEntity) {
+        if let story = inventoryStory(for: item) { context.delete(story) }
+        if let effect = ((try? context.fetch(FetchDescriptor<InventoryEffectEntity>())) ?? [])
+            .first(where: { $0.inventoryItemID == item.id }) { context.delete(effect) }
         context.delete(item)
         try? context.save()
+        objectWillChange.send()
+        if let petID = PetID(rawValue: item.petID) { windowManager?.refreshStatus(for: petID) }
     }
 
     func makeReviewCard(from line: ChatLine, petID: PetID) {
@@ -1043,12 +1134,69 @@ final class AppModel: ObservableObject {
 
     func isPetQuiet(_ petID: PetID, at date: Date) -> Bool {
         let profile = profile(for: petID)
-        return scheduler.isQuietHour(
+        let scheduledQuiet = scheduler.isQuietHour(
             date,
             calendar: .current,
             start: profile.quietStartHour,
             end: profile.quietEndHour
         )
+        let state = quietState(for: petID)
+        let explicitQuiet = state.quietUntil.map { date < $0 } ?? false
+        return scheduledQuiet || (explicitQuiet && state.includesSchedules)
+    }
+
+    func isPetAutonomouslyQuiet(_ petID: PetID, at date: Date = Date()) -> Bool {
+        let profile = profile(for: petID)
+        if scheduler.isQuietHour(date, calendar: .current, start: profile.quietStartHour, end: profile.quietEndHour) { return true }
+        return quietState(for: petID).quietUntil.map { date < $0 } ?? false
+    }
+
+    func quietState(for petID: PetID) -> PetQuietStateEntity {
+        if let state = ((try? context.fetch(FetchDescriptor<PetQuietStateEntity>())) ?? [])
+            .first(where: { $0.petID == petID.rawValue }) { return state }
+        let state = PetQuietStateEntity(petID: petID)
+        context.insert(state)
+        try? context.save()
+        return state
+    }
+
+    func setPetQuiet(_ petID: PetID, until: Date, includesSchedules: Bool = false) {
+        let state = quietState(for: petID)
+        state.quietUntil = until
+        state.includesSchedules = includesSchedules
+        state.updatedAt = Date()
+        pendingInvitations[petID] = nil
+        windowManager?.dismissInvitation(petID)
+        windowManager?.quiet(petID)
+        try? context.save()
+        objectWillChange.send()
+    }
+
+    func quietPetForOneHour(_ petID: PetID) {
+        setPetQuiet(petID, until: Date().addingTimeInterval(60 * 60))
+    }
+
+    func quietPetForToday(_ petID: PetID) {
+        let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: Calendar.current.startOfDay(for: Date())) ?? Date().addingTimeInterval(24 * 60 * 60)
+        setPetQuiet(petID, until: tomorrow)
+    }
+
+    func resumePetActivity(_ petID: PetID) {
+        let state = quietState(for: petID)
+        state.quietUntil = nil
+        state.includesSchedules = false
+        state.updatedAt = Date()
+        try? context.save()
+        objectWillChange.send()
+        windowManager?.refreshStatus(for: petID)
+    }
+
+    func quietStatus(for petID: PetID, now: Date = Date()) -> String? {
+        guard let until = quietState(for: petID).quietUntil, now < until else { return nil }
+        if Calendar.current.isDate(until, inSameDayAs: now) {
+            return "安静到 \(until.formatted(date: .omitted, time: .shortened))"
+        }
+        return "今天安静"
     }
 
     func addSchedule(
@@ -1230,9 +1378,11 @@ final class AppModel: ObservableObject {
         let petSchedules = schedules(for: petID)
         let petMessages = ((try? context.fetch(FetchDescriptor<ChatMessageEntity>())) ?? []).filter { $0.petID == petID.rawValue }
         let petItems = inventory(for: petID)
+        let petItemIDs = Set(petItems.map { $0.id })
         for message in petMessages { context.delete(message) }
         for thread in ((try? context.fetch(FetchDescriptor<ChatThreadEntity>())) ?? []).filter({ $0.petID == petID.rawValue }) { context.delete(thread) }
         for memory in memories(for: petID) { context.delete(memory) }
+        for story in ((try? context.fetch(FetchDescriptor<InventoryStoryEntity>())) ?? []).filter({ petItemIDs.contains($0.inventoryItemID) }) { context.delete(story) }
         for item in petItems { context.delete(item) }
         for schedule in petSchedules { context.delete(schedule) }
         for card in ((try? context.fetch(FetchDescriptor<ContentCardEntity>())) ?? []).filter({ $0.petID == petID.rawValue }) { context.delete(card) }
@@ -1242,13 +1392,13 @@ final class AppModel: ObservableObject {
         for state in ((try? context.fetch(FetchDescriptor<PetWindowStateEntity>())) ?? []).filter({ $0.petID == petID.rawValue }) { context.delete(state) }
         for state in ((try? context.fetch(FetchDescriptor<PetRoutineStateEntity>())) ?? []).filter({ $0.petID == petID.rawValue }) { context.delete(state) }
         for state in ((try? context.fetch(FetchDescriptor<PetDailyStateEntity>())) ?? []).filter({ $0.petID == petID.rawValue }) { context.delete(state) }
+        for state in ((try? context.fetch(FetchDescriptor<PetQuietStateEntity>())) ?? []).filter({ $0.petID == petID.rawValue }) { context.delete(state) }
         for metadata in ((try? context.fetch(FetchDescriptor<PetProfileMetadataEntity>())) ?? []).filter({ $0.petID == petID.rawValue }) { context.delete(metadata) }
         for preference in ((try? context.fetch(FetchDescriptor<PetContentPreferenceEntity>())) ?? []).filter({ $0.petID == petID.rawValue }) { context.delete(preference) }
         for metadata in ((try? context.fetch(FetchDescriptor<CardMetadataEntity>())) ?? []).filter({ $0.petID == petID.rawValue }) { context.delete(metadata) }
         for feedback in ((try? context.fetch(FetchDescriptor<CardFeedbackEntity>())) ?? []).filter({ $0.petID == petID.rawValue }) { context.delete(feedback) }
         for encounter in ((try? context.fetch(FetchDescriptor<LearningEncounterEntity>())) ?? []).filter({ $0.petID == petID.rawValue }) { context.delete(encounter) }
         for metadata in ((try? context.fetch(FetchDescriptor<InteractionMetadataEntity>())) ?? []).filter({ $0.petID == petID.rawValue }) { context.delete(metadata) }
-        let petItemIDs = Set(petItems.map { $0.id })
         for effect in ((try? context.fetch(FetchDescriptor<InventoryEffectEntity>())) ?? []).filter({ petItemIDs.contains($0.inventoryItemID) }) { context.delete(effect) }
         let petMessageIDs = Set(petMessages.map { $0.id })
         for metadata in ((try? context.fetch(FetchDescriptor<ChatMessageMetadataEntity>())) ?? []).filter({ petMessageIDs.contains($0.messageID) }) { context.delete(metadata) }
@@ -1358,6 +1508,7 @@ final class AppModel: ObservableObject {
             .map(\.content)
         let selectedItems = inventory(for: petID)
             .filter { !excludedContextItemIDs[petID, default: []].contains($0.id) }
+            .filter { inventoryStory(for: $0)?.isUnread != true }
             .filter { item in
                 let effects = (try? context.fetch(FetchDescriptor<InventoryEffectEntity>())) ?? []
                 guard let last = effects.first(where: { $0.inventoryItemID == item.id })?.lastReferencedAt else { return true }
@@ -1399,7 +1550,30 @@ final class AppModel: ObservableObject {
         windowPerchingEnabled = enabled
         UserDefaults.standard.set(enabled, forKey: "windowPerchingEnabled")
         refreshAccessibilityStatus()
-        if !enabled { windowManager?.cancelAmbientBehaviors() }
+        if enabled {
+            enableNaturalLifeForManualProfiles()
+        } else {
+            windowManager?.cancelAmbientBehaviors()
+        }
+    }
+
+    private func enableNaturalLifeForManualProfiles() {
+        var changed = false
+        for profile in profiles where ProactiveMode(rawValue: profile.proactiveMode) == .manual {
+            profile.proactiveMode = ProactiveMode.naturalPause.rawValue
+            changed = true
+        }
+        guard changed else { return }
+        try? context.save()
+        reloadProfiles()
+    }
+
+    func previewPersonalityAction(for petID: PetID) {
+        windowManager?.previewPersonalityAction(for: petID)
+    }
+
+    func previewPerch(for petID: PetID) {
+        windowManager?.previewPerch(for: petID)
     }
 
     func requestWindowPerchingPermission() {
@@ -1523,7 +1697,7 @@ final class AppModel: ObservableObject {
         }
         let candidates = PetID.allCases.filter { petID in
             let mode = ProactiveMode(rawValue: profile(for: petID).proactiveMode)
-            return (mode == .naturalPause || mode == .occasionalInvite) && !isPetQuiet(petID, at: Date())
+            return (mode == .naturalPause || mode == .occasionalInvite) && !isPetAutonomouslyQuiet(petID, at: Date())
         }
         let pet = candidates.min { lhs, rhs in
             let left = profile(for: lhs).lastInteractionAt ?? .distantPast

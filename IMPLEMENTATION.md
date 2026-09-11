@@ -21,14 +21,19 @@
 
 ## Verification completed
 
-- `swift test`: 61 tests in 16 suites passed, including V1→V4 store migrations, CEFR/card policy, malicious plugin fixtures, base/behavior asset checks, window selection, state transitions, pointer throttling, and provider contracts
+- `swift test`: 69 tests in 17 suites passed, including V1→V5 store migrations, CEFR/card policy, malicious plugin fixtures, base/behavior asset checks, window selection, state transitions, pointer throttling, and provider contracts
 - Release build: arm64 Mach-O, macOS 14 minimum, ad-hoc signature verified
 - Bundle identifier: `com.polypals.PolyPals`
 - Three packaged atlases: 1536×2288 RGBA WebP, 8×11, `spriteVersionNumber: 2`, zero transparent RGB residue
 - Natural-life behavior uses a cancellable state machine with window/screen-edge perch targets, deterministic candidate selection, Accessibility-gated cross-app window discovery, multi-display coordinate conversion, one-pet perch reservation, and safe screen-edge fallback.
 - Additional personality and perch animations are optional sidecar atlases (`*-behavior-spritesheet.webp` + `*-behavior.json`); the existing v2 8×11 contract remains unchanged and each clip declares timing, looping, anchor, interruptibility, and a safe legacy fallback.
 - The sidecar atlas is deterministically assembled from six-frame extracted rows. `perchExit` reverses `perchEnter`; Mousse and Ash reuse their restrained pride/wing gestures for celebration, and edge walking intentionally falls back to the existing direction-correct v2 running rows.
-- Direct interaction, chat/detail panels, invitations, answer generation, presentation mode, sleep, hiding, and screen changes cancel ambient state and its timers. Keyboard or pointer activity inside eight seconds suppresses a new natural action; overall cadence is capped at once per ten minutes after a fifteen-minute interaction idle period.
+- Direct interaction, chat/detail panels, invitations, answer generation, presentation mode, sleep, hiding, and screen changes cancel ambient state and its timers. A new natural action can begin after roughly 75 seconds without direct interaction and 2.5 seconds without typing or window dragging; plain pointer movement no longer keeps pets frozen. Actions are spaced by at least 60 seconds, while window perching has its own ten-minute cooldown. Focus mode permits only quiet personality actions.
+- Idle playback now holds a neutral pose and inserts sparse, pet-specific micro-animations instead of looping the blink row every 0.78 seconds. Settings expose immediate personality-action and perch previews, and newly created pets default to natural-pause mode.
+- When window perching is enabled, two completed non-perch natural actions make the next eligible action a guaranteed perch attempt. A temporary one-pet reservation conflict is not recorded as a completed attempt, so another pet can retry after the perch is released.
+- Transparent pet panels retain the default AppKit animation behavior so explicit animator-proxy frame changes used by walking, perching, edge strolling, returning, and window following are committed instead of advancing only the logical state machine.
+- Pet travel now uses a main-run-loop interpolation timer that writes panel origins directly; it does not depend on AppKit animator-proxy support for borderless non-activating panels.
+- Window discovery uses the public on-screen CGWindowList geometry even when Accessibility trust is unavailable (including after an ad-hoc rebuild changes the app signature); screen-edge placement remains the fallback only when no safe application window is returned.
 - GUI smoke test: final SpriteKit pet, quick menu, five-section detail panel, finite offline cards, chat focus, plan controls, and explicit bundled portraits render successfully
 - Short idle sample with all three pet windows: 0.0–1.5% CPU and about 108 MB resident memory
 - Local DMG passes `hdiutil verify`

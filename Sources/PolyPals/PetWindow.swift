@@ -90,6 +90,16 @@ final class PetWindowManager {
         controllers[petID]?.playBehavior(.celebrate, duration: 2.2)
     }
 
+    func previewPersonalityAction(for petID: PetID) {
+        controllers[petID]?.show()
+        controllers[petID]?.previewPersonalityAction()
+    }
+
+    func previewPerch(for petID: PetID) {
+        controllers[petID]?.show()
+        controllers[petID]?.previewPerch()
+    }
+
     func reservePerch(for petID: PetID) -> Bool {
         guard perchedPetID == nil || perchedPetID == petID else { return false }
         perchedPetID = petID
@@ -103,6 +113,15 @@ final class PetWindowManager {
     func cancelAmbientBehaviors() {
         controllers.values.forEach { $0.cancelAmbientBehavior(restoreHome: true) }
         perchedPetID = nil
+    }
+
+    func quiet(_ petID: PetID) {
+        controllers[petID]?.enterQuietState()
+        releasePerch(for: petID)
+    }
+
+    func refreshStatus(for petID: PetID) {
+        controllers[petID]?.refreshStatusBadge()
     }
 
     func invite(_ candidate: InvitationCandidate) {
@@ -157,12 +176,14 @@ final class PetWindowController: NSObject {
     private var detailController: NSWindowController?
     private var chatController: PetChatPanelController?
     private var invitationPanel: NonActivatingPetPanel?
+    private var actionPanel: NonActivatingPetPanel?
     private var returnApplication: NSRunningApplication?
     private var idleLifeTimer: Timer?
     private var lastDirectInteraction = Date()
     private var ambientReturnWorkItem: DispatchWorkItem?
     private var perchFollowTimer: Timer?
     private var pointerTimer: Timer?
+    private var movementTimer: Timer?
     private var pointerMotionFilter = PointerMotionFilter()
     private let ambientEngine = AmbientBehaviorEngine()
     private let windowProvider: any WindowEdgeProviding = SystemWindowEdgeProvider()
@@ -170,6 +191,7 @@ final class PetWindowController: NSObject {
     private var behaviorMachine = PetBehaviorStateMachine()
     private var activePerchTarget: PerchTarget?
     private var homeOrigin: NSPoint?
+    private var lastPerchAt = Date.distantPast
 
     init(petID: PetID, model: AppModel) {
         self.petID = petID
@@ -192,16 +214,20 @@ final class PetWindowController: NSObject {
         panel.hidesOnDeactivate = false
         panel.isMovableByWindowBackground = false
         panel.collectionBehavior = collectionBehavior()
-        panel.animationBehavior = .none
+        // Natural-life travel uses the window animator proxy. Disabling window
+        // animation here causes the behavior state to advance while the panel
+        // itself remains at its saved origin.
+        panel.animationBehavior = .default
         panel.acceptsMouseMovedEvents = true
         restorePosition()
-        idleLifeTimer = Timer.scheduledTimer(withTimeInterval: 15, repeats: true) { [weak self] _ in
+        idleLifeTimer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { [weak self] _ in
             Task { @MainActor in self?.performIdleLifeIfAppropriate() }
         }
     }
 
     func show() {
         spriteView.isPaused = false
+        refreshStatusBadge()
         panel.orderFrontRegardless()
     }
 
@@ -215,6 +241,7 @@ final class PetWindowController: NSObject {
         detailController?.window?.close()
         detailController = nil
         dismissInvitation()
+        dismissActionPanel()
     }
 
     func lowerBehindFocusedInteraction() {
@@ -259,6 +286,17 @@ final class PetWindowController: NSObject {
         }
         ambientReturnWorkItem = item
         DispatchQueue.main.asyncAfter(deadline: .now() + duration, execute: item)
+    }
+
+    func previewPersonalityAction() {
+        cancelAmbientBehavior(restoreHome: true)
+        playBehavior(personalityAction(at: Date()), duration: 4)
+    }
+
+    func previewPerch() {
+        cancelAmbientBehavior(restoreHome: true)
+        guard let screen = panel.screen ?? NSScreen.main else { return }
+        beginPerching(duration: 20, on: screen)
     }
 
     private func playAmbient(_ state: AnimationState, duration: TimeInterval) {
@@ -375,14 +413,17 @@ final class PetWindowController: NSObject {
     }
 
     func showQuickMenu(event: NSEvent, in view: NSView) {
+        refreshStatusBadge()
         let menu = NSMenu()
         menu.addItem(item("聊一下", action: #selector(openChat)))
         menu.addItem(item("给我一个小套餐", action: #selector(openCards)))
-        menu.addItem(item("看看它带回了什么", action: #selector(openBackpack)))
-        menu.addItem(item("送它一个东西", action: #selector(giveGift)))
+        let unread = model.unreadFoundItems(for: petID).count
+        let backpackTitle = unread > 0 ? "\(PetDefinition.definition(for: petID).name) 带回了 \(unread) 件东西" : "看看共同背包"
+        menu.addItem(item(backpackTitle, action: #selector(openBackpack)))
+        menu.addItem(item("送它一个小东西…", action: #selector(giveGift)))
         menu.addItem(item("设置提醒", action: #selector(openPlans)))
         menu.addItem(.separator())
-        menu.addItem(item("今天安静", action: #selector(quietToday)))
+        menu.addItem(item(model.quietStatus(for: petID) ?? "安静一下…", action: #selector(showQuietChoices)))
         menu.popUp(positioning: nil, at: view.convert(event.locationInWindow, from: nil), in: view)
     }
 
@@ -425,6 +466,8 @@ final class PetWindowController: NSObject {
         perchFollowTimer = nil
         pointerTimer?.invalidate()
         pointerTimer = nil
+        movementTimer?.invalidate()
+        movementTimer = nil
         panel.contentView?.layer?.removeAllAnimations()
         behaviorMachine.cancel()
         activePerchTarget = nil
@@ -442,13 +485,17 @@ final class PetWindowController: NSObject {
 
     private func performIdleLifeIfAppropriate(now: Date = Date()) {
         let profile = model.profile(for: petID)
+        refreshStatusBadge()
         guard panel.isVisible, !profile.isSleeping, !model.presentationMode,
+              !model.isPetAutonomouslyQuiet(petID, at: now),
               ProactiveMode(rawValue: profile.proactiveMode) != .manual,
               detailController?.window?.isVisible != true,
               invitationPanel?.isVisible != true,
               SystemActivityGate.hasQuietKeyboardAndPointer,
               now.timeIntervalSince(lastDirectInteraction) >= 45,
               let screen = panel.screen ?? NSScreen.main else { return }
+        _ = model.ensureFoundItemAvailable(for: petID, at: now)
+        refreshStatusBadge()
         let routine = model.routineState(for: petID)
         guard routine.lastAmbientActionAt.map({ now.timeIntervalSince($0) >= ambientEngine.minimumActionInterval }) ?? true else { return }
         let ambientItem = model.ambientInventoryItem(for: petID, at: now)
@@ -466,9 +513,16 @@ final class PetWindowController: NSObject {
             isVisible: panel.isVisible,
             isSleeping: profile.isSleeping,
             hasInventoryItem: ambientItem != nil,
-            recentActions: recentActions
+            recentActions: recentActions,
+            perchAllowed: model.windowPerchingEnabled && now.timeIntervalSince(lastPerchAt) >= 10 * 60
         )
         guard let decision = ambientEngine.decide(context: context) else { return }
+        if decision.action == .perch {
+            guard model.windowPerchingEnabled,
+                  beginPerching(duration: decision.duration, on: screen) else { return }
+            model.recordAmbientAction(.perch, for: petID, at: now)
+            return
+        }
         model.recordAmbientAction(decision.action, for: petID, at: now)
         switch decision.action {
         case .nap: playBehavior(.nap, duration: decision.duration)
@@ -477,10 +531,12 @@ final class PetWindowController: NSObject {
             if let ambientItem { model.recordAmbientInventoryReference(ambientItem, at: now) }
             playBehavior(petID == .mousse ? .mousseGroom : personalityAction(at: now), duration: decision.duration)
         case .lookAtPointer: followPointer(duration: decision.duration)
-        case .personality: playBehavior(personalityAction(at: now), duration: decision.duration)
-        case .perch:
-            guard model.windowPerchingEnabled else { return }
-            beginPerching(duration: decision.duration, on: screen)
+        case .personality:
+            let action = model.focusTimer.isRunning
+                ? PetPersonalityBehavior.focusAction(for: petID, stableSeed: personalitySeed(at: now))
+                : personalityAction(at: now)
+            playBehavior(action, duration: decision.duration)
+        case .perch: return
         case .walkToEdge: break
         case .idle: play(.idle)
         }
@@ -489,27 +545,30 @@ final class PetWindowController: NSObject {
             return
         }
         let visible = screen.visibleFrame.insetBy(dx: 8, dy: 8)
-        let day = Calendar.current.component(.day, from: now)
-        let direction = ((day + (petID == .sol ? 1 : petID == .mousse ? 2 : 3)) % 2 == 0) ? 1.0 : -1.0
-        let distance = CGFloat(48 + (day % 4) * 16) * direction
-        let destinationX = min(visible.maxX - panel.frame.width, max(visible.minX, panel.frame.minX + distance))
+        let minute = Calendar.current.component(.minute, from: now)
+        let direction = ((minute + (petID == .sol ? 1 : petID == .mousse ? 2 : 3)) % 2 == 0) ? 1.0 : -1.0
+        let distance = CGFloat(48 + (minute % 4) * 16) * direction
+        let bounded: (CGFloat) -> CGFloat = { x in
+            min(visible.maxX - self.panel.frame.width, max(visible.minX, x))
+        }
+        let preferredX = bounded(panel.frame.minX + distance)
+        let destinationX = abs(preferredX - panel.frame.minX) > 8
+            ? preferredX
+            : bounded(panel.frame.minX - distance)
         guard abs(destinationX - panel.frame.minX) > 8 else { return }
         play(destinationX > panel.frame.minX ? .runningRight : .runningLeft)
-        NSAnimationContext.runAnimationGroup { context in
-            context.duration = decision.duration
-            context.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
-            panel.animator().setFrameOrigin(NSPoint(x: destinationX, y: panel.frame.minY))
-        } completionHandler: { [weak self] in
-            Task { @MainActor in
-                self?.persistPosition()
-                self?.play(.idle)
-            }
+        animatePanel(to: NSPoint(x: destinationX, y: panel.frame.minY), duration: decision.duration) { [weak self] in
+            self?.persistPosition()
+            self?.play(.idle)
         }
     }
 
     private func personalityAction(at date: Date) -> PetBehaviorAnimation {
-        let seed = Calendar.current.ordinality(of: .minute, in: .year, for: date) ?? 0
-        return PetPersonalityBehavior.action(for: petID, stableSeed: seed)
+        PetPersonalityBehavior.action(for: petID, stableSeed: personalitySeed(at: date))
+    }
+
+    private func personalitySeed(at date: Date) -> Int {
+        Calendar.current.ordinality(of: .minute, in: .year, for: date) ?? 0
     }
 
     private func followPointer(duration: TimeInterval) {
@@ -539,12 +598,14 @@ final class PetWindowController: NSObject {
         DispatchQueue.main.asyncAfter(deadline: .now() + duration, execute: item)
     }
 
-    private func beginPerching(duration: TimeInterval, on screen: NSScreen) {
-        guard behaviorMachine.beginChoosing() else { return }
+    @discardableResult
+    private func beginPerching(duration: TimeInterval, on screen: NSScreen) -> Bool {
+        guard behaviorMachine.beginChoosing() else { return false }
         guard model.windowManager?.reservePerch(for: petID) == true else {
             behaviorMachine.cancel()
-            return
+            return false
         }
+        lastPerchAt = Date()
         let selection = PerchSelectionContext(
             petID: petID,
             petSize: panel.frame.size,
@@ -567,13 +628,10 @@ final class PetWindowController: NSObject {
         let destination = target.anchor
         play(destination.x >= panel.frame.minX ? .runningRight : .runningLeft)
         let travel = min(4.5, max(1.0, hypot(destination.x - panel.frame.minX, destination.y - panel.frame.minY) / 240))
-        NSAnimationContext.runAnimationGroup { context in
-            context.duration = travel
-            context.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
-            panel.animator().setFrameOrigin(destination)
-        } completionHandler: { [weak self] in
-            Task { @MainActor in self?.landOnPerch(duration: duration) }
+        animatePanel(to: destination, duration: travel) { [weak self] in
+            self?.landOnPerch(duration: duration)
         }
+        return true
     }
 
     private func landOnPerch(duration: TimeInterval) {
@@ -613,26 +671,20 @@ final class PetWindowController: NSObject {
             startFollowingPerch()
             return
         }
-        NSAnimationContext.runAnimationGroup { context in
-            context.duration = 1.4
-            context.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
-            panel.animator().setFrameOrigin(NSPoint(x: nextX, y: panel.frame.minY))
-        } completionHandler: { [weak self] in
-            Task { @MainActor in
-                guard let self, let oldTarget = self.activePerchTarget else { return }
-                self.activePerchTarget = PerchTarget(
-                    kind: oldTarget.kind,
-                    windowNumber: oldTarget.windowNumber,
-                    ownerPID: oldTarget.ownerPID,
-                    screenID: oldTarget.screenID,
-                    windowFrame: oldTarget.windowFrame,
-                    anchor: CGPoint(x: nextX, y: oldTarget.anchor.y),
-                    safeHorizontalRange: oldTarget.safeHorizontalRange
-                )
-                self.spriteView.sceneModel.playBehavior(.perchSit, returnToIdleAfter: nil)
-                self.behaviorMachine.setPerchActivity(.sitting)
-                self.startFollowingPerch()
-            }
+        animatePanel(to: NSPoint(x: nextX, y: panel.frame.minY), duration: 1.4) { [weak self] in
+            guard let self, let oldTarget = self.activePerchTarget else { return }
+            self.activePerchTarget = PerchTarget(
+                kind: oldTarget.kind,
+                windowNumber: oldTarget.windowNumber,
+                ownerPID: oldTarget.ownerPID,
+                screenID: oldTarget.screenID,
+                windowFrame: oldTarget.windowFrame,
+                anchor: CGPoint(x: nextX, y: oldTarget.anchor.y),
+                safeHorizontalRange: oldTarget.safeHorizontalRange
+            )
+            self.spriteView.sceneModel.playBehavior(.perchSit, returnToIdleAfter: nil)
+            self.behaviorMachine.setPerchActivity(.sitting)
+            self.startFollowingPerch()
         }
     }
 
@@ -665,11 +717,7 @@ final class PetWindowController: NSObject {
             return
         }
         guard hypot(next.x - panel.frame.minX, next.y - panel.frame.minY) > 1.5 else { return }
-        NSAnimationContext.runAnimationGroup { context in
-            context.duration = 0.18
-            context.timingFunction = CAMediaTimingFunction(name: .easeOut)
-            panel.animator().setFrameOrigin(next)
-        }
+        panel.setFrameOrigin(next)
     }
 
     private func schedulePerchDeparture(after duration: TimeInterval) {
@@ -694,27 +742,43 @@ final class PetWindowController: NSObject {
                 guard let self else { return }
                 self.behaviorMachine.beginReturning()
                 self.play(destination.x >= self.panel.frame.minX ? .runningRight : .runningLeft)
-                NSAnimationContext.runAnimationGroup { context in
-                    context.duration = min(3.5, max(0.8, hypot(
-                        destination.x - self.panel.frame.minX,
-                        destination.y - self.panel.frame.minY
-                    ) / 260))
-                    context.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
-                    self.panel.animator().setFrameOrigin(destination)
-                } completionHandler: { [weak self] in
-                    Task { @MainActor in
-                        guard let self else { return }
-                        self.activePerchTarget = nil
-                        self.homeOrigin = nil
-                        self.behaviorMachine.finish()
-                        self.model.windowManager?.releasePerch(for: self.petID)
-                        self.play(.idle)
-                    }
+                let travel = min(3.5, max(0.8, hypot(
+                    destination.x - self.panel.frame.minX,
+                    destination.y - self.panel.frame.minY
+                ) / 260))
+                self.animatePanel(to: destination, duration: travel) { [weak self] in
+                    guard let self else { return }
+                    self.activePerchTarget = nil
+                    self.homeOrigin = nil
+                    self.behaviorMachine.finish()
+                    self.model.windowManager?.releasePerch(for: self.petID)
+                    self.play(.idle)
                 }
             }
         }
         ambientReturnWorkItem = item
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.55, execute: item)
+    }
+
+    private func animatePanel(to destination: NSPoint, duration: TimeInterval, completion: @escaping @MainActor () -> Void) {
+        movementTimer?.invalidate()
+        let start = panel.frame.origin
+        let startedAt = ProcessInfo.processInfo.systemUptime
+        let safeDuration = max(0.01, duration)
+        let timer = Timer(timeInterval: 1.0 / 60.0, repeats: true) { [weak self] _ in
+            Task { @MainActor in
+                guard let self else { return }
+                let elapsed = ProcessInfo.processInfo.systemUptime - startedAt
+                let progress = min(1, elapsed / safeDuration)
+                self.panel.setFrameOrigin(PetWindowMotion.origin(from: start, to: destination, progress: progress))
+                guard progress >= 1 else { return }
+                self.movementTimer?.invalidate()
+                self.movementTimer = nil
+                completion()
+            }
+        }
+        movementTimer = timer
+        RunLoop.main.add(timer, forMode: .common)
     }
 
     func reconcileWithVisibleScreens() {
@@ -741,11 +805,8 @@ final class PetWindowController: NSObject {
     @objc private func openBackpack() { model.requestedTab[petID] = 2; openDetail() }
     @objc private func openPlans() { model.requestedTab[petID] = 3; openDetail() }
     @objc private func openCharacter() { model.requestedTab[petID] = 4; openDetail() }
-    @objc private func giveGift() {
-        model.giveGift(to: petID)
-        playBehavior(petID == .mousse ? .mousseProud : .celebrate, duration: 2.2)
-    }
-    @objc private func quietToday() { model.skipInvitationToday(for: petID); play(.idle) }
+    @objc private func giveGift() { showGiftChoices() }
+    @objc private func showQuietChoices() { showQuietChoicePanel() }
     @objc private func sleep() { model.profile(for: petID).isSleeping = true; try? model.container.mainContext.save(); hide() }
     @objc private func hidePet() { model.profile(for: petID).isVisible = false; try? model.container.mainContext.save(); hide() }
     @objc private func modeManual() { setMode(.manual) }
@@ -775,6 +836,103 @@ final class PetWindowController: NSObject {
         let item = NSMenuItem(title: title, action: action, keyEquivalent: "")
         item.target = self
         return item
+    }
+
+    func enterQuietState() {
+        cancelAmbientBehavior(restoreHome: true)
+        dismissInvitation()
+        dismissActionPanel()
+        play(.idle)
+        refreshStatusBadge()
+    }
+
+    func refreshStatusBadge() {
+        spriteView.sceneModel.setStatusBadge(
+            unreadCount: model.unreadFoundItems(for: petID).count,
+            isQuiet: model.isPetAutonomouslyQuiet(petID)
+        )
+    }
+
+    private func showGiftChoices() {
+        if let existing = model.giftGivenToday(to: petID) {
+            showReactionBubble("今天已经收到了你的\(existing.title)。")
+            return
+        }
+        let view = GiftChoiceBubbleView(
+            petName: PetDefinition.definition(for: petID).name,
+            choose: { [weak self] option in
+                guard let self, let item = self.model.giveGift(to: self.petID, title: option.title, symbol: option.symbol) else { return }
+                self.playBehavior(self.petID == .mousse ? .mousseProud : .celebrate, duration: 2.2)
+                self.showReactionBubble(self.model.giftReaction(for: self.petID, title: item.title))
+            },
+            cancel: { [weak self] in self?.dismissActionPanel() }
+        )
+        showActionPanel(rootView: AnyView(view), size: NSSize(width: 300, height: 190))
+    }
+
+    private func showQuietChoicePanel() {
+        let view = QuietChoiceBubbleView(
+            status: model.quietStatus(for: petID),
+            oneHour: { [weak self] in
+                guard let self else { return }
+                self.model.quietPetForOneHour(self.petID)
+                self.showReactionBubble("好，我安静待一会儿。")
+            },
+            today: { [weak self] in
+                guard let self else { return }
+                self.model.quietPetForToday(self.petID)
+                self.showReactionBubble("好，今天我就在这里安静陪着你。")
+            },
+            resume: { [weak self] in
+                guard let self else { return }
+                self.model.resumePetActivity(self.petID)
+                self.refreshStatusBadge()
+                self.showReactionBubble("我回来活动啦。")
+            },
+            cancel: { [weak self] in self?.dismissActionPanel() }
+        )
+        showActionPanel(rootView: AnyView(view), size: NSSize(width: 300, height: model.quietStatus(for: petID) == nil ? 160 : 195))
+    }
+
+    private func showReactionBubble(_ text: String) {
+        let view = PetReactionBubbleView(text: text) { [weak self] in self?.dismissActionPanel() }
+        showActionPanel(rootView: AnyView(view), size: NSSize(width: 300, height: 105))
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.2) { [weak self] in self?.dismissActionPanel() }
+    }
+
+    private func showActionPanel(rootView: AnyView, size: NSSize) {
+        dismissActionPanel()
+        let visible = (panel.screen ?? NSScreen.main)?.visibleFrame ?? NSRect(x: 0, y: 0, width: 1200, height: 800)
+        let preferredX = panel.frame.midX - size.width / 2
+        let preferredY = panel.frame.maxY + 8
+        let x = min(visible.maxX - size.width, max(visible.minX, preferredX))
+        let y = preferredY + size.height <= visible.maxY
+            ? preferredY
+            : max(visible.minY, panel.frame.minY - size.height - 8)
+        let action = NonActivatingPetPanel(
+            contentRect: NSRect(x: x, y: y, width: size.width, height: size.height),
+            styleMask: [.borderless, .nonactivatingPanel], backing: .buffered, defer: false
+        )
+        let hosted = rootView
+            .frame(width: size.width, height: size.height)
+            .fixedSize(horizontal: true, vertical: true)
+        action.contentViewController = NSHostingController(rootView: hosted)
+        action.contentMinSize = size
+        action.contentMaxSize = size
+        action.setContentSize(size)
+        action.isOpaque = false
+        action.backgroundColor = .clear
+        action.hasShadow = true
+        action.level = .floating
+        action.collectionBehavior = panel.collectionBehavior
+        action.becomesKeyOnlyIfNeeded = true
+        actionPanel = action
+        action.orderFrontRegardless()
+    }
+
+    private func dismissActionPanel() {
+        actionPanel?.orderOut(nil)
+        actionPanel = nil
     }
 
     private func collectionBehavior() -> NSWindow.CollectionBehavior {
@@ -934,6 +1092,7 @@ final class PetSpriteScene: SKScene {
     private var sprite: SKSpriteNode?
     private var emoji: SKLabelNode?
     private var currentState: AnimationState = .idle
+    private let statusBadge = SKLabelNode(fontNamed: "SFProRounded-Semibold")
     private lazy var atlasTexture: SKTexture? = {
         guard let url = PetAssetCatalog.spritesheetURL(for: petID),
               let image = NSImage(contentsOf: url) else { return nil }
@@ -952,6 +1111,11 @@ final class PetSpriteScene: SKScene {
         backgroundColor = .clear
         anchorPoint = CGPoint(x: 0.5, y: 0.5)
         configureVisual()
+        statusBadge.fontSize = 19
+        statusBadge.zPosition = 20
+        statusBadge.verticalAlignmentMode = .center
+        addChild(statusBadge)
+        positionStatusBadge()
         play(.idle)
     }
 
@@ -960,6 +1124,17 @@ final class PetSpriteScene: SKScene {
     override func didChangeSize(_ oldSize: CGSize) {
         sprite?.size = fittedSpriteSize()
         emoji?.fontSize = min(size.width, size.height) * 0.66
+        positionStatusBadge()
+    }
+
+    func setStatusBadge(unreadCount: Int, isQuiet: Bool) {
+        statusBadge.text = isQuiet ? "☾" : (unreadCount > 0 ? "✦\(unreadCount)" : "")
+        statusBadge.fontColor = isQuiet ? .systemIndigo : .systemOrange
+        statusBadge.isHidden = !isQuiet && unreadCount == 0
+    }
+
+    private func positionStatusBadge() {
+        statusBadge.position = CGPoint(x: size.width * 0.31, y: size.height * 0.34)
     }
 
     func play(_ state: AnimationState, returnToIdleAfter duration: TimeInterval? = 1.4) {
@@ -967,7 +1142,11 @@ final class PetSpriteScene: SKScene {
         removeAction(forKey: "return-idle")
         if let sprite, let textures = atlasTextures(for: state), !textures.isEmpty {
             sprite.removeAllActions()
-            sprite.run(.repeatForever(.animate(with: textures, timePerFrame: 0.13, resize: false, restore: true)), withKey: "frames")
+            if state == .idle {
+                playNaturalIdle(on: sprite, textures: textures)
+            } else {
+                sprite.run(.repeatForever(.animate(with: textures, timePerFrame: 0.13, resize: false, restore: true)), withKey: "frames")
+            }
         } else if let emoji {
             emoji.removeAllActions()
             let action: SKAction
@@ -983,6 +1162,19 @@ final class PetSpriteScene: SKScene {
         if state != .idle, let duration {
             run(.sequence([.wait(forDuration: duration), .run { [weak self] in self?.play(.idle) }]), withKey: "return-idle")
         }
+    }
+
+    private func playNaturalIdle(on sprite: SKSpriteNode, textures: [SKTexture]) {
+        guard let neutral = textures.first else { return }
+        sprite.texture = neutral
+        let blink = SKAction.sequence([
+            .animate(with: textures, timePerFrame: 0.16, resize: false, restore: false),
+            .run { [weak sprite] in sprite?.texture = neutral }
+        ])
+        let cycle = IdleAnimationCadence.waits(for: petID).flatMap { wait in
+            [SKAction.wait(forDuration: wait), blink]
+        }
+        sprite.run(.repeatForever(.sequence(cycle)), withKey: "frames")
     }
 
     func playBehavior(_ behavior: PetBehaviorAnimation, returnToIdleAfter duration: TimeInterval? = 1.8) {
