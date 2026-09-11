@@ -1,0 +1,37 @@
+name: 错误报告（中文）
+description: 报告可复现的 PolyPals 问题，请勿包含私人数据
+title: "[Bug] "
+body:
+  - type: textarea
+    id: behavior
+    attributes:
+      label: 发生了什么？
+      description: 请说明实际结果与预期结果。
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 复现步骤
+      description: 请提供能够稳定重现问题的最小步骤。
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: PolyPals 与 macOS 版本
+      placeholder: "例如：PolyPals 0.4.0，macOS 14.6"
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: 补充信息
+      description: 可以提供已脱敏的日志或截图，但不要上传用户数据库。
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 隐私确认
+      options:
+        - label: 我已移除 API Key、聊天记录、数据库、日志中的私人内容和其他个人信息。
+          required: true

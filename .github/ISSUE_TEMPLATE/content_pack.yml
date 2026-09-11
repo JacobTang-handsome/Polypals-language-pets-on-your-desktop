@@ -2,12 +2,19 @@ name: Content pack submission
 description: Propose a validated declarative content pack
 body:
   - type: input
-    attributes: { label: Pack ID and version }
-    validations: { required: true }
+    id: pack_identity
+    attributes:
+      label: Pack ID and version
+    validations:
+      required: true
   - type: textarea
-    attributes: { label: Languages, CEFR levels, sources, and license }
-    validations: { required: true }
+    id: scope_and_license
+    attributes:
+      label: Languages, CEFR levels, sources, and license
+    validations:
+      required: true
   - type: checkboxes
+    id: validation
     attributes:
       label: Validation
       options:

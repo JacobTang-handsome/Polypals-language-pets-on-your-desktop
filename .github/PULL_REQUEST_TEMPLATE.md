@@ -1,11 +1,19 @@
-## Summary
+## 修改摘要
 
-## Verification
+<!-- 说明修改了什么、为什么修改，并关联相关 Issue，例如 Closes #123。 -->
 
-- [ ] `swift test`
-- [ ] Release build
-- [ ] Relevant pack validation
-- [ ] No API key, user database, log, app, DMG, or signing credential
-- [ ] Migration and privacy impact described
+## 验证
 
-## Data / privacy / licensing impact
+- [ ] 已运行 `swift test`
+- [ ] 已运行 Release 构建
+- [ ] 已运行相关的包校验
+- [ ] 已补充或更新测试与文档
+- [ ] 不包含密钥、用户数据、日志、应用包、DMG 或签名凭据
+
+## 隐私、迁移与兼容性影响
+
+<!-- 没有影响时请填写“无”。 -->
+
+## 内容、角色与美术授权
+
+<!-- 没有相关资源时请填写“无”；如有，请说明来源、许可和再分发权利。 -->

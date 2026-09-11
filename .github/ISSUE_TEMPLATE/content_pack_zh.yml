@@ -1,0 +1,31 @@
+name: 内容包提交（中文）
+description: 提议经过校验的声明式内容包
+title: "[Content Pack] "
+body:
+  - type: input
+    id: pack_identity
+    attributes:
+      label: 内容包 ID 与版本
+    validations:
+      required: true
+  - type: textarea
+    id: scope_and_license
+    attributes:
+      label: 语言、CEFR 等级、来源与许可
+      description: 请列出内容语言、适用等级、资料来源和再分发许可。
+    validations:
+      required: true
+  - type: textarea
+    id: validation_output
+    attributes:
+      label: 验证结果
+      description: 请粘贴不含私人数据的 validate-pack 结果。
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: 权利与校验确认
+      options:
+        - label: 内容包已通过校验，所有对话均为原创或具有明确许可。
+          required: true
+        - label: 我拥有提交、修改和再分发这些内容所需的权利。
+          required: true

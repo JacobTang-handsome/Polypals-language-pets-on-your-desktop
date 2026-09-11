@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 私下报告安全漏洞
+    url: https://github.com/JacobTang-handsome/Polypals-language-pets-on-your-desktop/security/advisories/new
+    about: 请勿在公开 Issue 中提交漏洞、API Key 或私人数据。

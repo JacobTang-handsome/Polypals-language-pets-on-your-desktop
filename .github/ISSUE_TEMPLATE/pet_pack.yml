@@ -2,12 +2,19 @@ name: Pet pack submission
 description: Propose a validated declarative pet pack
 body:
   - type: input
-    attributes: { label: Pack and pet IDs }
-    validations: { required: true }
+    id: pack_identity
+    attributes:
+      label: Pack and pet IDs
+    validations:
+      required: true
   - type: textarea
-    attributes: { label: Sprite v2 QA and asset license }
-    validations: { required: true }
+    id: qa_and_license
+    attributes:
+      label: Sprite v2 QA and asset license
+    validations:
+      required: true
   - type: checkboxes
+    id: rights
     attributes:
       label: Rights and validation
       options:

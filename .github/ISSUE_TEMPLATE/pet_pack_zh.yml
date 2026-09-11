@@ -1,0 +1,31 @@
+name: 宠物包提交（中文）
+description: 提议经过校验且权利明确的声明式宠物包
+title: "[Pet Pack] "
+body:
+  - type: input
+    id: pack_identity
+    attributes:
+      label: 宠物包与宠物 ID
+    validations:
+      required: true
+  - type: textarea
+    id: qa_and_license
+    attributes:
+      label: Sprite v2 质量检查与资产许可
+      description: 请说明精灵图检查结果、作者、来源和再分发许可。
+    validations:
+      required: true
+  - type: textarea
+    id: validation_output
+    attributes:
+      label: 验证结果
+      description: 请粘贴不含私人数据的 validate-pack 结果。
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: 权利与校验确认
+      options:
+        - label: 我拥有全部提交资产的使用与再分发权利，完整宠物包已通过校验。
+          required: true
+        - label: 本提交不复制或改编未经授权的 PolyPals 内置角色与美术资源。
+          required: true

@@ -1,5 +1,7 @@
 # Contributing
 
+[简体中文](CONTRIBUTING.zh-CN.md) | English
+
 Thank you for improving PolyPals. Open an issue before a large architectural or data-model change. Keep domain behavior deterministic and preserve existing user stores.
 
 1. Build with Xcode 16 / Swift 6 on macOS 14+.
